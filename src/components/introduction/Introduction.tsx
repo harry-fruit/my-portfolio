@@ -7,9 +7,8 @@ export default function Introduction(): JSX.Element {
       <Image
         src={"/montain4.jpg"}
         alt={"Montain background"}
-        layout={"fill"}
-        objectFit={"cover"}
-        className={"blur-soft z-0"}
+        fill
+        className={"absolute blur-soft z-0 object-cover"}
       />
       <AnimatedBackground/>
     </section>
