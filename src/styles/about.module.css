@@ -1,0 +1,30 @@
+.aboutContainer {
+    display: grid;
+    grid-template: auto auto auto / 1fr;
+    grid-template-areas:
+        'header'
+        'picture'
+        'txt';
+}
+
+.header {
+    grid-area: header;
+}
+
+.picture {
+    grid-area: picture;
+}
+
+.txt {
+    grid-area: txt;
+}
+
+
+@media (min-width: 768px) {
+    .aboutContainer {
+        grid-template: auto auto / 1.25fr .75fr;
+        grid-template-areas:
+            'header picture'
+            'txt picture';
+    }
+}
