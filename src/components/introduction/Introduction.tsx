@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AnimatedBackground } from "./AnimatedBackground";
+import { AnimatedBackground } from "@/components/introduction/AnimatedBackground";
 
 export default function Introduction(): JSX.Element {
   return (
