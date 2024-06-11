@@ -35,5 +35,5 @@ export const useAnimeIntroduction = ({
       opacity: [0, 1],
       duration: 1500,
     });
-  }, []);
+  }, [headerRef, subHeaderRef, lineRef]);
 };
