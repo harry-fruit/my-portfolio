@@ -5,7 +5,7 @@ import { useAnimeIntroduction } from "@/hooks/useAnimeIntroduction";
 import style from "@/styles/introduction.module.css";
 import { LearnMoreButton } from "@/components/introduction/LearnMoreButton";
 
-export const AnimatedBackground = () => {
+export const AnimatedBackground: React.FC = (): JSX.Element => {
   const headerRef = useRef<HTMLHeadingElement>(null);
   const subHeaderRef = useRef<HTMLHeadingElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);

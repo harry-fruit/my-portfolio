@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AnimatedBackground } from "@/components/introduction/AnimatedBackground";
 
-export default function Introduction(): JSX.Element {
+export const Introduction: React.FC = (): JSX.Element => {
   return (
     <section id={"introduction"} className={"w-full h-screen relative"}>
       <Image
@@ -10,7 +10,7 @@ export default function Introduction(): JSX.Element {
         fill
         className={"absolute blur-soft z-0 object-cover"}
       />
-      <AnimatedBackground/>
+      <AnimatedBackground />
     </section>
   );
-}
+};
