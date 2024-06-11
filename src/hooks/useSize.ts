@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, RefObject } from 'react';
+import { useState, useEffect, RefObject } from "react";
 
 interface Size {
   width: number | undefined;
@@ -14,13 +14,11 @@ const useSize = (ref?: RefObject<HTMLElement>): Size => {
   useEffect(() => {
     const handleResize = () => {
       if (ref?.current) {
-        // If a ref is provided, get the size of the referenced element
         setSize({
           width: ref.current.offsetWidth,
           height: ref.current.offsetHeight,
         });
       } else {
-        // If no ref is provided, get the window size
         setSize({
           width: window.innerWidth,
           height: window.innerHeight,
@@ -28,11 +26,11 @@ const useSize = (ref?: RefObject<HTMLElement>): Size => {
       }
     };
 
-    handleResize(); // Set size initially
-    window.addEventListener('resize', handleResize); // Update size on window resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [ref]);
 
