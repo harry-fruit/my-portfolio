@@ -1,5 +1,6 @@
 .aboutContainer {
     display: grid;
+    row-gap: 5vh;
     grid-template: auto auto auto / 1fr;
     grid-template-areas:
         'header'
@@ -20,11 +21,25 @@
 }
 
 
+.lineSplit {
+    width: 75%;
+    height: .15rem;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+
 @media (min-width: 768px) {
     .aboutContainer {
-        grid-template: auto auto / 1.25fr .75fr;
+        grid-template: auto auto / 1.15fr .85fr;
+        row-gap: 0vh;
+        column-gap: 4vw;
         grid-template-areas:
             'header picture'
             'txt picture';
+    }
+
+    .lineSplit {
+        width: 55%;
     }
 }
