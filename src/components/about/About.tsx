@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "@/styles/about.module.css";
+import style from "@/styles/about.module.scss";
 
 export const About: React.FC = (): JSX.Element => {
   return (

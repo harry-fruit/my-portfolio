@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useAnimeIntroduction } from "@/hooks/useAnimeIntroduction";
-import style from "@/styles/introduction.module.css";
+import style from "@/styles/introduction.module.scss";
 import { LearnMoreButton } from "@/components/introduction/LearnMoreButton";
 
 export const AnimatedBackground: React.FC = (): JSX.Element => {

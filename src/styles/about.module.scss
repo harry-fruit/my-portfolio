@@ -6,20 +6,19 @@
         'header'
         'picture'
         'txt';
+        
+        .header {
+            grid-area: header;
+        }
+        
+        .picture {
+            grid-area: picture;
+        }
+        
+        .txt {
+            grid-area: txt;
+        }
 }
-
-.header {
-    grid-area: header;
-}
-
-.picture {
-    grid-area: picture;
-}
-
-.txt {
-    grid-area: txt;
-}
-
 
 .lineSplit {
     width: 75%;

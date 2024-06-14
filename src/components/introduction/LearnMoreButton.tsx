@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "@/styles/introduction.module.css";
+import style from "@/styles/introduction.module.scss";
 
 export const LearnMoreButton: React.FC = (): JSX.Element => {
   return (
