@@ -14,7 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       blur: {
-        soft: ".5px"
+        "soft": ".5px"
       }
     },
   },
