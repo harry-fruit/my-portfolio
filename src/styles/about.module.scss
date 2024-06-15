@@ -20,14 +20,6 @@
         }
 }
 
-.lineSplit {
-    width: 75%;
-    height: .15rem;
-    background-color: var(--primary-color);
-    border-radius: 100%;
-}
-
-
 @media (min-width: 768px) {
     .aboutContainer {
         grid-template: auto auto / 1.15fr .85fr;
@@ -38,7 +30,13 @@
             'txt picture';
     }
 
-    .lineSplit {
-        width: 55%;
+}
+
+@media (min-width: 1536px) {
+    .aboutContainer {
+        grid-template: auto auto / 1.1fr .6fr;
+        grid-template-areas:
+            'header picture'
+            'txt picture';
     }
 }

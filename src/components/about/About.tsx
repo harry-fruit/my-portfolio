@@ -4,7 +4,7 @@ import { LineSplit } from "@/components/LineSplit";
 
 export const About: React.FC = (): JSX.Element => {
   return (
-    <section id={"about"} className={`w-full py-10 px-2 md:px-6 xl:px-14 2xl:px-32 ${style.aboutContainer}`}>
+    <section id={"about"} className={`w-full py-10 px-2 md:px-6 md:py-12 lg:py-14 lg:px-10 xl:px-14 2xl:px-24 2xl:py-32 ${style.aboutContainer}`}>
       <div id="header-wrapper" className={`${style.header} flex flex-col justify-center items-center relative`}>
         <h2 className="text-3xl w-full text-center md:text-start font-semibold text-gray-800 dark:text-gray-50">Hey, Im Isaque.</h2>
         <h4 className={"text-xl py-4 text-center md:text-start font-medium text-gray-600 dark:text-gray-100"}>
@@ -12,7 +12,7 @@ export const About: React.FC = (): JSX.Element => {
           temporibus quam dolores labore laborum, eius iste voluptatem, quas,
           illum rerum ex vero consequatur?
         </h4>
-        <LineSplit className={"md:left-0"}/>
+        <LineSplit className={"absolute bottom-0 md:left-0"}/>
       </div>
       <div id="text-wrapper" className={`${style.txt} flex flex-col justify-center gap-2 md:mt-4`}>
         <p className="text-center md:text-start text-gray-600">
