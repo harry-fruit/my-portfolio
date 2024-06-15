@@ -3,7 +3,7 @@ import style from "@/styles/experiences.module.scss";
 export const Experience: React.FC = (): JSX.Element => {
   return (
     <section id={"experience"} className={"flex flex-col items-center px-4 pt-14 pb-7 2xl:pt-20 2xl:pb-10"}>
-      <div className={`${style.headerTitle} text-center mb-8 md:mb-12 lg:mb-16 xl:mb-20 2xl:mb-24`}>
+      <div className={`${style.headerTitle} text-center mb-8 md:mb-12 lg:mb-14 xl:mb-16 2xl:mb-20`}>
         <h2 className="text-2xl font-semibold text-gray-800">My experiences</h2>
         <p className="text-sm text-gray-600">A few of my experiences as professional and student</p>
       </div>
