@@ -1,12 +1,13 @@
 import style from "@/styles/experiences.module.scss";
+import { SectionHeaderContainer, SectionSubtitle, SectionTitle } from "@/components/section-header/SectionHeader";
 
 export const Experience: React.FC = (): JSX.Element => {
   return (
     <section id={"experience"} className={"flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16"}>
-      <div className={`${style.headerTitle} text-center my-8 md:mb-12 lg:mb-14 xl:mb-16 2xl:mb-20`}>
-        <h2 className="text-2xl font-semibold text-gray-800">My experiences</h2>
-        <p className="text-sm text-gray-600">A few of my experiences as professional and student</p>
-      </div>
+      <SectionHeaderContainer>
+          <SectionTitle text="My experiences"/>
+          <SectionSubtitle text="A few of my experiences as professional and student"/>
+      </SectionHeaderContainer>
       <div className="w-full sm:w-3/4">
         <ul className={`${style.timeline} ${style.timelineCentered}`}>
           <li className={style.timelineItem}>
