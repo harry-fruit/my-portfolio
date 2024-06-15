@@ -1,5 +1,6 @@
 import Image from "next/image";
 import style from "@/styles/about.module.scss";
+import { LineSplit } from "@/components/LineSplit";
 
 export const About: React.FC = (): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ export const About: React.FC = (): JSX.Element => {
           temporibus quam dolores labore laborum, eius iste voluptatem, quas,
           illum rerum ex vero consequatur?
         </h4>
-        <div className={`${style.lineSplit} absolute bottom-0 md:left-0`}/>
+        <LineSplit className={"md:left-0"}/>
       </div>
       <div id="text-wrapper" className={`${style.txt} flex flex-col justify-center gap-2 md:mt-4`}>
         <p className="text-center md:text-start text-gray-600">
