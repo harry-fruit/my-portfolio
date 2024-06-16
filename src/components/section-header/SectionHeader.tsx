@@ -11,12 +11,12 @@ type SectionTextProps = {
 } & DefaultProps;
 
 export const SectionHeaderContainer: React.FC<SectionHeaderContainerProps> = ({
-  children,
+  children = "",
   className,
 }: SectionHeaderContainerProps): JSX.Element => {
   return (
     <div
-      className={`text-center my-8 md:mb-12 lg:mb-14 xl:mb-16 2xl:mb-20 ${className}`}
+      className={`text-center my-8 md:mb-12 lg:mb-14 xl:mb-16 2xl:mb-20 ${className} flex flex-col justify-center items-center`}
     >
       {children}
     </div>
@@ -25,7 +25,7 @@ export const SectionHeaderContainer: React.FC<SectionHeaderContainerProps> = ({
 
 export const SectionTitle: React.FC<SectionTextProps> = ({
   text,
-  className,
+  className = "",
 }: SectionTextProps): JSX.Element => {
   return (
     <h2 className={`text-2xl font-semibold text-gray-800 ${className}`}>
@@ -36,7 +36,7 @@ export const SectionTitle: React.FC<SectionTextProps> = ({
 
 export const SectionSubtitle: React.FC<SectionTextProps> = ({
   text,
-  className,
+  className = "",
 }: SectionTextProps): JSX.Element => {
   return (
     <p

@@ -1,88 +1,34 @@
-import style from "@/styles/experiences.module.scss";
-import { SectionHeaderContainer, SectionSubtitle, SectionTitle } from "@/components/section-header/SectionHeader";
+import {
+  SectionHeaderContainer,
+  SectionSubtitle,
+  SectionTitle,
+} from "@/components/section-header/SectionHeader";
+import { FadeIn } from "@/components/FadeIn";
+import { Timeline } from "@/components/timeline/Timeline";
+import { TimelineItem } from "@/components/timeline/TimelineItem";
+import { TimelinePeriod } from "@/components/timeline/TimelinePeriod";
 
 export const Experience: React.FC = (): JSX.Element => {
   return (
-    <section id={"experience"} className={"flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16"}>
-      <SectionHeaderContainer>
-          <SectionTitle text="My experiences"/>
-          <SectionSubtitle text="A few of my experiences as professional and student"/>
-      </SectionHeaderContainer>
-      <div className="w-full sm:w-3/4">
-        <ul className={`${style.timeline} ${style.timelineCentered}`}>
-          <li className={style.timelineItem}>
-            <div className={`${style.timelineInfo} text-gray-600`}>
-              <span>February 12, 2022</span>
-            </div>
-            <div className={style.timelineMarker}></div>
-            <div className={style.timelineContent}>
-              <h3 className={`${style.timelineTitle} text-lg font-semibold text-gray-600`}>Event Title</h3>
-              <p className="text-gray-600">
-                Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a,
-                consectetuer eget, posuere ut, mauris. Donec orci lectus,
-                aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien
-                ut libero venenatis faucibus. ullam dictum felis eu pede mollis
-                pretium. Pellentesque ut neque.
-              </p>
-            </div>
-          </li>
-          <li className={style.timelineItem}>
-            <div className={`${style.timelineInfo} text-gray-600`}>
-              <span>February 23, 2022</span>
-            </div>
-            <div className={style.timelineMarker}></div>
-            <div className={style.timelineContent}>
-              <h3 className={`${style.timelineTitle} text-lg font-semibold text-gray-600`}>Event Title</h3>
-              <p className="text-gray-600">
-                Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a,
-                consectetuer eget, posuere ut, mauris. Donec orci lectus,
-                aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien
-                ut libero venenatis faucibus. ullam dictum felis eu pede mollis
-                pretium. Pellentesque ut neque.
-              </p>
-            </div>
-          </li>
-          <li className={`${style.timelineItem} ${style.period}`}>
-            <div className={style.timelineInfo}></div>
-            <div className={style.timelineMarker}></div>
-            <div className={style.timelineContent}>
-              <h2 className={`${style.timelineTitle} text-2xl font-bold text-gray-600`}>March 2022</h2>
-            </div>
-          </li>
-          <li className={style.timelineItem}>
-            <div className={`${style.timelineInfo} text-gray-600`}>
-              <span>March 02, 2022</span>
-            </div>
-            <div className={style.timelineMarker}></div>
-            <div className={style.timelineContent}>
-              <h3 className={`${style.timelineTitle} text-lg font-semibold text-gray-600`}>Event Title</h3>
-              <p className="text-gray-600">
-                Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a,
-                consectetuer eget, posuere ut, mauris. Donec orci lectus,
-                aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien
-                ut libero venenatis faucibus. ullam dictum felis eu pede mollis
-                pretium. Pellentesque ut neque.
-              </p>
-            </div>
-          </li>
-          <li className={style.timelineItem}>
-            <div className={`${style.timelineInfo} text-gray-600`}>
-              <span>March 28, 2022</span>
-            </div>
-            <div className={style.timelineMarker}></div>
-            <div className={style.timelineContent}>
-              <h3 className={`${style.timelineTitle} text-lg font-semibold text-gray-600`}>Event Title</h3>
-              <p className="text-gray-600">
-                Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a,
-                consectetuer eget, posuere ut, mauris. Donec orci lectus,
-                aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien
-                ut libero venenatis faucibus. ullam dictum felis eu pede mollis
-                pretium. Pellentesque ut neque.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <section
+      id={"experience"}
+      className={
+        "flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-2 md:px-6 lg:px-20 xl:px-36 2xl:px-52"
+      }
+    >
+      <FadeIn>
+        <SectionHeaderContainer>
+          <SectionTitle text="My experiences" />
+          <SectionSubtitle text="A few of my experiences as professional and student" />
+        </SectionHeaderContainer>
+      </FadeIn>
+      <Timeline>
+        <TimelineItem date="February 12, 2022" title="Event Title" description="Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque." />
+        <TimelineItem date="February 23, 2022" title="Event Title" description="Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque." />
+        <TimelinePeriod period="March 2022" />
+        <TimelineItem date="March 02, 2022" title="Event Title" description="Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque." />
+        <TimelineItem date="March 28, 2022" title="Event Title" description="Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque." />
+      </Timeline>
     </section>
   );
 };
