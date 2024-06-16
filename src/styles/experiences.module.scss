@@ -172,11 +172,17 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
         .timelineInfo {
             padding-right: 30px;
+            width: 40%;
         }
 
         .period .timelineTitle {
             position: relative;
             left: -45px;
+        }
+
+        .period .timelineInfo {
+            padding-right: 30px;
+            width: 28.5vw;
         }
     }
 }
