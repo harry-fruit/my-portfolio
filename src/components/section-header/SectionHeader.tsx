@@ -28,7 +28,7 @@ export const SectionTitle: React.FC<SectionTextProps> = ({
   className = "",
 }: SectionTextProps): JSX.Element => {
   return (
-    <h2 className={`text-2xl font-semibold text-gray-800 ${className}`}>
+    <h2 className={`text-2xl text-gray-800 dark:text-gray-50 font-bold ${className}`}>
       {text}
     </h2>
   );
@@ -40,7 +40,7 @@ export const SectionSubtitle: React.FC<SectionTextProps> = ({
 }: SectionTextProps): JSX.Element => {
   return (
     <p
-      className={`text-gray-600 m-[0 auto] max-w-[400px] text-base ${className}`}
+      className={`text-gray-600 dark:text-gray-300 font-semibold m-[0 auto] max-w-[400px] text-base ${className}`}
     >
       {text}
     </p>

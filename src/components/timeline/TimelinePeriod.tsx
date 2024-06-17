@@ -15,7 +15,7 @@ export const TimelinePeriod: React.FC<Props> = ({
         <div className={style.timelineMarker}></div>
         <div className={style.timelineContent}>
           <h2
-            className={`${style.timelineTitle} text-2xl font-bold text-gray-600`}
+            className={`${style.timelineTitle} text-2xl text-gray-800 dark:text-gray-50 font-bold`}
           >
             {period}
           </h2>
