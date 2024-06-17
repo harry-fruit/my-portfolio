@@ -5,7 +5,7 @@ import {
 } from "@/components/section-header/SectionHeader";
 import { FadeIn } from "@/components/FadeIn";
 import { CardItem } from "@/components/CardItem";
-import { ResponsiveSlideGrid } from "../ResponsiveSlideGrid";
+import { ResponsiveSlideGrid } from "@/components/ResponsiveSlideGrid";
 
 export const Projects: React.FC = (): JSX.Element => {
   return (
@@ -20,11 +20,44 @@ export const Projects: React.FC = (): JSX.Element => {
           <SectionTitle text="My projects" />
           <SectionSubtitle text="A few of my projects as professional and student" />
         </SectionHeaderContainer>
-        <div id="container" className="w-full h-full">
+        <div id="container" className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]">
           <ResponsiveSlideGrid>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
+            <CardItem
+              title="Project 1"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
+            <CardItem
+              title="Project 2"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
+            <CardItem
+              title="Project 3"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
+            <CardItem
+              title="Project 4"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
+            <CardItem
+              title="Project 5"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
+            <CardItem
+              title="Project 6"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
+              imgOptions={{ src: "/beach.jpg", alt: "project" }}
+              // className="bg-green-600"
+            />
           </ResponsiveSlideGrid>
         </div>
       </section>

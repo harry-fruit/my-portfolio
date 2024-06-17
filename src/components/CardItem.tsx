@@ -1,26 +1,42 @@
 import style from "@/styles/project-card.module.scss";
-
 import Image from "next/image";
 import { RightArrow } from "@/components/icons/RightArrow";
 
-export const CardItem: React.FC = (): JSX.Element => { 
+type ImgOptions = {
+  src: string;
+  alt: string;
+};
+
+type Props = {
+  className?: string;
+  title: string;
+  description: string;
+  imgOptions: ImgOptions;
+};
+
+export const CardItem: React.FC<Props> = ({
+  className,
+  title,
+  description,
+  imgOptions,
+}: Props) => {
   return (
     <div
       id="card-container"
-      className="w-[100vw] h-[600px] lg:w-[450px] relative flex flex-col items-center justify-center "
+      className={`w-[100vw] h-[600px] lg:w-[450px] relative flex flex-col items-center justify-center ${className}`}
     >
       <div
         id="card"
-        className={`bg-slate-100 dark:bg-slate-900 w-[325px] h-[525px] border absolute rounded-xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
+        className={`bg-slate-100 dark:bg-slate-800 w-[325px] h-[525px] border absolute rounded-xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
       >
         <div
           id="card-img"
           className="w-full h-1/2 flex flex-col items-center justify-center relative"
         >
           <Image
-            src="/beach.jpg"
-            alt="project"
-            className="rounded-3xl object-cover"
+            src={imgOptions.src}
+            alt={imgOptions.alt}
+            className="rounded-xl object-cover"
             fill
           />
         </div>
@@ -32,20 +48,24 @@ export const CardItem: React.FC = (): JSX.Element => {
             id="card-header"
             className="w-full flex justify-between items-center "
           >
-            <div id="card-title" className="text-2xl">Project name</div>
-            <div className="bg-slate-800 p-2 rounded-full">
-                <RightArrow width="20" height="20" className="text-gray-50"/>
+            <div id="card-title">
+              <p className={`text-2xl text-gray-600 dark:text-gray-300 font-semibold ${style.cardTitle}`}>
+                {title}
+              </p>
+            </div>
+            <div className={`p-2 rounded-full ${style.button}`}>
+              <RightArrow width="20" height="20" className="text-gray-50" />
             </div>
           </div>
-          <div id="card-description" className="text-base">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure,
-            quo provident vero explicabo ratione, veniam, accusamus molestias
-            perspiciatis perferendis recusandae impedit ipsum eveniet amet
-            quaerat fugit dolor. Dignissimos, laborum.
+          <div id="card-description" className="text-base ">
+            <p className="text-gray-600 dark:text-gray-400">{description}</p>
           </div>
         </div>
       </div>
-      <div id="animated-card" className={`w-[325px] h-[525px] dark:bg-slate-600 absolute rounded-3xl ${style.animatedCard}`}></div>
+      <div
+        id="animated-card"
+        className={`w-[325px] h-[525px] bg-primary-600 dark:bg-slate-600 absolute rounded-xl ${style.animatedCard}`}
+      ></div>
     </div>
   );
 };

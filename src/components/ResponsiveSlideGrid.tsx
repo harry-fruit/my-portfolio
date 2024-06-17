@@ -29,7 +29,7 @@ export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
   });
 
   return (
-    <div className="h-full w-full bg-white flex flex-col justify-center items-start">
+    <div className="h-full w-full flex flex-col justify-center items-start">
       <div
         className="flex flex-col justify-start items-start h-full w-full transition-transform duration-300 "
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -39,20 +39,20 @@ export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
       </div>
       <div className="w-full flex flex-col justify-center items-center mb-10">
         <div className="w-full flex justify-center items-center gap-2 mb-2">
-          <div className="flex flex-col items-center justify-center p-4 border rounded">
+          <div className="flex flex-col items-center justify-center p-4 border rounded active:shadow-md dark:active:border-white">
             <LeftArrow
               onClick={prevSlide}
               width="20"
               height="20"
-              className="text-gray-900"
+              className="text-gray-900 dark:text-gray-300 dark:active:text-white"
             />
           </div>
-          <div className="flex flex-col items-center justify-center p-4 border rounded">
+          <div className="flex flex-col items-center justify-center p-4 border rounded active:shadow-md dark:active:border-white">
             <RightArrow
               onClick={nextSlide}
               width="20"
               height="20"
-              className="text-gray-900"
+              className="text-gray-900 dark:text-gray-300 dark:active:text-white"
             />
           </div>
         </div>
@@ -75,7 +75,7 @@ export const ResponsiveSlideGrid: React.FC<Props> = ({ children }: Props) => {
 
 export const GridComponent: React.FC<Props> = ({ children }: Props) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
       {children}
     </div>
   );
