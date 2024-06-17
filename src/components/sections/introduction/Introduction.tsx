@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AnimatedBackground } from "@/components/introduction/AnimatedBackground";
+import { AnimatedBackground } from "@/components/sections/introduction/AnimatedBackground";
 
 export const Introduction: React.FC = (): JSX.Element => {
   return (

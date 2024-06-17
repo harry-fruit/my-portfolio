@@ -2,10 +2,10 @@ import {
   SectionHeaderContainer,
   SectionSubtitle,
   SectionTitle,
-} from "@/components/section-header/SectionHeader";
-import { FadeIn } from "@/components/FadeIn";
-import { CardItem } from "@/components/CardItem";
-import { ResponsiveSlideGrid } from "@/components/ResponsiveSlideGrid";
+} from "@/components/shared/section-header/SectionHeader";
+import { FadeIn } from "@/components/shared/FadeIn";
+import { CardItem } from "@/components/sections/projects/CardItem";
+import { ResponsiveSlideGrid } from "@/components/shared/ResponsiveSlideGrid";
 
 export const Projects: React.FC = (): JSX.Element => {
   return (
@@ -26,13 +26,11 @@ export const Projects: React.FC = (): JSX.Element => {
               title="Project 1"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
             <CardItem
               title="Project 2"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
             <CardItem
               title="Project 3"

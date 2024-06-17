@@ -2,11 +2,11 @@ import {
   SectionHeaderContainer,
   SectionSubtitle,
   SectionTitle,
-} from "@/components/section-header/SectionHeader";
-import { FadeIn } from "@/components/FadeIn";
-import { Timeline } from "@/components/timeline/Timeline";
-import { TimelineItem } from "@/components/timeline/TimelineItem";
-import { TimelinePeriod } from "@/components/timeline/TimelinePeriod";
+} from "@/components/shared/section-header/SectionHeader";
+import { FadeIn } from "@/components/shared/FadeIn";
+import { Timeline } from "@/components/sections/about/timeline/Timeline";
+import { TimelineItem } from "@/components/sections/about/timeline/TimelineItem";
+import { TimelinePeriod } from "@/components/sections/about/timeline/TimelinePeriod";
 
 export const Experience: React.FC = (): JSX.Element => {
   return (

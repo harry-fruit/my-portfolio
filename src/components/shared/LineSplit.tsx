@@ -1,5 +1,5 @@
 import React from "react";
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn } from "@/components/shared/FadeIn";
 
 type DefaultProps = {
   /**

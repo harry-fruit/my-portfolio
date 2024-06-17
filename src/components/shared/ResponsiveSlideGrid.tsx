@@ -3,8 +3,8 @@
 import useSize from "@/hooks/useSize";
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { LeftArrow } from "./icons/LeftArrow";
-import { RightArrow } from "./icons/RightArrow";
+import { LeftArrow } from "@/components/icons/LeftArrow";
+import { RightArrow } from "@/components/icons/RightArrow";
 
 type Props = {
   children: React.ReactNode;

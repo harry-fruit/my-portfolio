@@ -1,8 +1,8 @@
-import { Introduction } from "@/components/introduction/Introduction";
-import { About } from "@/components/about/About";
-import { Experience } from "@/components/experiences/Experiences";
-import { LineSplit } from "@/components/LineSplit";
-import { Projects } from "@/components/projects/Projects";
+import { Introduction } from "@/components/sections/introduction/Introduction";
+import { About } from "@/components/sections/about/About";
+import { Experience } from "@/components/sections/Experiences";
+import { LineSplit } from "@/components/shared/LineSplit";
+import { Projects } from "@/components/sections/projects/Projects";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <Experience />
       <LineSplit fadeIn alignCenter />
       <Projects />
+      <LineSplit fadeIn alignCenter />
     </main>
   );
 }

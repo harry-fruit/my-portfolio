@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "@/styles/about.module.scss";
-import { LineSplit } from "@/components/LineSplit";
-import { FadeIn } from "@/components/FadeIn";
+import { LineSplit } from "@/components/shared/LineSplit";
+import { FadeIn } from "@/components/shared/FadeIn";
 
 export const About: React.FC = (): JSX.Element => {
   return (

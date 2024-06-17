@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { useAnimeIntroduction } from "@/hooks/useAnimeIntroduction";
 import style from "@/styles/introduction.module.scss";
-import { LearnMoreButton } from "@/components/introduction/LearnMoreButton";
+import { LearnMoreButton } from "@/components/sections/introduction/LearnMoreButton";
 
 export const AnimatedBackground: React.FC = (): JSX.Element => {
   const headerRef = useRef<HTMLHeadingElement>(null);
