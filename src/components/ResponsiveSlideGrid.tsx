@@ -1,7 +1,10 @@
 "use client";
 
 import useSize from "@/hooks/useSize";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
+import { LeftArrow } from "./icons/LeftArrow";
+import { RightArrow } from "./icons/RightArrow";
 
 type Props = {
   children: React.ReactNode;
@@ -9,8 +12,6 @@ type Props = {
 
 export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % React.Children.count(children));
@@ -22,38 +23,40 @@ export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
     );
   };
 
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    touchStartX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50) {
-      nextSlide();
-    }
-
-    if (touchStartX.current - touchEndX.current < -50) {
-      prevSlide();
-    }
-  };
+  const handlers = useSwipeable({
+    onSwipedLeft: nextSlide,
+    onSwipedRight: prevSlide,
+  });
 
   return (
-    <div className="h-full w-full">
-      <button onClick={nextSlide}>next</button>
-      <button onClick={prevSlide}>previous</button>
+    <div className="h-full w-full bg-white flex flex-col justify-center items-start">
       <div
-        className="flex flex-col justify-start items-start relative h-full w-full transition-transform duration-300"
+        className="flex flex-col justify-start items-start h-full w-full transition-transform duration-300 "
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        {...handlers}
       >
-        <div className="absolute left-0 overflow-scroll bg-white flex flex-nowrap lg:w-0">
-          {children}
+        <div className=" flex flex-nowrap lg:w-0">{children}</div>
+      </div>
+      <div className="w-full flex flex-col justify-center items-center mb-10">
+        <div className="w-full flex justify-center items-center gap-2 mb-2">
+          <div className="flex flex-col items-center justify-center p-4 border rounded">
+            <LeftArrow
+              onClick={prevSlide}
+              width="20"
+              height="20"
+              className="text-gray-900"
+            />
+          </div>
+          <div className="flex flex-col items-center justify-center p-4 border rounded">
+            <RightArrow
+              onClick={nextSlide}
+              width="20"
+              height="20"
+              className="text-gray-900"
+            />
+          </div>
         </div>
+        <p className="text-gray-500 text-xs"><i>Tip: you can slide or click next to see more projects</i></p> 
       </div>
     </div>
   );

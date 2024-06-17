@@ -11,7 +11,7 @@ export const CardItem: React.FC = (): JSX.Element => {
     >
       <div
         id="card"
-        className={`bg-slate-100 dark:bg-slate-900 w-[325px] h-[525px] border absolute rounded-3xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
+        className={`bg-slate-100 dark:bg-slate-900 w-[325px] h-[525px] border absolute rounded-xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
       >
         <div
           id="card-img"

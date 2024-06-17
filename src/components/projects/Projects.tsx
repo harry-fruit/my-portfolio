@@ -20,7 +20,7 @@ export const Projects: React.FC = (): JSX.Element => {
           <SectionTitle text="My projects" />
           <SectionSubtitle text="A few of my projects as professional and student" />
         </SectionHeaderContainer>
-        <div id="container" className="w-full h-screen">
+        <div id="container" className="w-full h-full">
           <ResponsiveSlideGrid>
             <CardItem/>
             <CardItem/>
