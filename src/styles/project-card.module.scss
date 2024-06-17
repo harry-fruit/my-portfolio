@@ -1,0 +1,35 @@
+.card {
+  z-index: 10;
+  // background-color: blue;
+  z-index: 1;
+
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1), 
+  0px 5px 10px rgba(0, 0, 0, 0.05);
+  // border: .25px solid rgba(255, 255, 255, 0.274);
+
+  &:hover {
+    cursor: pointer;
+
+    +.animatedCard {
+      transform: rotate(5deg);
+    }
+    
+  }
+  
+}
+
+.animatedCard {
+  z-index: 0;
+  transition: transform 0.2s;
+}
+
+
+@media (min-width: 768px) {
+  .card {
+    &:hover {
+      +.animatedCard {
+        transform: rotate(12deg);
+      }
+    }
+  }
+}

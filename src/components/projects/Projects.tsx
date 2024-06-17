@@ -4,6 +4,8 @@ import {
   SectionTitle,
 } from "@/components/section-header/SectionHeader";
 import { FadeIn } from "@/components/FadeIn";
+import { CardItem } from "@/components/CardItem";
+import { ResponsiveSlideGrid } from "../ResponsiveSlideGrid";
 
 export const Projects: React.FC = (): JSX.Element => {
   return (
@@ -18,6 +20,13 @@ export const Projects: React.FC = (): JSX.Element => {
           <SectionTitle text="My projects" />
           <SectionSubtitle text="A few of my projects as professional and student" />
         </SectionHeaderContainer>
+        <div id="container" className="w-full h-screen">
+          <ResponsiveSlideGrid>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+          </ResponsiveSlideGrid>
+        </div>
       </section>
     </FadeIn>
   );
