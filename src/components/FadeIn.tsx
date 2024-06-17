@@ -22,8 +22,8 @@ export const FadeIn = ({ children, className }: Props) => {
       anime({
         targets: ref.current,
         opacity: [0, 1],
-        translateX: [(width / 2), 0],
-        duration: 500,
+        translateY: [-20, 0],
+        duration: 1000,
         easing: "spring(1, 80, 15, 0)",
       });
     }
