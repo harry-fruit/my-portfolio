@@ -1,0 +1,59 @@
+@import "variables";
+
+textarea.input {
+  resize: none;
+}
+
+.input {
+  color: $color-slate-50;
+  font-size: 0.9rem;
+  background-color: $bg-transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: 2px solid $color-slate-300;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus+.inputBorder {
+    transform: scaleX(100%);
+  }
+}
+
+.inputBorder {
+  position: absolute;
+  background: var(--border-after-color);
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0%);
+  transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.formControl {
+  position: relative;
+  --width-of-input: 300px;
+}
+
+.inputAlt {
+  font-size: 1.2rem;
+  padding-inline: 1em;
+  padding-block: 0.8em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:focus+.inputBorderAlt {
+    transform: scaleX(100%);
+  }
+}
+
+.inputBorderAlt {
+  height: 3px;
+  background: linear-gradient(90deg, $color-primary-200 0%, $color-primary-600 50%, $color-primary-200 100%);
+  transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
