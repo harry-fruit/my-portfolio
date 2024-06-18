@@ -4,8 +4,8 @@
     padding: 0.9rem 1.8rem;
     font-size: 16px;
     font-weight: 600;
-    color: $color-primary-600;
-    border: 3px solid $color-primary-600;
+    color: $color-primary-500;
+    border: 3px solid $color-primary-500;
     cursor: pointer;
     position: relative;
     background-color: $bg-transparent;
@@ -14,7 +14,7 @@
     z-index: 1;
 
     &>svg {
-        color: $color-primary-600;
+        color: $color-primary-500;
     }
 
     ;
@@ -26,7 +26,9 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: $color-primary-600;
+        background-color: $color-primary-500;
+        background: rgb(16,154,255);
+        background: linear-gradient(39deg, rgba(16,154,255,1) 50%, rgba(13,123,204,1) 95%);
         transform: translateX(-100%);
         transition: all .3s;
         z-index: -1;

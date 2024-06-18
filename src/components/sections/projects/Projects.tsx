@@ -13,11 +13,11 @@ export const Projects: React.FC = (): JSX.Element => {
       <section
         id={"projects"}
         className={
-          "flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16"
+          "flex flex-col items-center py-6 md:py-10 lg:pb-36 lg:pt-20"
         }
       >
         <SectionHeaderContainer>
-          <SectionTitle text="My projects" />
+          <SectionTitle text="My projects" className="text-primary-gradient dark:text-slate-50" />
           <SectionSubtitle text="A few of my projects as professional and student" />
         </SectionHeaderContainer>
         <div id="container" className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]">
@@ -36,25 +36,21 @@ export const Projects: React.FC = (): JSX.Element => {
               title="Project 3"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
             <CardItem
               title="Project 4"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
             <CardItem
               title="Project 5"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
             <CardItem
               title="Project 6"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
               imgOptions={{ src: "/beach.jpg", alt: "project" }}
-              // className="bg-green-600"
             />
           </ResponsiveSlideGrid>
         </div>

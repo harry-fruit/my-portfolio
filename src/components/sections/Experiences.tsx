@@ -18,7 +18,7 @@ export const Experience: React.FC = (): JSX.Element => {
     >
       <FadeIn>
         <SectionHeaderContainer>
-          <SectionTitle text="My experiences" />
+          <SectionTitle text="My experiences" className="text-primary-gradient" />
           <SectionSubtitle text="A few of my experiences as professional and student" />
         </SectionHeaderContainer>
       </FadeIn>

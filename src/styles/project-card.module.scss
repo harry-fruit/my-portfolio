@@ -1,5 +1,4 @@
-$primary-color: #109AFF;
-$active-primary-color: #0D7BCC;
+@import "variables.scss";
 
 .card {
   z-index: 1;
@@ -17,15 +16,15 @@ $active-primary-color: #0D7BCC;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 15%;
-      background-color: $active-primary-color;
+      height: 2.5px;
+      background-color: $color-primary-500;
       z-index: -1;
     }
 
   }
 
   .button {
-    background-color: $primary-color;
+    background-color: $color-primary-500;
     transform: rotate(-45deg);
     transition: all 0.2s;
   }
@@ -34,11 +33,15 @@ $active-primary-color: #0D7BCC;
     cursor: pointer;
 
     .button {
-      background-color: $active-primary-color;
+      background-color: $color-primary-600;
       transform: rotate(0deg);
+    }
+    .cardTitle {
+      color: $color-slate-50;
     }
     .cardTitle::after {
       height: 100%;
+      background-color: $color-primary-600;
     }
 
     +.animatedCard {
