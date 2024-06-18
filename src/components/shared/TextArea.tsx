@@ -33,7 +33,7 @@ export const TextArea = ({
       <textarea
         required={required}
         placeholder={placeholder}
-        className={`${style.input} ${style.inputAlt}`}
+        className={`${style.input} ${style.inputAlt} text-slate-800 dark:text-slate-50`}
         name={name}
         
       />

@@ -21,7 +21,7 @@ export const Form = () => {
           type="text"
           name="name"
           state={state}
-          placeholder={"Insert your name"}
+          placeholder={"Enter your name"}
           className={`w-full ${style.inputName}`}
           required
         />
@@ -30,7 +30,7 @@ export const Form = () => {
           type="email"
           name="email"
           state={state}
-          placeholder={"Insert your e-mail"}
+          placeholder={"Enter your email"}
           className={`w-full ${style.inputEmail}`}
           required
         />

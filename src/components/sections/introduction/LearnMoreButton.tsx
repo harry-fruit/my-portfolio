@@ -1,5 +1,6 @@
-import Image from "next/image";
 import style from "@/styles/introduction.module.scss";
+import { ProjectIcon } from "@/components/icons/ProjectIcon";
+import { ChevronDown } from "@/components/icons/ChevronDown";
 
 export const LearnMoreButton: React.FC = (): JSX.Element => {
   return (
@@ -8,11 +9,10 @@ export const LearnMoreButton: React.FC = (): JSX.Element => {
         id="wrapper"
         className="w-full h-full relative flex flex-col items-center justify-center"
       >
-        <Image
-          width={35}
-          height={35}
-          src={"/business_management_icon_white.svg"}
-          alt="logo"
+        <ProjectIcon
+          width={"50px"}
+          height={"50px"}
+          color="#F8FAFC"
           className={`${style.learnMoreHoverEffect} learn-more-hover-effect z-50`}
         />
         <div
@@ -20,12 +20,7 @@ export const LearnMoreButton: React.FC = (): JSX.Element => {
           className="opacity-0 flex flex-col items-center justify-center absolute"
         >
           <p className="text-md uppercase">learn more</p>
-          <Image
-            width={35}
-            height={35}
-            src="/chevron-down.svg"
-            alt="Learn More Button"
-          />
+          <ChevronDown width="35px" height="35px" color="#F8FAFC" />
         </div>
       </div>
     </div>
