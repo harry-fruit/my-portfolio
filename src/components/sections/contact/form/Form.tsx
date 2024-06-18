@@ -5,7 +5,7 @@ import { TextArea } from "@/components/shared/TextArea";
 import { useForm } from "@formspree/react";
 import { Button } from "@/components/sections/contact/form/Button";
 
-export const ContactForm = () => {
+export const Form = () => {
   const [state, handleSubmit] = useForm("mbjnneyo");
 
   if (state.succeeded) {
