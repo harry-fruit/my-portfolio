@@ -11,13 +11,13 @@ $active-primary-color: #0D7BCC;
     position: relative;
     
     &::after {
-      transition: all 0.5s;
+      transition: all 0.5s ease-in-out;
       content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 15%;
       background-color: $active-primary-color;
       z-index: -1;
     }

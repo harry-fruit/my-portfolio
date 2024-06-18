@@ -1,5 +1,6 @@
 "use client";
 
+import style from "@/styles/contact/form.module.scss";
 import { Input } from "@/components/shared/Input";
 import { TextArea } from "@/components/shared/TextArea";
 import { useForm } from "@formspree/react";
@@ -13,14 +14,24 @@ export const Form = () => {
   }
 
   return (
-    <div id="contact-form">
-      <form onSubmit={handleSubmit}>
+    <div id="contact-form" className="w-full">
+      <form onSubmit={handleSubmit} className={`w-full ${style.form}`}>
+        <Input
+          id="name"
+          type="text"
+          name="name"
+          state={state}
+          placeholder={"Insert your name"}
+          className={`w-full ${style.inputName}`}
+          required
+        />
         <Input
           id="email"
           type="email"
           name="email"
           state={state}
           placeholder={"Insert your e-mail"}
+          className={`w-full ${style.inputEmail}`}
           required
         />
         <TextArea
@@ -28,9 +39,15 @@ export const Form = () => {
           name="message"
           state={state}
           placeholder={"Write your message here"}
+          className={`w-full ${style.inputMessage}`}
           required
         />
-        <Button type={"submit"} text={"Submit"} disabled={state.submitting} />
+        <Button
+          type={"submit"}
+          text={"Submit"}
+          disabled={state.submitting}
+          className={`w-full mt-4 lg:mt-16 xl:mt-10 xl:w-[50%] 2xl:w-[35%] ${style.inputButton}`}
+        />
       </form>
     </div>
   );

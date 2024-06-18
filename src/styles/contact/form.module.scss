@@ -1,0 +1,43 @@
+.form {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "email"
+        "message"
+        "button";
+
+    .inputName {
+        grid-area: name;
+    }
+
+    .inputEmail {
+        grid-area: email;
+    }
+
+    .inputMessage {
+        grid-area: message;
+    }
+
+    .inputButton {
+        justify-self: center;
+        grid-area: button;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .form {
+        grid-template-areas:
+            "name email"
+            "message message"
+            "button button";
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .form {
+        row-gap: 1rem;
+        column-gap: 2rem;
+    }
+}
