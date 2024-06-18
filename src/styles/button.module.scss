@@ -1,0 +1,46 @@
+@import "variables";
+
+.btn {
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-primary-600;
+    border: 3px solid $color-primary-600;
+    cursor: pointer;
+    position: relative;
+    background-color: $bg-transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+
+    &>svg {
+        color: $color-primary-600;
+    }
+
+    ;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary-600;
+        transform: translateX(-100%);
+        transition: all .3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $color-slate-50;
+
+        &>svg {
+            color: $color-slate-50;
+        }
+
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

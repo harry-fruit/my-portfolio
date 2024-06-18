@@ -3,6 +3,7 @@ import { About } from "@/components/sections/about/About";
 import { Experience } from "@/components/sections/Experiences";
 import { LineSplit } from "@/components/shared/LineSplit";
 import { Projects } from "@/components/sections/projects/Projects";
+import { Contact } from "@/components/sections/contact/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Experience />
       <LineSplit fadeIn alignCenter />
       <Projects />
-      <LineSplit fadeIn alignCenter />
+      <Contact />
+      {/* <LineSplit fadeIn alignCenter /> */}
     </main>
   );
 }
