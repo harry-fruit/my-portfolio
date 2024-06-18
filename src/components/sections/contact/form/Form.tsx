@@ -10,7 +10,7 @@ export const Form = () => {
   const [state, handleSubmit] = useForm("mbjnneyo");
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks for your message. I will get in touch as soon as possible! :&#41;</p>;
   }
 
   return (

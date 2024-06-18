@@ -3,12 +3,12 @@
 .card {
   z-index: 1;
 
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1), 
-  0px 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1),
+    0px 5px 10px rgba(0, 0, 0, 0.05);
 
   .cardTitle {
     position: relative;
-    
+
     &::after {
       transition: all 0.5s ease-in-out;
       content: "";
@@ -36,29 +36,44 @@
       background-color: $color-primary-600;
       transform: rotate(0deg);
     }
+
     .cardTitle {
       color: $color-slate-50;
     }
+
     .cardTitle::after {
       height: 100%;
       background-color: $color-primary-600;
     }
 
     +.animatedCard {
+      transform: rotate(2.5deg);
+      opacity: 1;
+    }
+
+    ~.animatedCard:last-child {
       transform: rotate(5deg);
       opacity: 1;
     }
-    
+
   }
-  
+
 }
 
 .animatedCard {
   z-index: 0;
   transition: all 0.2s;
   opacity: 0;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1), 
-  0px 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1),
+    0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.animatedCard:last-child {
+  z-index: -1;
+  transition: all 0.2s;
+  opacity: 1;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1),
+    0px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -66,20 +81,12 @@
   .card {
     &:hover {
       +.animatedCard {
-        transform: rotate(12deg);
+        transform: rotate(4deg);
+      }
+
+      ~.animatedCard:last-child {
+        transform: rotate(8deg);
       }
     }
   }
 }
-
-
-//TODO: Fixar estilos de hover
-// @media (prefers-color-scheme: light) {
-//   .card {
-//     &:hover {
-//       .cardTitle::after {
-//         color: white!important;
-//       }
-//     }
-//   }
-// }
