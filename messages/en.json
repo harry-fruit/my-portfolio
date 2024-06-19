@@ -1,5 +1,54 @@
 {
   "introduction": {
     "learnMore": "Learn more"
+  },
+  "about": {
+    "title": "Hey there! I'm Isaque!",
+    "subTitle": "Passionate about creating web solutions and enthusiastic about AI, always exploring new ways to innovate and improve processes",
+    "firstParagraph": "I am a full stack web developer with extensive experience in front-end. I have solid knowledge in jQuery, React, Next.js, and previous experience with Gatsby, which allows me to create intuitive and dynamic user interfaces, always applying the best practices and available technologies. My dedication to front-end development drives me to constantly strive for excellence and create engaging and accessible user experiences.",
+    "secondParagraph": "In the back-end, I work efficiently using Node.js and Python to create REST APIs and develop automated ETL processes. I also have some experience with Java, which allows me to leverage its strengths in building robust backend services. My solid knowledge in relational databases, especially SQL Server, enables me to effectively manage and integrate data in complex systems",
+    "thirdParagraph": "As a software engineer, I value efficiency in creating robust and scalable solutions. I prioritize writing clean and well-structured code, ensuring that solutions are sustainable and easy to maintain. Additionally, I am a strong advocate for AI, constantly exploring new technologies to optimize and transform processes, believing in AI's potential to revolutionize software development"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "subTitle": "Some of my experiences as a developer and student",
+    "card1date": "January 2020",
+    "card1title": "Introduction to the world of development",
+    "card1description": "My first 'Hello World'. It was here where I began studying on my own and became self-taught.",
+    "card2date": "March 2020",
+    "card2title": "Development of personal projects",
+    "card2description": "After building a solid knowledge base, I decided to deepen my studies through the development of personal projects.",
+    "card3date": "January 2021",
+    "card3title": "Start of College",
+    "card3description": "After a year of self-study and skill development, I decided to enroll in the Software Analysis and Development course at Universidade Cruzeiro do Sul.",
+    "card4date": "June 2021",
+    "card4title": "First professional experience",
+    "card4description": "This is where I began working as a developer, working on web applications as a full stack developer.",
+    "card5date": "January 2022",
+    "card5title": "Joining 4MapIT",
+    "card5description": "Here, I worked as a systems analyst, conducting requirements gathering, systems modeling, and web application development using jQuery, Node.js, and SQL Server.",
+    "card6date": "January 2023",
+    "card6title": "College Graduation",
+    "card6description": "This is where I graduated as a systems analyst, learned database management, developed web and mobile applications, and primarily honed my skills in software engineering.",
+    "card7date": "March 2023",
+    "card7title": "College Graduation",
+    "card7description": "This is where I graduated as a systems analyst, learned database management, developed web and mobile applications, and primarily honed my skills in software engineering.",
+    "card8date": "Present",
+    "card8title": "What I do now?",
+    "card8description": "Currently, I work full-time as a systems analyst at Octea. In my spare time, I work as a freelancer and continue to deepen my knowledge in various areas of technology, such as web application development, data science, machine learning, etc.",
+    "present": "Present"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subTitle": "Some of my personal and professional projects"
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "subTitle": "Got a question or proposal, or just want to say hello? Go ahead",
+    "inputNamePlaceholder": "Enter your name",
+    "inputEmailPlaceholder": "Enter your email",
+    "inputMessagePlaceholder": "Write your message here",
+    "inputButton": "Submit",
+    "success": "Thanks for your message. I will get in touch as soon as possible! :)"
   }
 }

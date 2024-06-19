@@ -1,5 +1,55 @@
 {
   "introduction": {
     "learnMore": "Saiba mais"
+  },
+  "about": {
+    "title": "Olá! Eu sou Isaque!",
+    "subTitle": "Apaixonado por criar soluções web e entusiasta em IA, sempre explorando novas formas de inovar e melhorar processos.",
+    "firstParagraph": "Sou um desenvolvedor web full stack com vasta experiência em front-end. Possuo conhecimentos sólidos em jQuery, React, Next.js e experiência prévia com Gatsby, o que me permite criar interfaces de usuário intuitivas e dinâmicas, sempre aplicando as melhores práticas e tecnologias disponíveis. Minha dedicação ao desenvolvimento front-end me impulsiona a sempre buscar a excelência e criar experiências de usuário envolventes e acessíveis.",
+    "secondParagraph": "No back-end, trabalho com eficiência utilizando Node.js e Python para criar APIs REST e desenvolver processos automatizados e de ETL. Também possuo alguma experiência com Java, o que me permite aproveitar suas vantagens na construção de serviços robustos no backend. Meu sólido conhecimento em bancos de dados relacionais, especialmente SQL Server, me permite gerenciar e integrar dados de forma eficaz em sistemas complexos.",
+    "thirdParagraph": "Como engenheiro de software, valorizo a eficiência na criação de soluções robustas e escaláveis. Priorizo a escrita de código limpo e bem estruturado, garantindo que as soluções sejam sustentáveis e de fácil manutenção. Além disso, sou um grande entusiasta de IA, sempre explorando novas tecnologias para otimizar e transformar processos, acreditando no potencial da IA para revolucionar o desenvolvimento de software."
+  },
+  "experiences": {
+    "title": "Experiências",
+    "subTitle": "Algumas de minhas experiências como desenvolvedor e estudante",
+    "card1date": "Janeiro, 2020",
+    "card1title": "Introdução ao mundo do desenvolvimento",
+    "card1description": "Meu primeiro 'Hello World'. Foi aqui onde comecei a estudar por conta própria e me tornei autodidata.",
+    "card2date": "Março, 2020",
+    "card2title": "Desenvolvimento de projeto pessoais",
+    "card2description": "Após desenvolver uma boa base de conhecimentos, resolvi me aprofundar nos estudos a partir do desenvolvimento de projetos pessoais.",
+    "card3date": "Janeiro, 2021",
+    "card3title": "Inicio da Faculdade",
+    "card3description": "Após um ano estudando como autodidata e desenvolvendo minhas habilidades, resolvi entrar na Faculdade de Analise e Desenvolvimento de Software na Universidade Cruzeiro do Sul.",
+    "card4date": "Junho, 2021",
+    "card4title": "Primeira experiência profissional",
+    "card4description": "Foi aqui onde comecei a trabalhar como desenvolvedor, trabalhando em aplicativos web já como full stack.",
+    "card5date": "Janeiro, 2022",
+    "card5title": "Ingressão à 4MapIT",
+    "card5description": "Aqui trabalhei como analista de sistemas, realizando levantamento de requisitos, modelagem de sistemas e desenvolvimento de aplicativos web, onde realizava o desenvolvimento full stack com jQuery, Node.js e SQLServer.",
+    "card6date": "Janeiro, 2023",
+    "card6title": "Formatura da Faculdade",
+    "card6description": "Foi aqui onde me formei como analista de sistemas, aprendi a trabalhar com banco de dados, a criar aplicações web e aplicações mobile, e, principalmente , foi onde desenvolvi meus conhecimentos sobre engenharia de software.",
+    "card7date": "Março, 2023",
+    "card7title": "Formatura da Faculdade",
+    "card7description": "Foi aqui onde me formei como analista de sistemas, aprendi a trabalhar com banco de dados, a criar aplicações web e aplicações mobile, e, principalmente , foi onde desenvolvi meus conhecimentos sobre engenharia de software.",
+    "card8date": "Presente",
+    "card8title": "O que faço agora?",
+    "card8description": "Atualmente estou trabalhando full time como analista de sistemas na Octea e nas horas vagas, atuo como freelancer e também sigo me aprofundando em conhecimento de diversas areas de tecnologia, como o desenvolvimento de aplicativos web, data science, machine learning, etc.",
+    "present": "Presente"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "subTitle": "Alguns dos meus projetos pessoais e profissionais"
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "subTitle": "Tem alguma duvida ou proposta, ou só quer dizer olá? Então, vamos!",
+    "inputNamePlaceholder": "Insira seu nome",
+    "inputEmailPlaceholder": "Insira seu email",
+    "inputMessagePlaceholder": "Escreva sua mensagem aqui",
+    "inputButton": "Enviar",
+    "success": "Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :)"
   }
+  
 }

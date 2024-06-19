@@ -6,21 +6,27 @@ import {
 import { FadeIn } from "@/components/shared/FadeIn";
 import { CardItem } from "@/components/sections/projects/CardItem";
 import { ResponsiveSlideGrid } from "@/components/shared/ResponsiveSlideGrid";
+import { useTranslations } from "next-intl";
 
 export const Projects: React.FC = (): JSX.Element => {
+  const t = useTranslations("projects");
   return (
     <FadeIn>
       <section
         id={"projects"}
-        className={
-          "flex flex-col items-center py-6 md:py-10 lg:pb-36 lg:pt-20"
-        }
+        className={"flex flex-col items-center py-6 md:py-10 lg:pb-36 lg:pt-20"}
       >
         <SectionHeaderContainer>
-          <SectionTitle text="Meus Projetos" className="text-primary-gradient dark:text-slate-50" />
-          <SectionSubtitle text="Alguns dos meus projetos pessoais e profissionais" />
+          <SectionTitle
+            text={t("title")}
+            className="text-primary-gradient dark:text-slate-50"
+          />
+          <SectionSubtitle text={t("subTitle")} />
         </SectionHeaderContainer>
-        <div id="container" className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]">
+        <div
+          id="container"
+          className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]"
+        >
           <ResponsiveSlideGrid>
             <CardItem
               title="Project 1"

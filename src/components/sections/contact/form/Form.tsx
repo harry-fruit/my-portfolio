@@ -5,13 +5,15 @@ import { Input } from "@/components/shared/Input";
 import { TextArea } from "@/components/shared/TextArea";
 import { useForm } from "@formspree/react";
 import { Button } from "@/components/sections/contact/form/Button";
+import { useTranslations } from "next-intl";
+
 
 export const Form = () => {
+  const t = useTranslations("contact");
   const [state, handleSubmit] = useForm("mbjnneyo");
 
   if (state.succeeded) {
-    return <p>Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :&#41;</p>;
-    // return <p>Thanks for your message. I will get in touch as soon as possible! :&#41;</p>;
+    return <p>{t("success")}</p>;
   }
 
   return (
@@ -22,8 +24,7 @@ export const Form = () => {
           type="text"
           name="name"
           state={state}
-          // placeholder={"Enter your name"}
-          placeholder={"Insira seu nome"}
+          placeholder={t("inputNamePlaceholder")}
           className={`w-full ${style.inputName}`}
           required
         />
@@ -32,8 +33,7 @@ export const Form = () => {
           type="email"
           name="email"
           state={state}
-          // placeholder={"Enter your email"}
-          placeholder={"Insira seu email"}
+          placeholder={t("inputEmailPlaceholder")}
           className={`w-full ${style.inputEmail}`}
           required
         />
@@ -41,15 +41,13 @@ export const Form = () => {
           id="message"
           name="message"
           state={state}
-          // placeholder={"Write your message here"}
-          placeholder={"Escreva sua mensagem aqui"}
+          placeholder={t("inputMessagePlaceholder")}
           className={`w-full ${style.inputMessage}`}
           required
         />
         <Button
           type={"submit"}
-          text={"Enviar"}
-          // text={"Submit"}
+          text={t("inputButton")}
           disabled={state.submitting}
           className={`w-full mt-4 lg:mt-16 xl:mt-10 xl:w-[50%] 2xl:w-[35%] ${style.inputButton}`}
         />

@@ -1,7 +1,9 @@
 import { Form } from "@/components/sections/contact/form/Form";
 import { FadeIn } from "@/components/shared/FadeIn";
+import { useTranslations } from "next-intl";
 
 export const Contact = () => {
+  const t = useTranslations("contact");
   return (
     <div
       id="contact"
@@ -13,12 +15,10 @@ export const Contact = () => {
           className="w-full flex flex-col items-center justify-center gap-1"
         >
           <h1 className="text-4xl text-center font-bold text-primary-gradient apply-dark">
-            {/* Send me a message */}
-            Entre em contato
+            {t("title")}
           </h1>
           <h3 className="text-lg text-center">
-            Tem alguma duvida ou proposta, ou só quer dizer olá? Então, vamos!
-            {/* Got a question or proposal, or just want to say hello? Go ahead. */}
+            {t("subTitle")}
           </h3>
         </div>
       </FadeIn>

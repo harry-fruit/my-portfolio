@@ -1,9 +1,11 @@
 import Image from "next/image";
 import style from "@/styles/about.module.scss";
+import { useTranslations } from "next-intl";
 import { LineSplit } from "@/components/shared/LineSplit";
 import { FadeIn } from "@/components/shared/FadeIn";
 
 export const About: React.FC = (): JSX.Element => {
+  const t = useTranslations("about");
   return (
     <FadeIn>
       <section
@@ -14,16 +16,16 @@ export const About: React.FC = (): JSX.Element => {
           id="header-wrapper"
           className={`${style.header} flex flex-col justify-center items-center relative`}
         >
-          <h2 className="text-3xl w-full text-center md:text-start font-bold text-gray-800 dark:text-gray-50 text-primary-gradient apply-dark">
-            Olá! Eu sou Isaque.
+          <h2 title={t("title")} className="text-3xl w-full text-center md:text-start font-bold text-gray-800 dark:text-gray-50 text-primary-gradient apply-dark">
+            {t("title")}
           </h2>
           <h4
             className={
               "text-xl py-4 text-center md:text-start font-semibold text-gray-600 dark:text-gray-300"
             }
+            title={t("subTitle")}
           >
-            Apaixonado por criar soluções web e entusiasta em IA, sempre
-            explorando novas formas de inovar e melhorar processos.
+            {t("subTitle")}
           </h4>
           <LineSplit className={"absolute bottom-0 md:left-0"} />
         </div>
@@ -32,31 +34,13 @@ export const About: React.FC = (): JSX.Element => {
           className={`${style.txt} flex flex-col justify-center gap-2 md:mt-4`}
         >
           <p className="text-center md:text-start text-gray-600 dark:text-gray-400">
-            Sou um desenvolvedor web full stack com vasta experiência em
-            front-end. Possuo conhecimentos sólidos em jQuery, React, Next.js e
-            experiência prévia com Gatsby, o que me permite criar interfaces de
-            usuário intuitivas e dinâmicas, sempre aplicando as melhores
-            práticas e tecnologias disponíveis. Minha dedicação ao
-            desenvolvimento front-end me impulsiona a sempre buscar a excelência
-            e criar experiências de usuário envolventes e acessíveis.
+            {t("firstParagraph")}
           </p>
           <p className="text-center md:text-start text-gray-600 dark:text-gray-400">
-            No back-end, trabalho com eficiência utilizando Node.js e Python
-            para criar APIs REST e desenvolver processos automatizados e de ETL.
-            Também possuo alguma experiência com Java, o que me permite
-            aproveitar suas vantagens na construção de serviços robustos no
-            backend. Meu sólido conhecimento em bancos de dados relacionais,
-            especialmente SQL Server, me permite gerenciar e integrar dados de
-            forma eficaz em sistemas complexos.
+            {t("secondParagraph")}
           </p>
           <p className="text-center md:text-start text-gray-600 dark:text-gray-400">
-            Como engenheiro de software, valorizo a eficiência na criação de
-            soluções robustas e escaláveis. Priorizo a escrita de código limpo e
-            bem estruturado, garantindo que as soluções sejam sustentáveis e de
-            fácil manutenção. Além disso, sou um grande entusiasta de IA, sempre
-            explorando novas tecnologias para otimizar e transformar processos,
-            acreditando no potencial da IA para revolucionar o desenvolvimento
-            de software.
+            {t("thirdParagraph")}
           </p>
         </div>
         <div
