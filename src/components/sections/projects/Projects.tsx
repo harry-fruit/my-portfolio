@@ -17,8 +17,8 @@ export const Projects: React.FC = (): JSX.Element => {
         }
       >
         <SectionHeaderContainer>
-          <SectionTitle text="My projects" className="text-primary-gradient dark:text-slate-50" />
-          <SectionSubtitle text="A few of my projects as professional and student" />
+          <SectionTitle text="Meus Projetos" className="text-primary-gradient dark:text-slate-50" />
+          <SectionSubtitle text="Alguns dos meus projetos pessoais e profissionais" />
         </SectionHeaderContainer>
         <div id="container" className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]">
           <ResponsiveSlideGrid>

@@ -10,7 +10,8 @@ export const Form = () => {
   const [state, handleSubmit] = useForm("mbjnneyo");
 
   if (state.succeeded) {
-    return <p>Thanks for your message. I will get in touch as soon as possible! :&#41;</p>;
+    return <p>Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :&#41;</p>;
+    // return <p>Thanks for your message. I will get in touch as soon as possible! :&#41;</p>;
   }
 
   return (
@@ -21,7 +22,8 @@ export const Form = () => {
           type="text"
           name="name"
           state={state}
-          placeholder={"Enter your name"}
+          // placeholder={"Enter your name"}
+          placeholder={"Insira seu nome"}
           className={`w-full ${style.inputName}`}
           required
         />
@@ -30,7 +32,8 @@ export const Form = () => {
           type="email"
           name="email"
           state={state}
-          placeholder={"Enter your email"}
+          // placeholder={"Enter your email"}
+          placeholder={"Insira seu email"}
           className={`w-full ${style.inputEmail}`}
           required
         />
@@ -38,13 +41,15 @@ export const Form = () => {
           id="message"
           name="message"
           state={state}
-          placeholder={"Write your message here"}
+          // placeholder={"Write your message here"}
+          placeholder={"Escreva sua mensagem aqui"}
           className={`w-full ${style.inputMessage}`}
           required
         />
         <Button
           type={"submit"}
-          text={"Submit"}
+          text={"Enviar"}
+          // text={"Submit"}
           disabled={state.submitting}
           className={`w-full mt-4 lg:mt-16 xl:mt-10 xl:w-[50%] 2xl:w-[35%] ${style.inputButton}`}
         />

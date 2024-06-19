@@ -13,10 +13,12 @@ export const Contact = () => {
           className="w-full flex flex-col items-center justify-center gap-1"
         >
           <h1 className="text-4xl text-center font-bold text-primary-gradient apply-dark">
-            Send me a message
+            {/* Send me a message */}
+            Entre em contato
           </h1>
           <h3 className="text-lg text-center">
-            Got a question or proposal, or just want to say hello? Go ahead.
+            Tem alguma duvida ou proposta, ou só quer dizer olá? Então, vamos!
+            {/* Got a question or proposal, or just want to say hello? Go ahead. */}
           </h3>
         </div>
       </FadeIn>

@@ -19,7 +19,7 @@ export const LearnMoreButton: React.FC = (): JSX.Element => {
           id="textWrapper"
           className="opacity-0 flex flex-col items-center justify-center absolute"
         >
-          <p className="text-md uppercase">learn more</p>
+          <p className="text-md uppercase">Saiba mais</p>
           <ChevronDown width="35px" height="35px" color="#F8FAFC" />
         </div>
       </div>
