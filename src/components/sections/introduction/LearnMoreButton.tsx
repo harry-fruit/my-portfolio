@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 export const LearnMoreButton: React.FC = (): JSX.Element => {
   const t = useTranslations("introduction");
   return (
-    <div id="learn-more" title={t("learnMore")} className="w-full absolute bottom-10 flex flex-col">
+    <a id="learn-more" href="#about" title={t("learnMore")} className="w-full absolute bottom-10 flex flex-col">
       <div
         id="wrapper"
         className="w-full h-full relative flex flex-col items-center justify-center"
@@ -25,6 +25,6 @@ export const LearnMoreButton: React.FC = (): JSX.Element => {
           <ChevronDown width="35px" height="35px" color="#F8FAFC" />
         </div>
       </div>
-    </div>
+    </a>
   );
 };
