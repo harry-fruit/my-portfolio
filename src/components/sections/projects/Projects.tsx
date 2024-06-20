@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 export const Projects: React.FC = (): JSX.Element => {
   const t = useTranslations("projects");
   return (
-    <FadeIn>
+    <FadeIn threshold={0.25}>
       <section
         id={"projects"}
         className={"flex flex-col items-center py-6 md:py-10 lg:pb-36 lg:pt-20"}

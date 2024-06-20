@@ -18,7 +18,7 @@ export const Experience: React.FC = (): JSX.Element => {
         "flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-2 md:px-6 lg:px-20 xl:px-36 2xl:px-52"
       }
     >
-      <FadeIn>
+      <FadeIn threshold={0.25}>
         <SectionHeaderContainer>
           <SectionTitle text={t("title")} className="text-primary-gradient" />
           <SectionSubtitle text={t("subTitle")} />
