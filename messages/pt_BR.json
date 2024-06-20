@@ -30,12 +30,9 @@
     "card6date": "Janeiro, 2023",
     "card6title": "Formatura da Faculdade",
     "card6description": "Foi aqui onde me formei como analista de sistemas, aprendi a trabalhar com banco de dados, a criar aplicações web e aplicações mobile, e, principalmente , foi onde desenvolvi meus conhecimentos sobre engenharia de software.",
-    "card7date": "Março, 2023",
-    "card7title": "Formatura da Faculdade",
-    "card7description": "Foi aqui onde me formei como analista de sistemas, aprendi a trabalhar com banco de dados, a criar aplicações web e aplicações mobile, e, principalmente , foi onde desenvolvi meus conhecimentos sobre engenharia de software.",
-    "card8date": "Presente",
-    "card8title": "O que faço agora?",
-    "card8description": "Atualmente estou trabalhando full time como analista de sistemas na Octea e nas horas vagas, atuo como freelancer e também sigo me aprofundando em conhecimento de diversas areas de tecnologia, como o desenvolvimento de aplicativos web, data science, machine learning, etc.",
+    "card7date": "Presente",
+    "card7title": "O que faço agora?",
+    "card7description": "Atualmente estou trabalhando full time como analista de sistemas na Octea e nas horas vagas, atuo como freelancer e também sigo me aprofundando em conhecimento de diversas areas de tecnologia, como o desenvolvimento de aplicativos web, data science, machine learning, etc.",
     "present": "Presente"
   },
   "projects": {

@@ -30,12 +30,9 @@
     "card6date": "January 2023",
     "card6title": "College Graduation",
     "card6description": "This is where I graduated as a systems analyst, learned database management, developed web and mobile applications, and primarily honed my skills in software engineering.",
-    "card7date": "March 2023",
-    "card7title": "College Graduation",
-    "card7description": "This is where I graduated as a systems analyst, learned database management, developed web and mobile applications, and primarily honed my skills in software engineering.",
-    "card8date": "Present",
-    "card8title": "What I do now?",
-    "card8description": "Currently, I work full-time as a systems analyst at Octea. In my spare time, I work as a freelancer and continue to deepen my knowledge in various areas of technology, such as web application development, data science, machine learning, etc.",
+    "card7date": "Present",
+    "card7title": "What I do now?",
+    "card7description": "Currently, I work full-time as a systems analyst at Octea. In my spare time, I work as a freelancer and continue to deepen my knowledge in various areas of technology, such as web application development, data science, machine learning, etc.",
     "present": "Present"
   },
   "projects": {

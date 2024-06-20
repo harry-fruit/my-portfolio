@@ -59,16 +59,11 @@ export const Experience: React.FC = (): JSX.Element => {
           title={t("card6title")}
           description={t("card6description")}
         />
+        <TimelinePeriod period={t("present")} />
         <TimelineItem
           date={t("card7date")}
           title={t("card7title")}
           description={t("card7description")}
-        />
-        <TimelinePeriod period={t("present")} />
-        <TimelineItem
-          date={t("card8date")}
-          title={t("card8title")}
-          description={t("card8description")}
         />
       </Timeline>
     </section>
