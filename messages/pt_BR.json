@@ -47,6 +47,10 @@
     "inputMessagePlaceholder": "Escreva sua mensagem aqui",
     "inputButton": "Enviar",
     "success": "Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :)"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 Isaque Duarte / Todos os direitos reservados",
+    "whatsappLink": "https://wa.me/5511964957516?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20uma%20consultoria"
   }
   
 }

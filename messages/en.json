@@ -47,5 +47,9 @@
     "inputMessagePlaceholder": "Write your message here",
     "inputButton": "Submit",
     "success": "Thanks for your message. I will get in touch as soon as possible! :)"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 Isaque Duarte / All Rights Reserved",
+    "whatsappLink": "https://wa.me/5511964957516?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation"
   }
 }
