@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="py-4 md:py-8 lg:py-10 flex flex-col items-center justify-center bg-primary-600"
+      className="py-4 md:py-8 lg:py-10 flex flex-col items-center justify-center bg-primary-700 dark:bg-slate-950/90"
     >
       <div
         id="social-media"
@@ -40,7 +40,7 @@ export const Footer = () => {
       </div>
       <LineSplit
         alignCenter
-        className="bg-primary-500 mb-2 mt-6 lg:mt-8 lg:mb-4"
+        className="dark:bg-primary-500/60 w-2/6 mb-2 mt-6 lg:mt-8 lg:mb-4"
       />
       <p className="text-center px-8 text-gray-200 font-medium">
         {t("copyright")}

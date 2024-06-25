@@ -49,16 +49,14 @@ export const CardItem: React.FC<Props> = ({
             className="w-full flex justify-between items-center "
           >
             <div id="card-title">
-              <p className={`text-2xl text-gray-600 dark:text-gray-300 font-semibold ${style.cardTitle}`}>
-                {title}
-              </p>
+              <h2 className={`${style.cardTitle}`}>{title}</h2>
             </div>
             <div className={`p-2 rounded-full ${style.button}`}>
               <RightArrow width="20" height="20" className="text-gray-50" />
             </div>
           </div>
           <div id="card-description" className="text-base ">
-            <p className="text-gray-600 dark:text-gray-400">{description}</p>
+            <p className="">{description}</p>
           </div>
         </div>
       </div>

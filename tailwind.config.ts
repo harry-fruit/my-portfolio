@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        paragraph: {
+          light: "#5F5F66",
+          dark: "#B8B9D1",
+        },
+        title: {
+          light: "#27272A",
+          dark: "#E3ECFF",
+        },
+        subtitle: {
+          light: "#4B4B52",
+          dark: "#D1D7EB",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -23,12 +37,12 @@ const config: Config = {
           600: "#0d7bcc",
           700: "#0a5c99",
           800: "#063e66",
-          900: "#031f33"
-},
+          900: "#031f33",
+        },
       },
       blur: {
-        "soft": ".5px"
-      }
+        soft: ".5px",
+      },
     },
   },
   plugins: [],

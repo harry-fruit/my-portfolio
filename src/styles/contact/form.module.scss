@@ -5,6 +5,10 @@
         "email"
         "message"
         "button";
+    
+    input::placeholder {
+        @apply text-gray-800;
+    }
 
     .inputName {
         grid-area: name;

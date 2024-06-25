@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-100 dark:bg-slate-800`}>{children}</body>
+      <body className={`${inter.className} bg-slate-100 dark:bg-slate-900/95`}>
+        {children}
+      </body>
     </html>
   );
 }

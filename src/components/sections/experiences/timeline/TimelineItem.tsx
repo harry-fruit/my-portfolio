@@ -15,17 +15,13 @@ export const TimelineItem: React.FC<Props> = ({
   return (
     <FadeIn className={style.timelineItem}>
       <li>
-        <div className={`${style.timelineInfo} text-gray-600 dark:text-gray-300 font-semibold`}>
+        <div className={`${style.timelineInfo}`}>
           <span>{date}</span>
         </div>
         <div className={style.timelineMarker}></div>
         <div className={style.timelineContent}>
-          <h3
-            className={`${style.timelineTitle} text-lg text-gray-600 dark:text-gray-300 font-semibold`}
-          >
-            {title}
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400">{description}</p>
+          <h3 className={`${style.timelineTitle}`}>{title}</h3>
+          <p>{description}</p>
         </div>
       </li>
     </FadeIn>

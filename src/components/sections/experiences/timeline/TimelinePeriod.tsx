@@ -14,11 +14,7 @@ export const TimelinePeriod: React.FC<Props> = ({
         <div className={style.timelineInfo}></div>
         <div className={style.timelineMarker}></div>
         <div className={style.timelineContent}>
-          <h2
-            className={`${style.timelineTitle} text-2xl text-gray-800 dark:text-gray-50 font-bold`}
-          >
-            {period}
-          </h2>
+          <h2 className={`${style.timelineTitle}`}>{period}</h2>
         </div>
       </li>
     </FadeIn>

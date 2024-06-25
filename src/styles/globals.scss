@@ -9,6 +9,29 @@
   src: url("../font/InterTight-VariableFont_wght.ttf");
 }
 
+h1 {
+  @apply text-4xl font-bold text-title-light;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold text-subtitle-light;
+}
+
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
+}
+
+p {
+  @apply text-base text-paragraph-light;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
 }
@@ -27,12 +50,46 @@ body {
 
 
 @media (prefers-color-scheme: dark) {
+  h1 {
+    @apply text-title-dark
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply  text-subtitle-dark;
+  }
+
+  p {
+    @apply text-paragraph-dark;
+  }
+
   :root {
     --foreground-rgb: 255, 255, 255;
   }
+
   .text-primary-gradient:not(.apply-dark) {
     background: initial;
     background-clip: initial;
     -webkit-text-fill-color: initial;
   }
+}
+
+.wave-container {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }

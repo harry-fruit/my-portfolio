@@ -7,13 +7,13 @@ textarea.input {
 
 .input {
   font-size: 0.9rem;
-  background-color: $bg-transparent;
+  background-color: rgba($color-slate-100, 0.5);
   width: 100%;
   box-sizing: border-box;
   padding-inline: 0.5em;
   padding-block: 0.7em;
   border: none;
-  border-bottom: 2px solid $color-slate-300;
+  border-bottom: 4px solid rgba($color-primary-400, 0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &:focus {
@@ -24,11 +24,19 @@ textarea.input {
   &:focus+.inputBorder {
     transform: scaleX(100%);
   }
+
+}
+
+textarea.input,
+input.input {
+  &::placeholder {
+    @apply text-gray-800;
+  }
 }
 
 .inputBorder {
   position: absolute;
-  background: var(--border-after-color);
+  background: $color-primary-200;
   height: 2px;
   width: 100%;
   bottom: 0px;
@@ -36,8 +44,9 @@ textarea.input {
   transform: scaleX(0%);
   transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-textarea.inputBorder {
-  bottom: 3px;
+
+textarea+.inputBorder {
+  bottom: 5px;
 }
 
 .formControl {
@@ -62,8 +71,17 @@ textarea.inputBorder {
   transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
+
 @media (prefers-color-scheme: dark) {
+
   .input {
-    border-bottom: 2px solid $color-slate-600;
+    background-color: rgba($color-slate-800, 0.5);
+  }
+
+  textarea.input,
+  input.input {
+    &::placeholder {
+      @apply text-gray-400;
+    }
   }
 }

@@ -7,7 +7,6 @@ import { useForm } from "@formspree/react";
 import { Button } from "@/components/sections/contact/form/Button";
 import { useTranslations } from "next-intl";
 
-
 export const Form = () => {
   const t = useTranslations("contact");
   const [state, handleSubmit] = useForm("mbjnneyo");
@@ -17,7 +16,7 @@ export const Form = () => {
   }
 
   return (
-    <div id="contact-form" className="w-full">
+    <div id="contact-form" className="w-full md:w-4/5 xl:w-3/5 2xl:w-3/6">
       <form onSubmit={handleSubmit} className={`w-full ${style.form}`}>
         <Input
           id="name"

@@ -15,7 +15,7 @@ export const Experience: React.FC = (): JSX.Element => {
     <section
       id={"experiences"}
       className={
-        "flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-2 md:px-6 lg:px-20 xl:px-36 2xl:px-52"
+        "bg-primary-100/45 dark:bg-slate-950/20 flex flex-col items-center py-6 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-2 md:px-6 lg:px-20 xl:px-36 2xl:px-52"
       }
     >
       <FadeIn threshold={0.25}>
