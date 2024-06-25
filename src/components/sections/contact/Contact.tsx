@@ -25,8 +25,8 @@ export const Contact = () => {
           </div>
           <h3 className="text-center">{t("subTitle")}</h3>
         </div>
+        <Form />
       </FadeIn>
-      <Form />
     </div>
   );
 };
