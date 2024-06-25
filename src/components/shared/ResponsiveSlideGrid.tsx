@@ -77,7 +77,7 @@ export const ResponsiveSlideGrid: React.FC<Props> = ({ children }: Props) => {
 
 export const GridComponent: React.FC<Props> = ({ children }: Props) => {
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-8 justify-items-center">
       {children}
     </div>
   );

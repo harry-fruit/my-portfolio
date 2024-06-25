@@ -4,9 +4,12 @@ import {
   SectionTitle,
 } from "@/components/shared/section-header/SectionHeader";
 import { FadeIn } from "@/components/shared/FadeIn";
-import { CardItem } from "@/components/sections/projects/CardItem";
+import { Card } from "@/components/card/Card";
 import { ResponsiveSlideGrid } from "@/components/shared/ResponsiveSlideGrid";
 import { useTranslations } from "next-intl";
+import { CardTagsContainer } from "@/components/card/tags/CardTagsContainer";
+import { CardTag } from "@/components/card/tags/CardTag";
+import { CardImage } from "@/components/card/CardImage";
 
 export const Projects: React.FC = (): JSX.Element => {
   const t = useTranslations("projects");
@@ -25,39 +28,54 @@ export const Projects: React.FC = (): JSX.Element => {
         </SectionHeaderContainer>
         <div
           id="container"
-          className="w-full h-full lg:w-[70%] xl:w-[85%] 2xl:w-[70%]"
+          className="w-full h-full lg:w-[85%] xl:w-[95%] 2xl:w-[85%] 3xl:w-[70%]"
         >
           <ResponsiveSlideGrid>
-            <CardItem
-              title="Project 1"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
-            <CardItem
-              title="Project 2"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
-            <CardItem
-              title="Project 3"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
-            <CardItem
-              title="Project 4"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
-            <CardItem
-              title="Project 5"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
-            <CardItem
-              title="Project 6"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure, quo provident vero explicabo ratione, veniam, accusamus molestias perspiciatis perferendis recusandae impedit ipsum eveniet amet quaerat fugit dolor. Dignissimos, laborum."
-              imgOptions={{ src: "/beach.jpg", alt: "project" }}
-            />
+            <Card title="Project 1">
+              <CardTagsContainer>
+                <CardTag text="Python" type="python" />
+                <CardTag text="SQL" type="sql" />
+                <CardTag text="Tailwind" type="tailwind" />
+                <CardTag text="Tailwind" type="tailwind" />
+              </CardTagsContainer>
+              <CardImage src="/beach.jpg" alt="project" />
+            </Card>
+            <Card title="Project 2">
+              <CardTagsContainer>
+                <CardTag text="Python" type="python" />
+                <CardTag text="SQL" type="sql" />
+                <CardTag text="Tailwind" type="tailwind" />
+                <CardTag text="Tailwind" type="tailwind" />
+              </CardTagsContainer>
+              <CardImage src="/beach.jpg" alt="project" />
+            </Card>
+            <Card title="Project 3">
+              <CardTagsContainer>
+                <CardTag text="Python" type="python" />
+                <CardTag text="SQL" type="sql" />
+                <CardTag text="Tailwind" type="tailwind" />
+                <CardTag text="Tailwind" type="tailwind" />
+              </CardTagsContainer>
+              <CardImage src="/beach.jpg" alt="project" />
+            </Card>
+            <Card title="Project 4">
+              <CardTagsContainer>
+                <CardTag text="Python" type="python" />
+                <CardTag text="SQL" type="sql" />
+                <CardTag text="Tailwind" type="tailwind" />
+                <CardTag text="Tailwind" type="tailwind" />
+              </CardTagsContainer>
+              <CardImage src="/beach.jpg" alt="project" />
+            </Card>
+            <Card title="Project 5">
+              <CardTagsContainer>
+                <CardTag text="Python" type="python" />
+                <CardTag text="SQL" type="sql" />
+                <CardTag text="Tailwind" type="tailwind" />
+                <CardTag text="Tailwind" type="tailwind" />
+              </CardTagsContainer>
+              <CardImage src="/beach.jpg" alt="project" />
+            </Card>
           </ResponsiveSlideGrid>
         </div>
       </section>
