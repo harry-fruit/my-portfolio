@@ -27,7 +27,7 @@ export const CardItem: React.FC<Props> = ({
     >
       <div
         id="card"
-        className={`bg-slate-100 dark:bg-slate-800 w-[325px] h-[525px] border absolute rounded-xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
+        className={`bg-slate-100 dark:bg-slate-800 w-[325px] h-[525px] absolute rounded-xl overflow-hidden p-5 flex flex-col items-center justify-between ${style.card}`}
       >
         <div
           id="card-img"
@@ -62,11 +62,11 @@ export const CardItem: React.FC<Props> = ({
       </div>
       <div
         id="animated-card"
-        className={`w-[325px] h-[525px] bg-primary-600 dark:bg-slate-700 absolute rounded-xl ${style.animatedCard}`}
+        className={`w-[320px] h-[520px] bg-primary-600 dark:bg-slate-700 absolute rounded-xl ${style.animatedCard}`}
       ></div>
       <div
         id="animated-card-2"
-        className={`w-[325px] h-[525px] bg-primary-700 dark:bg-slate-950 absolute rounded-xl ${style.animatedCard}`}
+        className={`w-[320px] h-[520px] bg-primary-700 dark:bg-slate-950 absolute rounded-xl ${style.animatedCard}`}
       ></div>
     </div>
   );
