@@ -9,7 +9,7 @@ export const About: React.FC = (): JSX.Element => {
     <FadeIn threshold={0.1}>
       <section
         id={"about"}
-        className={`w-full min-h-screen py-12 px-2 md:px-6 md:py-4 md:min-h-[80vh] lg:min-h-[55vh] lg:py-28 lg:px-20 xl:px-36 xl:py-44 2xl:min-h-[80vh] 2xl:px-64 2xl:py-52 ${style.aboutContainer}`}
+        className={`w-full min-h-screen py-12 px-2 md:px-6 md:py-4 md:min-h-[80vh] lg:min-h-[55vh] lg:py-28 lg:px-20 xl:px-36 xl:py-44 2xl:min-h-[70vh] 2xl:px-64 2xl:py-44 ${style.aboutContainer}`}
       >
         <div
           id="header-wrapper"

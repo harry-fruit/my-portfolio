@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-primary-100/25 dark:bg-slate-950/20 py-4 px-4 w-full min-h-screen flex flex-col items-center justify-center"
+      className="bg-primary-100/25 dark:bg-slate-950/20 py-4 px-4 w-full min-h-[90vh] flex flex-col items-center justify-center"
     >
       <FadeIn
         duration={2000}

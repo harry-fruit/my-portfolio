@@ -14,7 +14,7 @@ export const Footer = () => {
     >
       <div
         id="social-media"
-        className="flex flex-row items-center justify-center gap-5 md:gap-10"
+        className="flex flex-row items-center justify-center gap-5 md:gap-10 xl:gap-8"
       >
         <Link
           href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
@@ -40,7 +40,7 @@ export const Footer = () => {
       </div>
       <LineSplit
         alignCenter
-        className="dark:bg-primary-500/60 w-2/6 mb-2 mt-6 lg:mt-8 lg:mb-4"
+        className="bg-primary-500/70 dark:bg-primary-500/60 w-2/6 mb-2 mt-4 lg:mt-6 lg:mb-4"
       />
       <p className="text-center px-8 text-gray-200 font-medium">
         {t("copyright")}

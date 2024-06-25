@@ -37,7 +37,8 @@
   },
   "projects": {
     "title": "My Projects",
-    "subTitle": "Some of my personal and professional projects"
+    "subTitle": "Some of my personal and professional projects",
+    "slideTip": "Tip: You can slide or click 'next' to see more projects"
   },
   "contact": {
     "title": "Send me a message!",
@@ -49,7 +50,7 @@
     "success": "Thanks for your message. I will get in touch as soon as possible! :)"
   },
   "footer": {
-    "copyright": "Copyright © 2024 Isaque Duarte / All Rights Reserved",
+    "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation"
   }
 }

@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { LeftArrow } from "@/components/icons/LeftArrow";
 import { RightArrow } from "@/components/icons/RightArrow";
+import { useTranslations } from "next-intl";
 
 type Props = {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ type Props = {
 
 export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const t = useTranslations("projects");
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % React.Children.count(children));
@@ -56,7 +58,7 @@ export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
             />
           </div>
         </div>
-        <p className="text-gray-500 text-xs"><i>Tip: you can slide or click next to see more projects</i></p> 
+        <p className="text-gray-500 text-s mt-6"><i>{t("slideTip")}</i></p> 
       </div>
     </div>
   );

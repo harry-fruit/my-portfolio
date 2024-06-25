@@ -37,7 +37,8 @@
   },
   "projects": {
     "title": "Meus Projetos",
-    "subTitle": "Alguns dos meus projetos pessoais e profissionais"
+    "subTitle": "Alguns dos meus projetos pessoais e profissionais",
+    "slideTip": "Dica: Você pode deslizar ou clicar em 'próximo' para ver mais projetos"
   },
   "contact": {
     "title": "Entre em contato",
@@ -49,7 +50,7 @@
     "success": "Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :)"
   },
   "footer": {
-    "copyright": "Copyright © 2024 Isaque Duarte / Todos os direitos reservados",
+    "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20uma%20consultoria"
   }
   

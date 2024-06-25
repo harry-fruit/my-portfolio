@@ -14,7 +14,7 @@ export const Projects: React.FC = (): JSX.Element => {
     <FadeIn threshold={0.25}>
       <section
         id={"projects"}
-        className={"flex flex-col items-center py-6 md:py-10 lg:pb-36 lg:pt-20"}
+        className={"flex flex-col items-center py-6 md:py-8 lg:pb-36 lg:pt-20"}
       >
         <SectionHeaderContainer>
           <SectionTitle
