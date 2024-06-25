@@ -7,12 +7,12 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-primary-100/45 dark:bg-slate-950/20 py-4 px-4 w-full min-h-screen flex flex-col items-center justify-center gap-10 md:gap-32 lg:gap-40 xl:gap-24"
+      className="bg-primary-100/45 dark:bg-slate-950/20 py-4 px-4 w-full min-h-screen flex flex-col items-center justify-center"
     >
       <FadeIn
         duration={2000}
         threshold={0.9}
-        className="md:w-4/5 xl:w-3/5 2xl:w-3/6"
+        className="w-full lg:w-5/6 xl:w-4/5 2xl:w-5/6 flex flex-col items-center justify-center gap-10 md:gap-32 lg:gap-40 xl:gap-24"
       >
         <div
           id="contact-header"
