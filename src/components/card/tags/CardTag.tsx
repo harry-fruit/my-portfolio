@@ -18,5 +18,5 @@ export type CardTagProps = {
 };
 
 export const CardTag = ({ text, type }: CardTagProps) => {
-  return <li className={`${style[type]} ${style.tag}`}>{text}</li>;
+  return <li className={`${style[type]} ${style.tag} text-xs md:text-sm lg:text-base xl:text-xs 2xl:text-sm`}>{text}</li>;
 };
