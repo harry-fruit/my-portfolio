@@ -1,6 +1,6 @@
 import style from "@/styles/card/tags.module.scss";
 
-type Props = {
+export type CardTagProps = {
   text: string;
   type:
     | "python"
@@ -9,12 +9,14 @@ type Props = {
     | "react"
     | "nextjs"
     | "sass"
+    | "css"
+    | "html"
     | "sql"
     | "tailwind"
     | "new"
     | "default";
 };
 
-export const CardTag = ({ text, type }: Props) => {
+export const CardTag = ({ text, type }: CardTagProps) => {
   return <li className={`${style[type]} ${style.tag}`}>{text}</li>;
 };

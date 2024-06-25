@@ -8,8 +8,117 @@ import { Card } from "@/components/card/Card";
 import { ResponsiveSlideGrid } from "@/components/shared/ResponsiveSlideGrid";
 import { useTranslations } from "next-intl";
 import { CardTagsContainer } from "@/components/card/tags/CardTagsContainer";
-import { CardTag } from "@/components/card/tags/CardTag";
+import { CardTag, CardTagProps } from "@/components/card/tags/CardTag";
 import { CardImage } from "@/components/card/CardImage";
+
+type CardsData = {
+  link: {
+    href:string;
+    target?: "_blank"
+  }
+  title: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  tags: CardTagProps[],
+}
+
+const cards: CardsData[] = [
+  {
+    title: "Gym Project",
+    link: {
+      href: "https://gym-project.netlify.app/",
+      target: "_blank"
+    },
+    tags: [
+      {
+        text: "React",
+        type: "react",
+      },
+      {
+        text: "Sass",
+        type: "sass"
+      }
+    ],
+    image: { src: "/projects/gym.png", alt: "Gym Project" }
+  },
+  {
+    title: "Brás Cubas's Kitchen",
+    link: {
+      href: "https://bras-kitchen.netlify.app/",
+      target: "_blank"
+    },
+    tags: [
+      {
+        text: "HTML",
+        type: "html"
+      },
+      {
+        text: "CSS",
+        type: "css"
+      },
+      {
+        text: "Javascript",
+        type: "javascript",
+      },
+    ],
+    image: { src: "/projects/bras-kitchen.png", alt: "Brás Cubas's Kitchen" }
+  },
+  {
+    title: "Matrix Canvas",
+    link: {
+      href: "https://codesandbox.io/p/github/harry-fruit/matrix-canvas/master",
+      target: "_blank"
+    },
+    tags: [
+      {
+        text: "React",
+        type: "react",
+      },
+      {
+        text: "Sass",
+        type: "sass"
+      }
+    ],
+    image: { src: "/projects/matrix-canvas.gif", alt: "Matrix Canvas" }
+  },
+  {
+    title: "My Portfolio",
+    link: {
+      href: "/",
+    },
+    tags: [
+      {
+        text: "Next.js",
+        type: "nextjs"
+      },
+      {
+        text: "Tailwind",
+        type: "tailwind"
+      },
+      {
+        text: "Sass",
+        type: "sass"
+      }
+    ],
+    image: { src: "/projects/my-portfolio.gif", alt: "My Portfolio" }
+  },
+  {
+    title: "Base Converter",
+    link: {
+      href: "https://github.com/harry-fruit/Conversor-de-bases",
+      target: "_blank",
+    },
+    tags: [
+      {
+        text: "Python",
+        type: "python"
+      }
+    ],
+    image: { src: "/projects/python.jpg", alt: "Python Logo" }
+  }
+];
 
 export const Projects: React.FC = (): JSX.Element => {
   const t = useTranslations("projects");
@@ -31,51 +140,18 @@ export const Projects: React.FC = (): JSX.Element => {
           className="w-full h-full lg:w-[85%] xl:w-[95%] 2xl:w-[85%] 3xl:w-[70%]"
         >
           <ResponsiveSlideGrid>
-            <Card title="Project 1">
-              <CardTagsContainer>
-                <CardTag text="Python" type="python" />
-                <CardTag text="SQL" type="sql" />
-                <CardTag text="Tailwind" type="tailwind" />
-                <CardTag text="Tailwind" type="tailwind" />
-              </CardTagsContainer>
-              <CardImage src="/beach.jpg" alt="project" />
-            </Card>
-            <Card title="Project 2">
-              <CardTagsContainer>
-                <CardTag text="Python" type="python" />
-                <CardTag text="SQL" type="sql" />
-                <CardTag text="Tailwind" type="tailwind" />
-                <CardTag text="Tailwind" type="tailwind" />
-              </CardTagsContainer>
-              <CardImage src="/beach.jpg" alt="project" />
-            </Card>
-            <Card title="Project 3">
-              <CardTagsContainer>
-                <CardTag text="Python" type="python" />
-                <CardTag text="SQL" type="sql" />
-                <CardTag text="Tailwind" type="tailwind" />
-                <CardTag text="Tailwind" type="tailwind" />
-              </CardTagsContainer>
-              <CardImage src="/beach.jpg" alt="project" />
-            </Card>
-            <Card title="Project 4">
-              <CardTagsContainer>
-                <CardTag text="Python" type="python" />
-                <CardTag text="SQL" type="sql" />
-                <CardTag text="Tailwind" type="tailwind" />
-                <CardTag text="Tailwind" type="tailwind" />
-              </CardTagsContainer>
-              <CardImage src="/beach.jpg" alt="project" />
-            </Card>
-            <Card title="Project 5">
-              <CardTagsContainer>
-                <CardTag text="Python" type="python" />
-                <CardTag text="SQL" type="sql" />
-                <CardTag text="Tailwind" type="tailwind" />
-                <CardTag text="Tailwind" type="tailwind" />
-              </CardTagsContainer>
-              <CardImage src="/beach.jpg" alt="project" />
-            </Card>
+            
+            {cards.map((card, index) => (
+              <Card key={index} title={card.title} link={card.link}>
+                <CardTagsContainer>
+                  {card.tags.map((tag, index) => (
+                    <CardTag key={index} text={tag.text} type={tag.type} />
+                  ))}
+                </CardTagsContainer>
+                <CardImage src={card.image.src} alt={card.image.alt} />
+              </Card>
+            ))}
+
           </ResponsiveSlideGrid>
         </div>
       </section>

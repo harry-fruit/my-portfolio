@@ -44,7 +44,7 @@ $default: #f1f5f9;
         }
     
         &.nextjs {
-          border-color: #06b6d4;
+          border-color: #161616;
         }
     
         &.sass {
@@ -57,6 +57,14 @@ $default: #f1f5f9;
     
         &.tailwind {
           border-color: #38bdf8;
+        }
+
+        &.html {
+          border-color: #e34c26;
+        }
+
+        &.css {
+          border-color: #6da8f5;
         }
     
         &.new {

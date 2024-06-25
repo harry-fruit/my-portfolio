@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "@/styles/globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Isaque Duarte | Portfolio",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-100 dark:bg-slate-900/95`}>
+      <body className={"bg-slate-100 dark:bg-slate-900/95"}>
         {children}
       </body>
     </html>

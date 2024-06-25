@@ -3,14 +3,19 @@
 import style from "@/styles/card/card.module.scss";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { RightArrow } from "@/components/icons/RightArrow";
+import Link from "next/link";
 
 type Props = {
   className?: string;
   title: string;
   children: ReactNode;
+  link: {
+    href:string;
+    target?: "_blank"
+  }
 };
 
-export const Card = ({ className = "", title, children }: Props) => {
+export const Card = ({ className = "", title, children, link }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [useCardSize, setCardSize] = useState<{
     width: number;
@@ -20,7 +25,7 @@ export const Card = ({ className = "", title, children }: Props) => {
   const setShadowCardSize = () => {
     if (cardRef.current) {
       const { width, height } = cardRef.current.getBoundingClientRect();
-      setCardSize({ width: (width - 5), height: (height - 5) });
+      setCardSize({ width: width - 5, height: height - 5 });
     }
   };
 
@@ -31,8 +36,7 @@ export const Card = ({ className = "", title, children }: Props) => {
     return () => {
       window.removeEventListener("resize", setShadowCardSize); // Remove o listener ao desmontar o componente
     };
-
-  }, [cardRef, ]);
+  }, [cardRef]);
 
   return (
     <div
@@ -46,32 +50,38 @@ export const Card = ({ className = "", title, children }: Props) => {
       >
         {children}
         <CardInfo>
-          <CardHeader title={title} />
+          <CardHeader link={link} title={title} />
         </CardInfo>
       </div>
       <div
         id="animated-card"
-        style={{ width: `${useCardSize.width}px`, height: `${useCardSize.height}px` }}
+        style={{
+          width: `${useCardSize.width}px`,
+          height: `${useCardSize.height}px`,
+        }}
         className={`w-[${useCardSize.width}px] h-[${useCardSize.height}px] bg-primary-600 dark:bg-slate-700 absolute rounded-xl ${style.animatedCard}`}
       ></div>
       <div
         id="animated-card-2"
-        style={{ width: `${useCardSize.width}px`, height: `${useCardSize.height}px` }}
+        style={{
+          width: `${useCardSize.width}px`,
+          height: `${useCardSize.height}px`,
+        }}
         className={` bg-primary-700 dark:bg-slate-950 absolute rounded-xl ${style.animatedCard}`}
       ></div>
     </div>
   );
 };
 
-const CardHeader = ({ title }: { title: string }) => {
+const CardHeader = ({ title, link }: { title: string, link: {href:string, target?: "_blank"} }) => {
   return (
     <div id="card-header" className="w-full flex justify-between items-center ">
       <div id="card-title">
         <h2 className={`${style.cardTitle}`}>{title}</h2>
       </div>
-      <div className={`p-2 rounded-full ${style.button}`}>
+      <Link href={link.href} target={link.target} title={`Go to '${title}'`} className={`p-2 rounded-full ${style.button}`}>
         <RightArrow width="25" height="25" className="text-gray-50" />
-      </div>
+      </Link>
     </div>
   );
 };
