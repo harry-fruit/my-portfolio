@@ -12,7 +12,12 @@ type Props = {
   threshold?: number;
 };
 
-export const FadeIn = ({ children, className, duration = 1000, threshold = 0.25 }: Props) => {
+export const FadeIn = ({
+  children,
+  className,
+  duration = 1000,
+  threshold = 0.15,
+}: Props) => {
   const [ref, inView] = useInView({
     threshold,
     triggerOnce: true,

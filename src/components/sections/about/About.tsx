@@ -9,18 +9,18 @@ export const About: React.FC = (): JSX.Element => {
     <FadeIn threshold={0.1}>
       <section
         id={"about"}
-        className={`w-full min-h-screen py-12 px-2 md:px-6 md:py-4 md:min-h-[80vh] lg:min-h-[55vh] lg:py-28 lg:px-20 xl:px-36 xl:py-44 2xl:min-h-[70vh] 2xl:px-64 2xl:py-44 ${style.aboutContainer}`}
+        className={`w-full min-h-screen py-12 px-2 md:px-6 md:py-14 md:min-h-[80vh] lg:min-h-[55vh] lg:py-28 lg:px-20 xl:px-36 xl:py-44 2xl:min-h-[70vh] 2xl:px-64 2xl:py-44 ${style.aboutContainer}`}
       >
         <div
           id="header-wrapper"
           className={`${style.header} flex flex-col justify-center items-center relative`}
         >
-          <h1 title={t("title")} className="w-full text-center md:text-start">
+          <h1 title={t("title")} className="w-full text-center lg:text-start">
             <span className="text-primary-gradient">{t("title")}</span>{" "}
             <span className="wave-container">👋</span>
           </h1>
           <h3
-            className={"py-4 text-center md:text-start"}
+            className={"py-4 text-center lg:text-start"}
             title={t("subTitle")}
           >
             {t("subTitle")}
@@ -30,9 +30,9 @@ export const About: React.FC = (): JSX.Element => {
           id="text-wrapper"
           className={`${style.txt} flex flex-col justify-center gap-2`}
         >
-          <p className="text-center md:text-start">{t("firstParagraph")}</p>
-          <p className="text-center md:text-start">{t("secondParagraph")}</p>
-          <p className="text-center md:text-start">{t("thirdParagraph")}</p>
+          <p className="text-center lg:text-start">{t("firstParagraph")}</p>
+          <p className="text-center lg:text-start">{t("secondParagraph")}</p>
+          <p className="text-center lg:text-start">{t("thirdParagraph")}</p>
         </div>
         <div
           id="imageWrapper"
