@@ -12,10 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth">
-      <body className={"bg-slate-100 dark:bg-slate-900/95"}>
-        {children}
-      </body>
+    <html>
+      <body className="flex flex-col justify-center items-center">{children}</body>
     </html>
   );
 }

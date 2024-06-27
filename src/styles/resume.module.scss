@@ -1,0 +1,172 @@
+.container {
+    display: grid;
+    grid-template-areas:
+    "links"
+    "aside"
+    "introduction"
+    "experiences"
+    "projects";
+    width: 100%;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 1rem;
+    // background-color: red;
+    padding: 1rem 2rem;
+
+    .links {
+        grid-area: links;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 2rem;
+        // background-color: blue;
+    }
+
+    .aside {
+        // background-color: red;
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .moreInfo {
+            display: none;
+        }
+
+        .skillsContainer {
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            // background-color: green;
+            margin-bottom: 3vh; // TODO: remove this on large screens
+            .skills{
+                width: 50%;
+                ul {
+                    padding-left: 20px;
+                    li {
+                        list-style-type: square;
+                    }
+                }
+            }
+            .skills:last-child {
+                align-items: end;
+            }
+
+        }
+        
+    }
+
+    .introduction {
+        grid-area: introduction;
+        margin-bottom: 2rem;
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .experiences {
+        grid-area: experiences;
+        margin-bottom: 2rem;
+
+        .experiencesHeader {
+            margin-bottom: 1rem;
+        }
+        .experienceItemsWrapper {
+            // background-color: red;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .experienceItem {
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+
+                .experienceHeader  {
+                    .companyName {
+                        color: blue;
+                        font-weight: 700;
+                    }
+                    .role {
+                        font-weight: 600;
+                    }
+                    // background-color: red;
+                }
+                .description {
+                    // background-color: blue;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    padding: 0 5vw; // TODO: remove this on large screens
+                    li {
+                        list-style-type: square;
+                        // background-color: green;
+                    }
+                }
+            }
+        }
+    }
+    .projects {
+        grid-area: projects;
+    }
+
+    hr {
+        margin: 2rem 0;
+    }
+
+}
+
+
+@media (min-width: 820px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+        "links links"
+        "aside introduction"
+        "aside experiences"
+        "aside projects";
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: .25fr 1fr;
+
+        .aside {
+            .moreInfo {
+                display: block;
+            }
+    
+            .skillsContainer {
+                // background-color: red;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+                // background-color: green;
+                margin-bottom: 3vh; // TODO: remove this on large screens
+                .skills{
+                    width: fit-content;
+                }
+                .skills:last-child {
+                    align-items: end;
+                }
+    
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        padding: 4rem 8rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        width: 80%;
+    }
+}
