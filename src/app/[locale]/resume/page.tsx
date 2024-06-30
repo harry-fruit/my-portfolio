@@ -23,11 +23,7 @@ const Resume = ({ params }: { params: { locale: string } }) => {
     const blob = await response.blob();
     //TODO: Refatorar
     const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(url, "_blank");
     URL.revokeObjectURL(url);
   };
 

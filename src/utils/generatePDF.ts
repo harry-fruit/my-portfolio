@@ -18,6 +18,8 @@ export const generatePDF = async ({ locale }: IGeneratePDF): Promise<Blob> => {
     waitUntil: "networkidle0",
   });
 
+  console.log("base url", process.env.BASE_URL);
+
   await page.$eval("#download-resume", (el) => el.remove());
 
   const pdfBuffer = await page.pdf({

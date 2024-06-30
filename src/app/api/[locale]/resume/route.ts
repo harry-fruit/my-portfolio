@@ -14,7 +14,7 @@ export async function GET(
 
   const headers = new Headers({
     "Content-Type": "application/pdf",
-    "Content-Disposition": "attachment; filename='arquivo.pdf'",
+    "Content-Disposition": "attachment; filename='resume.pdf'",
   });
 
   const pdfBlob = await generatePDF({ locale });
