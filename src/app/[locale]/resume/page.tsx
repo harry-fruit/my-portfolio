@@ -1,30 +1,83 @@
+"use client";
+
 import Link from "next/link";
 import style from "@/styles/resume.module.scss";
+import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
+import { DownloadIcon } from "@/components/icons/Download";
+import { GithubIcon } from "@/components/icons/GithubIcon";
+import { EmailIcon } from "@/components/icons/EmailIcon";
 
-const Resume = () => {
+// TODO: Translate page
+const Resume = ({ params }: { params: { locale: string } }) => {
+  const { locale } = params;
+
+  const generateResume = async () => {
+    //OBS: Para testar a msg de erro, basta alterar o locale aqui para qualquer coisa diferente de "en" e "pt_br"
+    const response = await fetch(`/api/${locale}/resume`);
+
+    if (!response.ok) {
+      //TODO: Exibir mensagem de erro
+      throw new Error("Failed to fetch resume");
+    }
+
+    const blob = await response.blob();
+    //TODO: Refatorar
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div className={style.container}>
+    <div id="resume-container" className={style.container}>
       <ul id="links" className={style.links}>
         <li>
-          <Link href="https://youtube.com" target="_blank">
-            Linkedin
+          <Link
+            href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
+            title="My LinkedIn Profile"
+            target="_blank"
+          >
+            <LinkedinIcon className={`${style.linkedinIcon}`} />
           </Link>
         </li>
-        <li>Email</li>
+        <li>
+          <Link
+            href={"https://github.com/harry-fruit"}
+            title="My Github Profile"
+            target="_blank"
+          >
+            <GithubIcon />
+          </Link>
+        </li>
+        <li title="Send me an e-mail">
+          <Link href="mailto:isaqueduarte17@gmail.com">
+            <EmailIcon width="20" height="20" />
+          </Link>
+        </li>
         <li
+          id="download-resume"
+          title="Download Resume"
+          onClick={generateResume}
         >
-          Download Resume
+          <DownloadIcon width="20" height="20" />
         </li>
       </ul>
       <aside className={style.aside}>
         <div id="more-info" className={style.moreInfo}>
-          <Link href="https://isaquedev.vercel.app">Isaque | Portfolio</Link>
+          <Link
+            href="https://isaquedev.vercel.app"
+            className={`${style.primaryColor} font-bold`}
+          >
+            Isaque | Portfolio
+          </Link>
           <p>São Paulo, Brazil</p>
         </div>
         <div className={style.skillsContainer}>
           <div className={style.skills}>
-            <h2>Core Skills</h2>
+            <h2 className={`${style.primaryColor}`}>Core Skills</h2>
             <ul>
               <li>Javascript</li>
               <li>Typescript</li>
@@ -39,7 +92,7 @@ const Resume = () => {
             </ul>
           </div>
           <div className={style.skills}>
-            <h2>Others</h2>
+            <h2 className={`${style.primaryColor}`}>Others</h2>
             <ul>
               <li className="xl:w-1/2">Design Systems</li>
               <li>Responsive Web Design</li>
@@ -53,17 +106,18 @@ const Resume = () => {
         </div>
       </aside>
       <section id="introduction" className={style.introduction}>
-        <h1>Isaque Duarte</h1>
+        <h1 className={`${style.primaryColor}`}>Isaque Duarte</h1>
         <h3>Fullstack Developer</h3>
         <p>
           Passionate about creating web solutions and enthusiastic about AI,
           always exploring new ways to innovate and improve processes
         </p>
       </section>
-      <hr />
       <section id="experiences" className={style.experiences}>
         <div className={style.experiencesHeader}>
-          <h2 className={style.sectionTitle}>Experiences</h2>
+          <h2 className={`${style.sectionTitle} ${style.primaryColor}`}>
+            Experiences
+          </h2>
           <p>
             Ive worked on a handful of web projects over the years, some of
             which were for the following organizations: TODOTODO
@@ -73,12 +127,16 @@ const Resume = () => {
           <div className={style.experienceItem}>
             <div className={style.experienceHeader}>
               <p>
-                <span className={style.companyName}>Pollux </span>
+                <span className={`${style.companyName} ${style.primaryColor}`}>
+                  Pollux{" "}
+                </span>
                 <span className={style.role}>― Full Stack Developer</span>
               </p>
               <p className={style.period}>March/Jun 2021</p>
             </div>
-            <p className={style.description}>Breve descrição do serviço max 150 linhas</p>
+            <p className={style.description}>
+              Breve descrição do serviço max 150 linhas
+            </p>
             <ul>
               <li>
                 Criação de funcionalidades e realização de suporte a aplicações
@@ -98,12 +156,16 @@ const Resume = () => {
           <div className={style.experienceItem}>
             <div className={style.experienceHeader}>
               <p>
-                <span className={style.companyName}>4MapIT </span>
+                <span className={`${style.companyName} ${style.primaryColor}`}>
+                  4MapIT{" "}
+                </span>
                 <span className={style.role}>― Analista de Sistemas</span>
               </p>
               <p className={style.period}>Jan 2022 - Present</p>
             </div>
-            <p className={style.description}>Breve descrição do serviço max 150 linhas</p>
+            <p className={style.description}>
+              Breve descrição do serviço max 150 linhas
+            </p>
             <ul>
               <li>
                 Criação de funcionalidades e realização de suporte a
@@ -125,7 +187,9 @@ const Resume = () => {
         </div>
       </section>
       <section id="projects" className={style.projects}>
-        <h2 className={style.sectionTitle}>Projects</h2>
+        <h2 className={`${style.sectionTitle} ${style.primaryColor}`}>
+          Projects
+        </h2>
         <p>
           Links to some of my work can be found on isaquedev/projects and
           details can be provided upon request via a scheduled demo call.

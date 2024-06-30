@@ -5,6 +5,7 @@ import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import { LineSplit } from "@/components/shared/LineSplit";
 import { useTranslations } from "next-intl";
 
+// TODO: Translate titles
 export const Footer = () => {
   const t = useTranslations("footer");
   return (
@@ -18,7 +19,7 @@ export const Footer = () => {
       >
         <Link
           href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
-          title="LinkedIn"
+          title="My LinkedIn Profile" 
           target="_blank"
         >
           <LinkedinIcon
@@ -29,7 +30,7 @@ export const Footer = () => {
         </Link>
         <Link
           href={"https://github.com/harry-fruit"}
-          title="Github"
+          title="My Github Profile"
           target="_blank"
         >
           <GithubIcon width="40" height="40" className="text-gray-200" />
