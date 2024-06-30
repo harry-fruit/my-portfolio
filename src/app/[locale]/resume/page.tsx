@@ -68,7 +68,7 @@ const Resume = ({ params }: { params: { locale: string } }) => {
       <aside className={style.aside}>
         <div id="more-info" className={style.moreInfo}>
           <Link
-            href="https://isaquedev.vercel.app"
+            href={"/"}
             className={`${style.primaryColor} font-bold`}
           >
             Isaque | Portfolio

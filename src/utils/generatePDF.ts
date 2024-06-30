@@ -14,7 +14,7 @@ export const generatePDF = async ({ locale }: IGeneratePDF): Promise<Blob> => {
   const page = await browser.newPage();
 
   //TODO: Aplicar .env
-  await page.goto(`http://localhost:3000/${locale}/resume`, {
+  await page.goto(`${process.env.BASE_URL}/${locale}/resume`, {
     waitUntil: "networkidle0",
   });
 
