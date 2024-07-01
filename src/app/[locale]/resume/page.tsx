@@ -3,29 +3,29 @@
 import Link from "next/link";
 import style from "@/styles/resume.module.scss";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
-import { DownloadIcon } from "@/components/icons/Download";
+// import { DownloadIcon } from "@/components/icons/Download";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
 
 // TODO: Translate page
-const Resume = ({ params }: { params: { locale: string } }) => {
-  const { locale } = params;
+// const Resume = ({ params }: { params: { locale: string } }) => {
+const Resume = () => {
+  // const { locale } = params;
 
-  const generateResume = async () => {
-    //OBS: Para testar a msg de erro, basta alterar o locale aqui para qualquer coisa diferente de "en" e "pt_br"
-    const response = await fetch(`/api/${locale}/resume`);
+  // const generateResume = async () => {
+  //   //OBS: Para testar a msg de erro, basta alterar o locale aqui para qualquer coisa diferente de "en" e "pt_br"
+  //   const response = await fetch(`/api/${locale}/resume`);
 
-    if (!response.ok) {
-      //TODO: Exibir mensagem de erro
-      throw new Error("Failed to fetch resume");
-    }
+  //   if (!response.ok) {
+  //     //TODO: Exibir mensagem de erro
+  //     throw new Error("Failed to fetch resume");
+  //   }
 
-    const blob = await response.blob();
-    //TODO: Refatorar
-    const url = URL.createObjectURL(blob);
-    window.open(url, "_blank");
-    URL.revokeObjectURL(url);
-  };
+  //   const blob = await response.blob();
+  //   const url = URL.createObjectURL(blob);
+  //   window.open(url, "_blank");
+  //   URL.revokeObjectURL(url);
+  // };
 
   return (
     <div id="resume-container" className={style.container}>
@@ -53,13 +53,12 @@ const Resume = ({ params }: { params: { locale: string } }) => {
             <EmailIcon width="20" height="20" />
           </Link>
         </li>
-        <li
+        {/* <li
           id="download-resume"
           title="Download Resume"
-          onClick={generateResume}
         >
           <DownloadIcon width="20" height="20" />
-        </li>
+        </li> */}
       </ul>
       <aside className={style.aside}>
         <div id="more-info" className={style.moreInfo}>
