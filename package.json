@@ -12,6 +12,7 @@
     "@formspree/core": "^3.0.1",
     "@formspree/react": "^2.5.1",
     "animejs": "^3.2.2",
+    "jsonwebtoken": "^9.0.2",
     "next": "14.2.4",
     "next-intl": "^3.15.2",
     "react": "^18",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

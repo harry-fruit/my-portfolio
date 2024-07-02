@@ -7,23 +7,20 @@ import { DownloadIcon } from "@/components/icons/Download";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
 
-const getRequestOptions = (locale: string) => ({
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ locale: locale }),
-});
 
 // TODO: Translate page
 const Resume = ({ params }: { params: { locale: string } }) => {
   const { locale } = params;
 
+  //Analisar se é possivel extrair para uma server action // Acredito que sim.
   const generateResume = async () => {
-    //OBS: Para testar a msg de erro, basta alterar o locale aqui para qualquer coisa diferente de "en" e "pt_br"
-    const reqOptions = getRequestOptions(locale);
-    //TODO: Alterar o URL para o servidor local
-    const response = await fetch("http://localhost:3500/generate-pdf", reqOptions);
+
+    if (!locale) {
+      //TODO: Exibir mensagem de erro
+      throw new Error("Locale not provided");
+    }
+
+    const response = await fetch(`/api/${locale}/generate-pdf`);
 
     if (!response.ok) {
       //TODO: Exibir mensagem de erro
