@@ -58,7 +58,7 @@ export const SlideComponent: React.FC<Props> = ({ children }: Props) => {
             />
           </div>
         </div>
-        <p className="text-gray-500 text-s mt-6"><i>{t("slideTip")}</i></p> 
+        <p className="text-gray-500 text-s text-center mt-6 px-4"><i>{t("slideTip")}</i></p> 
       </div>
     </div>
   );

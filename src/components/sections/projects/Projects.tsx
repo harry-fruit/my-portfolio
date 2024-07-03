@@ -123,7 +123,7 @@ const cards: CardsData[] = [
 export const Projects: React.FC = (): JSX.Element => {
   const t = useTranslations("projects");
   return (
-    <FadeIn threshold={0.25}>
+    <FadeIn threshold={0.15}>
       <section
         id={"projects"}
         className={"flex flex-col items-center py-6 md:py-8 lg:pb-36 lg:pt-20"}

@@ -33,7 +33,11 @@
     "card7date": "Presente",
     "card7title": "O que faço agora?",
     "card7description": "Atualmente estou trabalhando full time como analista de sistemas na Octea e nas horas vagas, atuo como freelancer e também sigo me aprofundando em conhecimento de diversas areas de tecnologia, como o desenvolvimento de aplicativos web, data science, machine learning, etc.",
-    "present": "Presente"
+    "present": "Presente",
+    "resume": {
+      "title": "Veja meu currículo",
+      "text": "Meu Currículo"
+    }
   },
   "projects": {
     "title": "Meus Projetos",

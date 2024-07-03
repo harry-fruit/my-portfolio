@@ -11,6 +11,17 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
     }
 }
 
+.resumeContainer {
+    * {
+        transition: transform 0.3s ease-out;
+        overflow: visible;
+    }
+
+    &:hover * {
+        transform: scale(1.1);
+    }
+}
+
 /*==================================
     TIMELINE
 ==================================*/
@@ -267,3 +278,8 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
         }
     }
 }
+
+/*==================================
+    TIMELINE -- FIM
+==================================*/
+

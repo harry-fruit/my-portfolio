@@ -33,7 +33,11 @@
     "card7date": "Present",
     "card7title": "What I do now?",
     "card7description": "Currently, I work full-time as a systems analyst at Octea. In my spare time, I work as a freelancer and continue to deepen my knowledge in various areas of technology, such as web application development, data science, machine learning, etc.",
-    "present": "Present"
+    "present": "Present",
+    "resume": {
+      "title": "See my résumé",
+      "text": "My Résumé"
+    }
   },
   "projects": {
     "title": "My Projects",
