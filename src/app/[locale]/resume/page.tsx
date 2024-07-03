@@ -7,6 +7,7 @@ import { DownloadIcon } from "@/components/icons/Download";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
 import { useTranslations } from "next-intl";
+import toast from "react-hot-toast";
 
 
 const Resume = ({ params }: { params: { locale: string } }) => {
@@ -17,21 +18,25 @@ const Resume = ({ params }: { params: { locale: string } }) => {
   const generateResume = async () => {
 
     if (!locale) {
-      //TODO: Exibir mensagem de erro
-      throw new Error(t("errors.localeNotProvided"));
+      toast.error(t("errors.localeNotProvided"));
+      return;
     }
 
     const response = await fetch(`/api/${locale}/generate-pdf`);
 
     if (!response.ok) {
-      //TODO: Exibir mensagem de erro
-      throw new Error(t("errors.generateResume"));
+      toast.error(t("errors.generateResume"));
+      return;
     }
 
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
+    const fiveMinInMilliseconds = 60000 * 5;
     window.open(url, "_blank");
-    URL.revokeObjectURL(url);
+
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, fiveMinInMilliseconds);
   };
 
   return (
