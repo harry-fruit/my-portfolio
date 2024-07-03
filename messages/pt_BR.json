@@ -49,9 +49,76 @@
     "inputButton": "Enviar",
     "success": "Obrigado pela mensagem. Entrarei em contato com você assim que possivel! :)"
   },
+  "resume": {
+    "myInfo": {
+      "role": "Engenheiro de Software / Desenvolvedor Full Stack",
+      "location": "São Paulo, Brasil"
+    },
+    "subtitle": "Apaixonado por criar soluções web e entusiasta de IA, sempre explorando novas maneiras de inovar e melhorar processos",
+    "links": {
+      "linkedInTitle": "Meu perfil no LinkedIn",
+      "githubTitle": "Meu perfil no Github",
+      "emailTitle": "Envie-me um e-mail",
+      "downloadTitle": "Baixar Currículo",
+      "downloadText": "Download"
+    },
+    "aside": {
+      "portfolio": "Isaque | Portfólio",
+      "skills": {
+        "core": {
+          "title": "Habilidades Principais"
+        },
+        "others": {
+          "title": "Outras",
+          "skills": {
+            "one": "Sistemas de Design",
+            "two": "Design Responsivo",
+            "three": "Otimização de Performance",
+            "four": "Processo ETL",
+            "five": "Código Limpo",
+            "six": "Git",
+            "seven": "API Rest"
+          }
+        }
+      }
+    },
+    "experiences": {
+      "title": "Experiências",
+      "subtitle": "Trabalhei em diversos projetos web ao longo dos anos, alguns dos quais foram para as seguintes organizações:",
+      "jobs": {
+        "one": {
+          "role": "Desenvolvedor Full Stack",
+          "period": "Mar/Jun 2021",
+          "description": "Responsável por criar aplicações web do zero e implementar novas funcionalidades em aplicações existentes. Atuei na análise de requisitos, desenvolvimento front-end e back-end, garantindo integração eficiente entre diferentes sistemas. Utilizei boas práticas de programação e princípios de desenvolvimento ágil para entregar soluções de alta qualidade e escaláveis.",
+          "activities": {
+            "one": "Criação de funcionalidades e suporte para aplicações front-end utilizando React.js, Next.js, Gatsby.js, e outras tecnologias.",
+            "two": "Criação de funcionalidades e suporte para aplicações back-end utilizando Node.js, Express.js, Koa.js, Nest.js, e outras tecnologias.",
+            "three": "Controle de versão com Git.",
+            "four": "Utilização de serviços em nuvem como AWS, incluindo EC2, SES, e Lambda."
+          }
+        },
+        "two": {
+          "role": "Analista de Sistemas",
+          "period": "Jan 2022-Presente",
+          "description": "Trabalhei como analista de sistemas e desenvolvedor full-stack, criando sistemas complexos do zero e dando suporte para aplicações existentes. Responsável pela análise e levantamento de requisitos, criação de interfaces, desenvolvimento de serviços back-end (incluindo APIs, processos automatizados, tarefas agendadas e processos ETL), modelagem de estrutura de banco de dados relacional e implementação.",
+          "activities": {
+            "one": "Criação de funcionalidades e suporte para funcionalidades front-end existentes com jQuery.",
+            "two": "Desenvolvimento de APIs REST com Node.js.",
+            "three": "Desenvolvimento de estruturas e processos com bancos de dados relacionais (SQL Server).",
+            "four": "Análise de requisitos e modelagem de sistemas.",
+            "five": "Criação de processos automatizados.",
+            "six": "Criação de processos ETL (Extract, Transform, Load) com Python e SQL Server."
+          }
+        }
+      }
+    },
+    "projects": {
+      "title": "Projetos",
+      "text": "Links para alguns dos meus trabalhos podem ser encontrados em isaquedev/projects e detalhes podem ser fornecidos mediante solicitação através de uma chamada de demonstração agendada."
+    }
+  },
   "footer": {
     "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20uma%20consultoria"
   }
-  
 }

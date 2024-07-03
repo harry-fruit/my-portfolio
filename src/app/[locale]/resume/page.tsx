@@ -6,25 +6,26 @@ import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { DownloadIcon } from "@/components/icons/Download";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
+import { useTranslations } from "next-intl";
 
 
-// TODO: Translate page
 const Resume = ({ params }: { params: { locale: string } }) => {
   const { locale } = params;
+  const t = useTranslations("resume");
 
   //Analisar se é possivel extrair para uma server action // Acredito que sim.
   const generateResume = async () => {
 
     if (!locale) {
       //TODO: Exibir mensagem de erro
-      throw new Error("Locale not provided");
+      throw new Error(t("errors.localeNotProvided"));
     }
 
     const response = await fetch(`/api/${locale}/generate-pdf`);
 
     if (!response.ok) {
       //TODO: Exibir mensagem de erro
-      throw new Error("Failed to fetch resume");
+      throw new Error(t("errors.generateResume"));
     }
 
     const blob = await response.blob();
@@ -39,8 +40,8 @@ const Resume = ({ params }: { params: { locale: string } }) => {
         <li>
           <Link
             href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
-            title="My LinkedIn Profile"
-            target="_blank"
+            title={t("links.linkedInTitle")}
+            target="_blank" rel="noreferrer"
           >
             <LinkedinIcon className={`${style.linkedinIcon}`} />
           </Link>
@@ -48,20 +49,20 @@ const Resume = ({ params }: { params: { locale: string } }) => {
         <li>
           <Link
             href={"https://github.com/harry-fruit"}
-            title="My Github Profile"
+            title={t("links.githubTitle")}
             target="_blank"
           >
             <GithubIcon />
           </Link>
         </li>
-        <li title="Send me an e-mail">
+        <li title={t("links.emailTitle")}>
           <Link href="mailto:isaqueduarte17@gmail.com">
             <EmailIcon width="20" height="20" />
           </Link>
         </li>
         <li
           id="download-resume"
-          title="Download Resume"
+          title={t("links.downloadTitle")}
           onClick={generateResume}
         >
           <DownloadIcon width="20" height="20" />
@@ -71,15 +72,16 @@ const Resume = ({ params }: { params: { locale: string } }) => {
         <div id="more-info" className={style.moreInfo}>
           <Link
             href={"/"}
+            target="_blank"
             className={`${style.primaryColor} font-bold`}
           >
-            Isaque | Portfolio
+            {t("aside.portfolio")}
           </Link>
-          <p>São Paulo, Brazil</p>
+          <p>{t("myInfo.location")}</p>
         </div>
         <div className={style.skillsContainer}>
           <div className={style.skills}>
-            <h2 className={`${style.primaryColor}`}>Core Skills</h2>
+            <h2 className={`${style.primaryColor}`}>{t("aside.skills.core.title")}</h2>
             <ul>
               <li>Javascript</li>
               <li>Typescript</li>
@@ -94,35 +96,33 @@ const Resume = ({ params }: { params: { locale: string } }) => {
             </ul>
           </div>
           <div className={style.skills}>
-            <h2 className={`${style.primaryColor}`}>Others</h2>
+            <h2 className={`${style.primaryColor}`}>{t("aside.skills.others.title")}</h2>
             <ul>
-              <li className="xl:w-1/2">Design Systems</li>
-              <li>Responsive Web Design</li>
-              <li>Performance Optimization</li>
-              <li>ETL Process</li>
-              <li>Clean Code</li>
-              <li>Git</li>
-              <li>Rest API</li>
+              <li>{t("aside.skills.others.skills.one")}</li>
+              <li>{t("aside.skills.others.skills.two")}</li>
+              <li>{t("aside.skills.others.skills.three")}</li>
+              <li>{t("aside.skills.others.skills.four")}</li>
+              <li>{t("aside.skills.others.skills.five")}</li>
+              <li>{t("aside.skills.others.skills.six")}</li>
+              <li>{t("aside.skills.others.skills.seven")}</li>
             </ul>
           </div>
         </div>
       </aside>
       <section id="introduction" className={style.introduction}>
         <h1 className={`${style.primaryColor}`}>Isaque Duarte</h1>
-        <h3>Fullstack Developer</h3>
+        <h3>{t("myInfo.role")}</h3>
         <p>
-          Passionate about creating web solutions and enthusiastic about AI,
-          always exploring new ways to innovate and improve processes
+          {t("subtitle")}
         </p>
       </section>
       <section id="experiences" className={style.experiences}>
         <div className={style.experiencesHeader}>
           <h2 className={`${style.sectionTitle} ${style.primaryColor}`}>
-            Experiences
+            {t("experiences.title")}
           </h2>
           <p>
-            Ive worked on a handful of web projects over the years, some of
-            which were for the following organizations: TODOTODO
+            {t("experiences.subtitle")}
           </p>
         </div>
         <div className={style.experienceItemsWrapper}>
@@ -132,26 +132,23 @@ const Resume = ({ params }: { params: { locale: string } }) => {
                 <span className={`${style.companyName} ${style.primaryColor}`}>
                   Pollux{" "}
                 </span>
-                <span className={style.role}>― Full Stack Developer</span>
+                <span className={style.role}>― {t("experiences.jobs.one.role")}</span>
               </p>
-              <p className={style.period}>March/Jun 2021</p>
+              <p className={style.period}>{t("experiences.jobs.one.period")}</p>
             </div>
             <p className={style.description}>
-              Breve descrição do serviço max 150 linhas
+              {t("experiences.jobs.one.description")}
             </p>
             <ul>
               <li>
-                Criação de funcionalidades e realização de suporte a aplicações
-                front-end com React.js, Next.js, Gatsby.js e outras tecnologias
+                {t("experiences.jobs.one.activities.one")}
               </li>
               <li>
-                Criação de funcionalidades e realização de suporte a aplicações
-                back-end com Node.js, Express.js, Koa.js, Nest.js.
+                {t("experiences.jobs.one.activities.two")}
               </li>
-              <li>Controle de versão com Git</li>
+              <li>{t("experiences.jobs.one.activities.three")}</li>
               <li>
-                Utilização de serviços AWS, como p.e: AWS EC2, AWS SES e AWS
-                Lambda
+                {t("experiences.jobs.one.activities.four")}
               </li>
             </ul>
           </div>
@@ -161,40 +158,30 @@ const Resume = ({ params }: { params: { locale: string } }) => {
                 <span className={`${style.companyName} ${style.primaryColor}`}>
                   4MapIT{" "}
                 </span>
-                <span className={style.role}>― Analista de Sistemas</span>
+                <span className={style.role}>― {t("experiences.jobs.two.role")}</span>
               </p>
-              <p className={style.period}>Jan 2022 - Present</p>
+              <p className={style.period}>{t("experiences.jobs.two.period")}</p>
             </div>
             <p className={style.description}>
-              Breve descrição do serviço max 150 linhas
+              {t("experiences.jobs.two.description")}
             </p>
             <ul>
-              <li>
-                Criação de funcionalidades e realização de suporte a
-                funciondades existentes em front-end jQuery
-              </li>
-              <li>Desenvolvimento de APIs REST com Node.js</li>
-              <li>
-                Grande foco em desenvolvimento de estruturas e processos com
-                banco de dados relacionais (SQL Server)
-              </li>
-              <li>Análise de requisitos e modelagem de sistemas</li>
-              <li>Criação de processos de automação</li>
-              <li>
-                Criação de processos de ETL (Extract, Transform, Load) com
-                Python e SQL Server
-              </li>
+              <li>{t("experiences.jobs.two.activities.one")}</li>
+              <li>{t("experiences.jobs.two.activities.two")}</li>
+              <li>{t("experiences.jobs.two.activities.three")}</li>
+              <li>{t("experiences.jobs.two.activities.four")}</li>
+              <li>{t("experiences.jobs.two.activities.five")}</li>
+              <li>{t("experiences.jobs.two.activities.six")}</li>
             </ul>
           </div>
         </div>
       </section>
       <section id="projects" className={style.projects}>
         <h2 className={`${style.sectionTitle} ${style.primaryColor}`}>
-          Projects
+          {t("projects.title")}
         </h2>
         <p>
-          Links to some of my work can be found on isaquedev/projects and
-          details can be provided upon request via a scheduled demo call.
+          {t("projects.text")}
         </p>
       </section>
     </div>
