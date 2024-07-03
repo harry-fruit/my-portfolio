@@ -115,6 +115,10 @@
     "projects": {
       "title": "Projetos",
       "text": "Links para alguns dos meus trabalhos podem ser encontrados em isaquedev/projects e detalhes podem ser fornecidos mediante solicitação através de uma chamada de demonstração agendada."
+    },
+    "errors": {
+      "generateResume": "Falha ao gerar currículo",
+      "localeNotProvided": "Linguagem não fornecida"
     }
   },
   "footer": {
