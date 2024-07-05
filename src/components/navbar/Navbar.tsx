@@ -6,9 +6,17 @@ import { useState } from "react";
 import { ProjectIcon } from "../icons/ProjectIcon";
 import Link from "next/link";
 
-export const Navbar = () => {
+
+type Props = {
+  locale: string;
+};
+
+export const Navbar = ({ locale }:Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  console.log(isActive);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
@@ -16,25 +24,23 @@ export const Navbar = () => {
         <ProjectIcon width="40" height="40" className="text-white" />
         <MenuButton
           isActive={isActive}
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
+          onClick={toggleMenu}
         />
       </header>
       <div className={`${style.content} ${isActive ? style.active : ""}`}>
         <section className={style.navigation}>
           <ul>
             <li>
-              <Link href={"#about"}>About</Link>
+              <Link href={"#about"} onClick={toggleMenu}>About</Link>
             </li>
             <li>
-              <Link href={"#experiences"}>Experiences</Link>
+              <Link href={"#experiences"} onClick={toggleMenu}>Experiences</Link>
             </li>
             <li>
-              <Link href={"#projects"}>Projects</Link>
+              <Link href={"#projects"} onClick={toggleMenu}>Projects</Link>
             </li>
             <li>
-              <Link href={"#todo"}>My résumé</Link>
+              <Link href={`/${locale}/resume`} target="_blank">My résumé</Link>
             </li>
           </ul>
         </section>
@@ -46,21 +52,23 @@ export const Navbar = () => {
             </li>
           </ul>
         </section>
-        <section className={style.socials}>
-          <ul>
-            <li>
-              <Link href={"https://github.com/harry-fruit"}>GH</Link>
-            </li>
-            <li>
-              <Link
-                href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
-              >
-                LN
-              </Link>
-            </li>
-          </ul>
-        </section>
       </div>
+      <section className={style.socials}>
+        <ul>
+          <li>
+            <Link title={"My Github"} href={"https://github.com/harry-fruit"} target="_blank">GH</Link>
+          </li>
+          <li>
+            <Link
+              title={"My LinkedIn"}
+              href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
+              target="_blank"
+            >
+              LN
+            </Link>
+          </li>
+        </ul>
+      </section>
     </nav>
   );
 };

@@ -11,7 +11,7 @@ export default function Home({ params }: { params: { locale: string } }) {
   
   return (
     <main className="w-full flex flex-col items-center justify-center overflow-x-hidden relative">
-      <Navbar />
+      <Navbar locale={locale} />
       <Introduction />
       <About />
       <Experience locale={locale} />
