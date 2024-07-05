@@ -1,0 +1,38 @@
+.menuButtonContainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  // box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: fit-content;
+  // background-color: blue;
+
+  &.active {
+    .bar {
+      &:first-child {
+        transform: translate(0, 10px) rotate(45deg);
+      }
+
+      &:last-child {
+        width: 40px;
+        transform: translate(0, -6px) rotate(-45deg);
+      }
+    }
+  }
+
+  .bar {
+    transition: all 0.2s ease;
+    display: block;
+    background-color: white;
+    width: 40px;
+    height: 4px;
+    margin: 6px 0;
+    border-radius: 5px;
+
+    &:last-child {
+      width: 20px;
+    }
+  }
+}
