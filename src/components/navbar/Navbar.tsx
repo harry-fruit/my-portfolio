@@ -5,6 +5,7 @@ import { MenuButton } from "./MenuButton";
 import { useState } from "react";
 import { ProjectIcon } from "../icons/ProjectIcon";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 
 type Props = {
@@ -13,6 +14,7 @@ type Props = {
 
 export const Navbar = ({ locale }:Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const t = useTranslations("navbar");
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -31,21 +33,21 @@ export const Navbar = ({ locale }:Props) => {
         <section className={style.navigation}>
           <ul>
             <li>
-              <Link href={"#about"} onClick={toggleMenu}>About</Link>
+              <Link href={"#about"} onClick={toggleMenu}>{t("about")}</Link>
             </li>
             <li>
-              <Link href={"#experiences"} onClick={toggleMenu}>Experiences</Link>
+              <Link href={"#experiences"} onClick={toggleMenu}>{t("experiences")}</Link>
             </li>
             <li>
-              <Link href={"#projects"} onClick={toggleMenu}>Projects</Link>
+              <Link href={"#projects"} onClick={toggleMenu}>{t("projects")}</Link>
             </li>
             <li>
-              <Link href={`/${locale}/resume`} target="_blank">My résumé</Link>
+              <Link href={`/${locale}/resume`} target="_blank">{t("resume")}</Link>
             </li>
           </ul>
         </section>
         <section className={style.getInTouch}>
-          <h2>Say Hello</h2>
+          <h2>{t("sayHello")}</h2>
           <ul>
             <li>
               <Link href="mailto:isaqueduarte17@gmail.com">E-Mail</Link>
@@ -56,11 +58,11 @@ export const Navbar = ({ locale }:Props) => {
       <section className={style.socials}>
         <ul>
           <li>
-            <Link title={"My Github"} href={"https://github.com/harry-fruit"} target="_blank">GH</Link>
+            <Link title={t("links.githubTitle")} href={"https://github.com/harry-fruit"} target="_blank">GH</Link>
           </li>
           <li>
             <Link
-              title={"My LinkedIn"}
+              title={t("links.linkedInTitle")}
               href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
               target="_blank"
             >

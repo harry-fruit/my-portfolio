@@ -1,6 +1,7 @@
 "use client";
 
 import style from "@/styles/navbar/menu-button.module.scss";
+import { useTranslations } from "next-intl";
 
 type Props = {
   isActive?: boolean;
@@ -8,9 +9,11 @@ type Props = {
 };
 
 export const MenuButton = ({ isActive, onClick }: Props) => {
+  const t = useTranslations("navbar.menuButton");
+  
   return (
     <div
-      title={isActive ? "Close Menu" : "Open Menu"}
+      title={isActive ? t("close") : t("open")}
       className={`${style.menuButtonContainer} ${isActive ? style.active : ""}`}
       onClick={onClick}
     >

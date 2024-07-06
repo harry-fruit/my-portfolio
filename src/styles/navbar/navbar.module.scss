@@ -87,7 +87,6 @@ $hovered-links-color: $title-dark-color;
         transition: all 0.3s ease;
 
         ul {
-            // background-color: red;
             display: flex;
             gap: 2em;
 
@@ -112,23 +111,10 @@ $hovered-links-color: $title-dark-color;
     }
 }
 
-@media (min-width: 820px) {
-    // .navbar {
-    //     align-items: center;
-    //     .content {
-    //         justify-content: center;
-    //     }
-    // }
-}
-
 
 @media (prefers-color-scheme: dark) {
     .navbar {
-        .content {
-            @apply bg-slate-950;
-        }
-
-        .socials {
+        .content, .socials {
             @apply bg-slate-950;
         }
 
