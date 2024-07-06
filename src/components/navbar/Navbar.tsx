@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import style from "@/styles/navbar/navbar.module.scss";
 import { MenuButton } from "./MenuButton";
 import { useState } from "react";
-import { ProjectIcon } from "../icons/ProjectIcon";
-import Link from "next/link";
+import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { useTranslations } from "next-intl";
+import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 
 
 type Props = {
@@ -24,6 +25,7 @@ export const Navbar = ({ locale }:Props) => {
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
       <header className={style.header}>
         <ProjectIcon width="40" height="40" className="text-white" />
+        <ThemeToggle/>
         <MenuButton
           isActive={isActive}
           onClick={toggleMenu}
@@ -48,6 +50,14 @@ export const Navbar = ({ locale }:Props) => {
         </section>
         <section className={style.getInTouch}>
           <h2>{t("sayHello")}</h2>
+          <ul>
+            <li>
+              <Link href="mailto:isaqueduarte17@gmail.com">E-Mail</Link>
+            </li>
+          </ul>
+        </section>
+        <section className={style.accessibility}>
+          <h2>Accessibility</h2>
           <ul>
             <li>
               <Link href="mailto:isaqueduarte17@gmail.com">E-Mail</Link>
