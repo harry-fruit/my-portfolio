@@ -125,6 +125,21 @@
       "localeNotProvided": "Linguagem não fornecida"
     }
   },
+  "navbar": {
+    "about": "Sobre",
+    "experiences": "Experiências",
+    "projects": "Projetos",
+    "resume": "Meu Currículo",
+    "sayHello": "Diga Olá!",
+    "links": {
+      "githubTitle":"Meu Github",
+      "linkedInTitle":"Meu LinkedIn"
+    },
+    "menuButton": {
+      "open": "Abrir Menu",
+      "close": "Fechar Menu"
+    }
+  },
   "footer": {
     "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20uma%20consultoria"

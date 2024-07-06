@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-full py-4 md:py-8 lg:py-10 flex flex-col items-center justify-center bg-primary-700 dark:bg-slate-950/90"
+      className="w-full py-8 md:py-10 lg:py-12 flex flex-col items-center justify-center bg-primary-700 dark:bg-slate-950/90"
     >
       <div
         id="social-media"

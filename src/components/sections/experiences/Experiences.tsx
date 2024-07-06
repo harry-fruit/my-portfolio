@@ -15,11 +15,11 @@ import Link from "next/link";
 export const Experience = ({ locale }: { locale: string }): JSX.Element => {
   const t = useTranslations("experiences");
   return (
-    <FadeIn threshold={0.25}>
+    <FadeIn threshold={0.1}>
       <section
         id={"experiences"}
         className={
-          "bg-primary-100/25 dark:bg-slate-950/20 flex flex-col items-center"
+          "bg-primary-100/60 dark:bg-slate-950/20 flex flex-col items-center py-4 md:py-8 xl:py-10"
         }
       >
         <SectionHeaderContainer className="px-4">

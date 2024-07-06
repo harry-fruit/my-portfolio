@@ -125,6 +125,21 @@
       "localeNotProvided": "Locale not provided"
     }
   },
+  "navbar": {
+    "about": "About",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "resume": "My Résumé",
+    "sayHello": "Say Hello",
+    "links": {
+      "githubTitle":"My Github",
+      "linkedInTitle":"My LinkedIn"
+    },
+    "menuButton": {
+      "open": "Open Menu",
+      "close": "Close Menu"
+    }
+  },
   "footer": {
     "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation"
