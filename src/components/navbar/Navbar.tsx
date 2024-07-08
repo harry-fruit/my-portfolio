@@ -8,12 +8,11 @@ import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { useTranslations } from "next-intl";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 
-
 type Props = {
   locale: string;
 };
 
-export const Navbar = ({ locale }:Props) => {
+export const Navbar = ({ locale }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const t = useTranslations("navbar");
 
@@ -23,28 +22,32 @@ export const Navbar = ({ locale }:Props) => {
 
   return (
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
-      <header className={style.header}>
+      <header className={`${style.header} ${isActive ? "navbar-color" : ""}`}>
         <ProjectIcon width="40" height="40" className="text-white" />
-        <ThemeToggle/>
-        <MenuButton
-          isActive={isActive}
-          onClick={toggleMenu}
-        />
+        <MenuButton isActive={isActive} onClick={toggleMenu} />
       </header>
-      <div className={`${style.content} ${isActive ? style.active : ""}`}>
+      <div className={`${style.content} navbar-color ${isActive ? style.active : ""}`}>
         <section className={style.navigation}>
           <ul>
             <li>
-              <Link href={"#about"} onClick={toggleMenu}>{t("about")}</Link>
+              <Link href={"#about"} onClick={toggleMenu}>
+                {t("about")}
+              </Link>
             </li>
             <li>
-              <Link href={"#experiences"} onClick={toggleMenu}>{t("experiences")}</Link>
+              <Link href={"#experiences"} onClick={toggleMenu}>
+                {t("experiences")}
+              </Link>
             </li>
             <li>
-              <Link href={"#projects"} onClick={toggleMenu}>{t("projects")}</Link>
+              <Link href={"#projects"} onClick={toggleMenu}>
+                {t("projects")}
+              </Link>
             </li>
             <li>
-              <Link href={`/${locale}/resume`} target="_blank">{t("resume")}</Link>
+              <Link href={`/${locale}/resume`} target="_blank">
+                {t("resume")}
+              </Link>
             </li>
           </ul>
         </section>
@@ -60,15 +63,21 @@ export const Navbar = ({ locale }:Props) => {
           <h2>Accessibility</h2>
           <ul>
             <li>
-              <Link href="mailto:isaqueduarte17@gmail.com">E-Mail</Link>
+              <ThemeToggle/>
             </li>
           </ul>
         </section>
       </div>
-      <section className={style.socials}>
+      <section className={`${style.socials} navbar-color`}>
         <ul>
           <li>
-            <Link title={t("links.githubTitle")} href={"https://github.com/harry-fruit"} target="_blank">GH</Link>
+            <Link
+              title={t("links.githubTitle")}
+              href={"https://github.com/harry-fruit"}
+              target="_blank"
+            >
+              GH
+            </Link>
           </li>
           <li>
             <Link

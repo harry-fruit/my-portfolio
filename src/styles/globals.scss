@@ -48,8 +48,35 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.navbar-color {
+  @apply bg-primary-800;
+  transition: opacity .5s ease;
+}
 
-@media (prefers-color-scheme: dark) {
+:root {
+  --text-color-3: #5F5F66;
+  --text-color-2: #4B4B52;
+  --text-color-1: #27272A;
+
+  --input-bg-color: #F1F5F9;
+  --input-text-color: #2c2c2c;
+  --input-placeholder-color: #5F5F66;
+}
+
+
+html.dark {
+  --text-color-3: #B8B9D1;
+  --text-color-2: #E3ECFF;
+  --text-color-1: #D1D7EB;
+
+  --input-bg-color: #1e293b;
+  --input-text-color: #F1F5F9;
+  --input-placeholder-color: #B8B9D1;
+
+  .navbar-color {
+    @apply bg-slate-950;
+  }
+  
   h1 {
     @apply text-title-dark
   }

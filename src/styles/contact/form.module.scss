@@ -5,6 +5,7 @@
         "email"
         "message"
         "button";
+        gap: .75em;
     
     input::placeholder {
         @apply text-gray-800;

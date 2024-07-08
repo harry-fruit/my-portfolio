@@ -1,5 +1,9 @@
 @import "variables";
 
+$input-bg-color: #1e293b;
+$input-text-color: var(--input-text-color);
+$input-placeholder-color: var(--input-placeholder-color);
+
 textarea.input {
   resize: none;
   height: 200px;
@@ -7,7 +11,7 @@ textarea.input {
 
 .input {
   font-size: 0.9rem;
-  background-color: rgba($color-slate-100, 0.5);
+  background-color:var(--input-bg-color);
   width: 100%;
   box-sizing: border-box;
   padding-inline: 0.5em;
@@ -15,22 +19,22 @@ textarea.input {
   border: none;
   border-bottom: 4px solid rgba($color-primary-400, 0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: $input-text-color;
 
   &:focus {
     outline: none;
     border-color: transparent;
   }
 
-  &:focus+.inputBorder {
+  &:focus + .inputBorder {
     transform: scaleX(100%);
   }
-
 }
 
 textarea.input,
 input.input {
   &::placeholder {
-    @apply text-gray-800;
+    color: $input-placeholder-color;
   }
 }
 
@@ -45,8 +49,8 @@ input.input {
   transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-textarea+.inputBorder {
-  bottom: 5px;
+textarea + .inputBorder {
+  bottom: 2px;
 }
 
 .formControl {
@@ -60,28 +64,18 @@ textarea+.inputBorder {
   padding-block: 0.8em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  &:focus+.inputBorderAlt {
+  &:focus + .inputBorderAlt {
     transform: scaleX(100%);
   }
 }
 
 .inputBorderAlt {
   height: 3px;
-  background: linear-gradient(90deg, $color-primary-200 0%, $color-primary-600 50%, $color-primary-200 100%);
+  background: linear-gradient(
+    90deg,
+    $color-primary-200 0%,
+    $color-primary-600 50%,
+    $color-primary-200 100%
+  );
   transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-
-@media (prefers-color-scheme: dark) {
-
-  .input {
-    background-color: rgba($color-slate-800, 0.5);
-  }
-
-  textarea.input,
-  input.input {
-    &::placeholder {
-      @apply text-gray-400;
-    }
-  }
 }

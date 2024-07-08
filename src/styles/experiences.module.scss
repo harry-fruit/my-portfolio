@@ -60,6 +60,10 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
     white-space: nowrap;
 }
 
+.timelineDate {
+    color: var(--text-color-1);
+}
+
 .timelineMarker {
     position: absolute;
     top: 0;
