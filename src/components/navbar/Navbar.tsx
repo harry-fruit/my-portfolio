@@ -22,11 +22,11 @@ export const Navbar = ({ locale }: Props) => {
 
   return (
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
-      <header className={`${style.header} ${isActive ? "navbar-color" : ""}`}>
+      <header className={`${style.header}`}>
         <ProjectIcon width="40" height="40" className="text-white" />
         <MenuButton isActive={isActive} onClick={toggleMenu} />
       </header>
-      <div className={`${style.content} navbar-color ${isActive ? style.active : ""}`}>
+      <div className={`${style.content} ${isActive ? style.active : ""}`}>
         <section className={style.navigation}>
           <ul>
             <li>
@@ -68,7 +68,7 @@ export const Navbar = ({ locale }: Props) => {
           </ul>
         </section>
       </div>
-      <section className={`${style.socials} navbar-color`}>
+      <section className={`${style.socials}`}>
         <ul>
           <li>
             <Link

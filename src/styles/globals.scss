@@ -9,6 +9,89 @@
   src: url("../font/InterTight-VariableFont_wght.ttf");
 }
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+
+  // COLORS PALLETE
+  --primary-color-100: #cfebff;
+  --primary-color-200: #9fd7ff;
+  --primary-color-300: #70c2ff;
+  --primary-color-400: #40aeff;
+  --primary-color-500: #109aff;
+  --primary-color-600: #0d7bcc;
+  --primary-color-700: #0a5c99;
+  --primary-color-800: #063e66;
+  --primary-color-900: #031f33;
+
+  --slate-color-50: #f8fafc;
+  --slate-color-100: #f1f5f9;
+  --slate-color-200: #e2e8f0;
+  --slate-color-300: #cbd5e1;
+  --slate-color-400: #94a3b8;
+  --slate-color-500: #64748b;
+  --slate-color-600: #475569;
+  --slate-color-700: #334155;
+  --slate-color-800: #1e293b;
+  --slate-color-900: #0f172a;
+  --slate-color-950: #020617;
+
+  // MY VARIABLES
+  --text-color-3: #5f5f66;
+  --text-color-2: #4b4b52;
+  --text-color-1: #27272a;
+
+  --input-bg-color: #f1f5f9;
+  --input-text-color: #2c2c2c;
+  --input-placeholder-color: #5f5f66;
+
+  --navbar-bg-color: var(--primary-color-800);
+}
+
+html.dark {
+  --text-color-3: #b8b9d1;
+  --text-color-2: #e3ecff;
+  --text-color-1: #d1d7eb;
+
+  --input-bg-color: #1e293b;
+  --input-text-color: #f1f5f9;
+  --input-placeholder-color: #b8b9d1;
+
+  --navbar-bg-color: var(--slate-color-950);
+
+  h1 {
+    @apply text-title-dark;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-subtitle-dark;
+  }
+
+  p {
+    @apply text-paragraph-dark;
+  }
+
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+
+  .text-primary-gradient:not(.apply-dark) {
+    background: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+body {
+  font-family: "Inter Tight", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
 h1 {
   @apply text-4xl font-bold text-title-light;
 }
@@ -32,76 +115,10 @@ p {
   @apply text-base text-paragraph-light;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-}
-
-
-body {
-  font-family: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(var(--foreground-rgb));
-}
-
 .text-primary-gradient {
   background: -webkit-linear-gradient($color-primary-600, $color-primary-500);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.navbar-color {
-  @apply bg-primary-800;
-  transition: opacity .5s ease;
-}
-
-:root {
-  --text-color-3: #5F5F66;
-  --text-color-2: #4B4B52;
-  --text-color-1: #27272A;
-
-  --input-bg-color: #F1F5F9;
-  --input-text-color: #2c2c2c;
-  --input-placeholder-color: #5F5F66;
-}
-
-
-html.dark {
-  --text-color-3: #B8B9D1;
-  --text-color-2: #E3ECFF;
-  --text-color-1: #D1D7EB;
-
-  --input-bg-color: #1e293b;
-  --input-text-color: #F1F5F9;
-  --input-placeholder-color: #B8B9D1;
-
-  .navbar-color {
-    @apply bg-slate-950;
-  }
-  
-  h1 {
-    @apply text-title-dark
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply  text-subtitle-dark;
-  }
-
-  p {
-    @apply text-paragraph-dark;
-  }
-
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-
-  .text-primary-gradient:not(.apply-dark) {
-    background: initial;
-    background-clip: initial;
-    -webkit-text-fill-color: initial;
-  }
 }
 
 .wave-container {
@@ -111,12 +128,28 @@ html.dark {
 }
 
 @keyframes wave {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
