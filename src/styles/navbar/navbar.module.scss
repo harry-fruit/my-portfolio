@@ -79,6 +79,16 @@ $hovered-links-color: $title-dark-color;
         color: white;
       }
     }
+
+    .accessibility {
+      width: 100%;
+
+      ul {
+        li {
+          margin: 0.75em 0;
+        }
+      }
+    }
   }
 
   .socials {
@@ -112,7 +122,7 @@ $hovered-links-color: $title-dark-color;
   &.active {
     z-index: 99;
     position: fixed;
-
+    background-color: var(--navbar-bg-color);
     .content {
       opacity: 1;
     }
