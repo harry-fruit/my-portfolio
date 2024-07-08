@@ -16,7 +16,7 @@ export const TimelineItem: React.FC<Props> = ({
     <FadeIn className={style.timelineItem}>
       <li>
         <div className={`${style.timelineInfo}`}>
-          <span>{date}</span>
+          <span className={style.timelineDate}>{date}</span>
         </div>
         <div className={style.timelineMarker}></div>
         <div className={style.timelineContent}>

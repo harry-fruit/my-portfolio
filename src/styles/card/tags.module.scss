@@ -24,6 +24,7 @@ $default: #f1f5f9;
             rounded-full;
         padding: .25rem .75rem;
         border: 2px solid;
+        color: var(--text-color-2);
     
         &.python {
           border-color: #4da54d

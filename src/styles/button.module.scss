@@ -52,7 +52,7 @@ $dark-button-color-hover: #E3ECFF;
     }
 }
 
-@media (prefers-color-scheme: dark) {
+:global(html.dark) {
     .btn{
         color: $dark-button-color;
         border-color: $dark-button-color;
