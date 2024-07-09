@@ -138,6 +138,17 @@
     "menuButton": {
       "open": "Open Menu",
       "close": "Close Menu"
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "theme": {
+        "dark": "Switch to dark mode",
+        "light": "Switch to light mode"
+      },
+      "languages": {
+        "english": "English",
+        "portuguese": "Portuguese"
+      }
     }
   },
   "footer": {
