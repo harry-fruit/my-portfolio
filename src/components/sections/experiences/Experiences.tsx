@@ -7,13 +7,14 @@ import { FadeIn } from "@/components/shared/FadeIn";
 import { Timeline } from "@/components/sections/experiences/timeline/Timeline";
 import { TimelineItem } from "@/components/sections/experiences/timeline/TimelineItem";
 import { TimelinePeriod } from "@/components/sections/experiences/timeline/TimelinePeriod";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { DocumentIcon } from "@/components/icons/DocumentIcon";
 import style from "@/styles/experiences.module.scss";
 import Link from "next/link";
 
-export const Experience = ({ locale }: { locale: string }): JSX.Element => {
+export const Experience = (): JSX.Element => {
   const t = useTranslations("experiences");
+  const locale = useLocale();
   return (
     <FadeIn threshold={0.05} className={style.experiencesContainer}>
       <section

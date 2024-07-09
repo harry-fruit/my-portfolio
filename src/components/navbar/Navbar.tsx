@@ -3,9 +3,9 @@
 import Link from "next/link";
 import style from "@/styles/navbar/navbar.module.scss";
 import { MenuButton } from "./MenuButton";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useState, useTransition } from "react";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 import { useRouter } from "next/navigation";
 import { Dropdown } from "../shared/Dropdown";
@@ -13,14 +13,13 @@ import { DropdownOptions } from "@/types/components/dropdownOptions";
 import { BrazilFlag } from "../icons/flags/Brazil";
 import { USFlag } from "../icons/flags/US";
 
-type Props = {
-  locale: string;
-};
 
-export const Navbar = ({ locale }: Props) => {
+export const Navbar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [, startTransition] = useTransition();
   const t = useTranslations("navbar");
   const router = useRouter();
+  const locale = useLocale();
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -28,7 +27,7 @@ export const Navbar = ({ locale }: Props) => {
 
   const handleLanguageChange = (event: MouseEvent<HTMLLIElement>) => {
     const { value } = event.currentTarget.dataset;
-    router.push(`/${value}`);
+    startTransition(() => router.replace(`/${value}`));
   };
 
   const getDropdownOptions = (): DropdownOptions => {
