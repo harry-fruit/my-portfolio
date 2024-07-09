@@ -1,7 +1,7 @@
 import style from "@/styles/dropdown.module.scss";
 import { MouseEvent, useState } from "react";
 import { DropdownOptions } from "@/types/components/dropdownOptions";
-import { TriangleIcon } from "../icons/TriangleIcon";
+import { TriangleIcon } from "@/components/icons/TriangleIcon";
 
 type Props = {
   onChange: (event: MouseEvent<HTMLLIElement>) => void;
@@ -39,9 +39,8 @@ export const Dropdown = ({ options, onChange }: Props) => {
       setCurrentOption({ value: value as string, label: label as string });
     }
 
-    if (onChange) {
-      onChange(event);
-    }
+    if (onChange) { onChange(event); }
+    
   };
 
   const toggle = () => {

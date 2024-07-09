@@ -2,22 +2,22 @@
 
 import Link from "next/link";
 import style from "@/styles/navbar/navbar.module.scss";
-import { MenuButton } from "./MenuButton";
 import { MouseEvent, useState, useTransition } from "react";
-import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { useLocale, useTranslations } from "next-intl";
-import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 import { useRouter } from "next/navigation";
-import { Dropdown } from "../shared/Dropdown";
+import { MenuButton } from "@/components/navbar/MenuButton";
+import { ProjectIcon } from "@/components/icons/ProjectIcon";
+import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
+import { Dropdown } from "@/components/shared/Dropdown";
 import { DropdownOptions } from "@/types/components/dropdownOptions";
-import { BrazilFlag } from "../icons/flags/Brazil";
-import { USFlag } from "../icons/flags/US";
+import { BrazilFlag } from "@/components/icons/flags/Brazil";
+import { USFlag } from "@/components/icons/flags/US";
 
 
 export const Navbar = () => {
-  const [isActive, setIsActive] = useState<boolean>(false);
-  const [, startTransition] = useTransition();
   const t = useTranslations("navbar");
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [,startTransition] = useTransition();
   const router = useRouter();
   const locale = useLocale();
 
