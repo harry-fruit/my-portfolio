@@ -3,10 +3,15 @@
 import Link from "next/link";
 import style from "@/styles/navbar/navbar.module.scss";
 import { MenuButton } from "./MenuButton";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { useTranslations } from "next-intl";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
+import { useRouter } from "next/navigation";
+import { Dropdown } from "../shared/Dropdown";
+import { DropdownOptions } from "@/types/components/dropdownOptions";
+import { BrazilFlag } from "../icons/flags/Brazil";
+import { USFlag } from "../icons/flags/US";
 
 type Props = {
   locale: string;
@@ -15,10 +20,42 @@ type Props = {
 export const Navbar = ({ locale }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const t = useTranslations("navbar");
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
+
+  const handleLanguageChange = (event: MouseEvent<HTMLLIElement>) => {
+    const { value } = event.currentTarget.dataset;
+    router.push(`/${value}`);
+  };
+
+  const getDropdownOptions = (): DropdownOptions => {
+    return dropdownOptions.map((option) => {
+      if (option.value === locale) {
+        option.selected = true;
+      } else {
+        option.selected = false;
+      }
+      return option;
+    });
+  };
+
+  const dropdownOptions: DropdownOptions = [
+    {
+      value: "en",
+      label: t("accessibility.languages.english"),
+      selected: false,
+      icon: <USFlag />
+    },
+    {
+      value: "pt-BR",
+      label: t("accessibility.languages.portuguese"),
+      selected: false,
+      icon: <BrazilFlag />
+    },
+  ];
 
   return (
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
@@ -61,9 +98,15 @@ export const Navbar = ({ locale }: Props) => {
         </section>
         <section className={style.accessibility}>
           <h2>Accessibility</h2>
-          <ul>
-            <li>
-              <ThemeToggle/>
+          <ul className={style.accessibilityList}>
+            <li className={style.accessibilityItem}>
+              <ThemeToggle />
+            </li>
+            <li className={style.accessibilityItem}>
+              <Dropdown
+                onChange={handleLanguageChange}
+                options={getDropdownOptions()}
+              />
             </li>
           </ul>
         </section>

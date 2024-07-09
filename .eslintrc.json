@@ -6,10 +6,6 @@
   ],
   "rules": {
     "quotes":["warn", "double"],
-    "semi": ["warn", "always"],
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ]
+    "semi": ["warn", "always"]
   }
 }
