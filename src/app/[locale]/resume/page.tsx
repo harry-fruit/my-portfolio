@@ -8,39 +8,39 @@ import { GithubIcon } from "@/components/icons/GithubIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
+import { handleResumeGeneration } from "@/util/generateResume";
+import { useTransition } from "react";
+import { Loader } from "@/components/Loader";
+import { useUserDevice } from "@/hooks/useUserDevice";
 
+type ResumeProps = {
+  params: {
+    locale: string;
+  };
+};
 
-const Resume = ({ params }: { params: { locale: string } }) => {
-  const { locale } = params;
+const Resume = ({ params: { locale } }: ResumeProps) => {
   const t = useTranslations("resume");
+  const [isPending, startTransition] = useTransition();
+  const userDevice  = useUserDevice();
 
-  //Analisar se é possivel extrair para uma server action // Acredito que sim.
   const generateResume = async () => {
-
-    if (!locale) {
-      toast.error(t("errors.localeNotProvided"));
-      return;
-    }
-
-    const response = await fetch(`/api/${locale}/generate-pdf`);
-
-    if (!response.ok) {
-      toast.error(t("errors.generateResume"));
-      return;
-    }
-
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const fiveMinInMilliseconds = 60000 * 5;
-    window.open(url, "_blank");
-
-    setTimeout(() => {
-      URL.revokeObjectURL(url);
-    }, fiveMinInMilliseconds);
+    startTransition(async () => {
+      const response = await fetch(`/api/${locale}/generate-pdf`);
+  
+      if (!response.ok) {
+        toast.error(t("errors.generateResume"));
+        return;
+      }
+  
+      const blob = await response.blob();
+      handleResumeGeneration({ blob, device: userDevice });
+    });
   };
 
   return (
     <div id="resume-container" className={style.container}>
+      {isPending && <Loader message={t("loadingSpinner.message")}/>}
       <ul id="links" className={style.links}>
         <li>
           <Link

@@ -123,7 +123,8 @@
     "errors": {
       "generateResume": "Failed to generate resume",
       "localeNotProvided": "Locale not provided"
-    }
+    },
+    "loadingSpinner": { "message": "Generating résumé..." }
   },
   "navbar": {
     "about": "About",
@@ -154,5 +155,6 @@
   "footer": {
     "copyright": "Copyright © 2024 Isaque Duarte",
     "whatsappLink": "https://wa.me/5511964957516?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation"
-  }
+  },
+  "loadingSpinner": { "message": "Loading..." }
 }
