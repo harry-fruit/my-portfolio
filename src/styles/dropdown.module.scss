@@ -9,7 +9,7 @@
     padding: 0.5em;
     font-weight: 550;
     background-color: var(--input-bg-color);
-    color: rgba(#2c2c2c, 0.75);
+    color: var(--input-text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +17,9 @@
     svg {
       transform: rotate(-90deg);
       transition: transform 0.5s ease-in-out;
+      polygon {
+        fill: var(--input-text-color);
+      }
     }
   }
 
@@ -34,7 +37,7 @@
       cursor: pointer;
       font-weight: 550;
       background-color: var(--input-bg-color);
-      color: var(--input-placeholder-color);
+      color: var(--input-text-color);
       display: flex;
       align-items: center;
       justify-content: space-between;
