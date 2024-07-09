@@ -97,7 +97,7 @@ export const Navbar = ({ locale }: Props) => {
           </ul>
         </section>
         <section className={style.accessibility}>
-          <h2>Accessibility</h2>
+          <h2>{t("accessibility.title")}</h2>
           <ul className={style.accessibilityList}>
             <li className={style.accessibilityItem}>
               <ThemeToggle />
