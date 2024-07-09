@@ -1,4 +1,8 @@
+@import "./mixins.scss";
+
 .aboutContainer {
+    @include section-box-shadow(rgba(0, 0, 0, .35), 8px, .3px, 0.35);
+    background-color: var(--bg-primary-color);
     display: grid;
     row-gap: 5vh;
     grid-template: auto auto auto / 1fr;
@@ -38,5 +42,12 @@
         grid-template-areas:
             'header picture'
             'txt picture';
+    }
+}
+
+
+:global(html.dark) {
+    .aboutContainer {
+        @include section-box-shadow;
     }
 }

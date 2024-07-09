@@ -15,12 +15,10 @@ import Link from "next/link";
 export const Experience = ({ locale }: { locale: string }): JSX.Element => {
   const t = useTranslations("experiences");
   return (
-    <FadeIn threshold={0.1}>
+    <FadeIn threshold={0.05} className={style.experiencesContainer}>
       <section
         id={"experiences"}
-        className={
-          "bg-primary-100/60 dark:bg-slate-950/20 flex flex-col items-center py-4 md:py-8 xl:py-10"
-        }
+        className={"flex flex-col items-center pt-4 md:pt-8 xl:pt-10"}
       >
         <SectionHeaderContainer className="px-4">
           <SectionTitle text={t("title")} className="text-primary-gradient" />
@@ -74,13 +72,18 @@ export const Experience = ({ locale }: { locale: string }): JSX.Element => {
           className={`w-full ${style.resumeContainer}`}
           title={t("resume.title")}
         >
-          <FadeIn threshold={0.25} className="w-full flex flex-col gap-3 justify-center items-center bg-primary-600 dark:bg-slate-950/90 py-12">
+          <FadeIn
+            threshold={0.25}
+            className="w-full flex flex-col gap-3 justify-center items-center bg-primary-600 dark:bg-slate-950/90 py-12"
+          >
             <DocumentIcon
               width="40"
               height="40"
               className="text-title-dark font-bold"
             />
-            <p className="text-title-dark capitalize font-bold text-lg">{t("resume.text")}</p>
+            <p className="text-title-dark capitalize font-bold text-lg">
+              {t("resume.text")}
+            </p>
           </FadeIn>
         </Link>
       </section>

@@ -13,27 +13,27 @@
   --foreground-rgb: 0, 0, 0;
 
   // COLORS PALLETE
-  --primary-color-100: #cfebff;
-  --primary-color-200: #9fd7ff;
-  --primary-color-300: #70c2ff;
-  --primary-color-400: #40aeff;
-  --primary-color-500: #109aff;
-  --primary-color-600: #0d7bcc;
-  --primary-color-700: #0a5c99;
-  --primary-color-800: #063e66;
-  --primary-color-900: #031f33;
+  --primary-color-100: 207, 235, 255;
+  --primary-color-200: 159, 215, 255;
+  --primary-color-300: 112, 194, 255;
+  --primary-color-400: 64, 174, 255;
+  --primary-color-500: 16, 154, 255;
+  --primary-color-600: 13, 123, 204;
+  --primary-color-700: 10, 92, 153;
+  --primary-color-800: 6, 62, 102;
+  --primary-color-900: 3, 31, 51;
 
-  --slate-color-50: #f8fafc;
-  --slate-color-100: #f1f5f9;
-  --slate-color-200: #e2e8f0;
-  --slate-color-300: #cbd5e1;
-  --slate-color-400: #94a3b8;
-  --slate-color-500: #64748b;
-  --slate-color-600: #475569;
-  --slate-color-700: #334155;
-  --slate-color-800: #1e293b;
-  --slate-color-900: #0f172a;
-  --slate-color-950: #020617;
+  --slate-color-50: 248, 250, 252;
+  --slate-color-100: 241, 245, 249;
+  --slate-color-200: 226, 232, 240;
+  --slate-color-300: 203, 213, 225;
+  --slate-color-400: 148, 163, 184;
+  --slate-color-500: 100, 116, 139;
+  --slate-color-600: 71, 85, 105;
+  --slate-color-700: 51, 65, 85;
+  --slate-color-800: 30, 41, 59;
+  --slate-color-900: 15, 23, 42;
+  --slate-color-950: 2, 6, 23;
 
   // MY VARIABLES
   --text-color-3: #5f5f66;
@@ -44,7 +44,10 @@
   --input-text-color: #2c2c2c;
   --input-placeholder-color: #5f5f66;
 
-  --navbar-bg-color: var(--primary-color-800);
+  --navbar-bg-color: rgb(var(--primary-color-800));
+
+  --bg-primary-color: rgb(var(--slate-color-50));
+  --bg-secondary-color: rgba(var(--primary-color-100), .6);
 }
 
 html.dark {
@@ -56,7 +59,10 @@ html.dark {
   --input-text-color: #f1f5f9;
   --input-placeholder-color: #b8b9d1;
 
-  --navbar-bg-color: var(--slate-color-950);
+  --navbar-bg-color: rgb(var(--slate-color-950));
+
+  --bg-primary-color: rgba(var(--slate-color-900), .55);
+  --bg-secondary-color: rgba(var(--slate-color-900), .95);
 
   h1 {
     @apply text-title-dark;

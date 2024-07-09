@@ -1,3 +1,4 @@
+import style from "@/styles/contact.module.scss";
 import { Form } from "@/components/sections/contact/form/Form";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { useTranslations } from "next-intl";
@@ -7,7 +8,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-primary-100/25 dark:bg-slate-950/20 py-4 px-4 w-full min-h-[90vh] flex flex-col items-center justify-center"
+      className={`py-4 px-4 w-full min-h-[90vh] flex flex-col items-center justify-center ${style.contactContainer}`}
     >
       <FadeIn
         duration={2000}

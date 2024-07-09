@@ -45,7 +45,7 @@
 
     .dropdownItem[data-selected="true"] {
       color: white;
-      background-color: var(--primary-color-900);
+      background-color: rgb(var(--primary-color-900));
     }
   }
 

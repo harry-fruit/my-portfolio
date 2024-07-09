@@ -1,6 +1,10 @@
 $primary-color: #109AFF;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
+.experiencesContainer {
+    background-color: var(--bg-secondary-color);
+}
+
 .headerTitle {
     text-align: center;
 

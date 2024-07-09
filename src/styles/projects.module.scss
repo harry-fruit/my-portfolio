@@ -1,0 +1,12 @@
+@import "./mixins.scss";
+
+.projectsContainer {
+    background-color: var(--bg-primary-color);
+    @include section-box-shadow(rgba(0, 0, 0, .35), 8px, .3px, 0.35);
+}
+
+:global(html.dark) {
+    .projectsContainer {
+        @include section-box-shadow;
+    }
+}
