@@ -1,12 +1,12 @@
 "use client";
 
 import style from "@/styles/theme-toggle.module.scss";
-import { getNewTheme, getTheme } from "@/util/getTheme";
+import { getNewTheme } from "@/util/getTheme";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
 export const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme: theme } = useTheme();
   const t = useTranslations("navbar");
   const toggle = () => {
     const newTheme = getNewTheme(theme);
@@ -22,11 +22,11 @@ export const ThemeToggle = () => {
           type="checkbox"
           role="switch"
           name="theme"
-          value={getTheme(theme)}
-          checked={getTheme(theme) == "dark"}
+          value={theme}
+          checked={theme == "dark"}
           onChange={toggle}
           title={
-            getTheme(theme) === "dark"
+            theme === "dark"
               ? t("accessibility.theme.light")
               : t("accessibility.theme.dark")
           }
