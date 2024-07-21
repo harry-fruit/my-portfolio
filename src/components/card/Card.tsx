@@ -3,7 +3,7 @@
 import style from "@/styles/card/card.module.scss";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { RightArrow } from "@/components/icons/RightArrow";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 type Props = {
   className?: string;
@@ -79,7 +79,7 @@ const CardHeader = ({ title, link }: { title: string, link: {href:string, target
       <div id="card-title">
         <h2 className={`${style.cardTitle}`}>{title}</h2>
       </div>
-      <Link href={link.href} target={link.target} title={`Go to '${title}'`} className={`p-2 rounded-full ${style.button}`}>
+      <Link href={link.href} target={link.target || "_self"} title={`Go to '${title}'`} className={`p-2 rounded-full ${style.button}`}>
         <RightArrow width="25" height="25" className="text-gray-50" />
       </Link>
     </div>

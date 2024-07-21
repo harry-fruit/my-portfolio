@@ -15,7 +15,7 @@ export const AnimatedBackground: React.FC = (): JSX.Element => {
   return (
     <div
       id="wrapper"
-      className={`${style.introGradient} w-full h-full absolute z-10 flex flex-col items-center justify-center`}
+      className={`${style.introGradient} w-full h-full absolute z-1 flex flex-col items-center justify-center`}
     >
       <div className="animated-header relative flex flex-col justify-center items-center">
         <h1 className="w-fit text-5xl text-center font-bold text-gray-50" ref={headerRef}>

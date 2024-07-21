@@ -2,21 +2,23 @@
 
 import Link from "next/link";
 import style from "@/styles/navbar/navbar.module.scss";
-import { MouseEvent, useState, useTransition } from "react";
+import { Dispatch, MouseEvent, SetStateAction, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { MenuButton } from "@/components/navbar/MenuButton";
-import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 import { Dropdown } from "@/components/shared/Dropdown";
 import { DropdownOptions } from "@/types/components/dropdownOptions";
 import { BrazilFlag } from "@/components/icons/flags/Brazil";
 import { USFlag } from "@/components/icons/flags/US";
 
+type NavbarProps = {
+  isActive: boolean;
+  setIsActive: Dispatch<SetStateAction<boolean>>;
+};
 
-export const Navbar = () => {
+
+export const Navbar = ({ isActive, setIsActive }: NavbarProps) => {
   const t = useTranslations("navbar");
-  const [isActive, setIsActive] = useState<boolean>(false);
   const [,startTransition] = useTransition();
   const router = useRouter();
   const locale = useLocale();
@@ -58,10 +60,6 @@ export const Navbar = () => {
 
   return (
     <nav className={`${style.navbar} ${isActive ? style.active : ""}`}>
-      <header className={`${style.header}`}>
-        <ProjectIcon width="40" height="40" className="text-white" />
-        <MenuButton isActive={isActive} onClick={toggleMenu} />
-      </header>
       <div className={`${style.content} ${isActive ? style.active : ""}`}>
         <section className={style.navigation}>
           <ul>

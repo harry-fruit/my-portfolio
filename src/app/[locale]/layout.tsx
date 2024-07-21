@@ -1,4 +1,6 @@
 import "@/styles/globals.scss";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -23,11 +25,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className="flex flex-col justify-center items-center bg-slate-100 dark:bg-slate-900/95">
+      <body className="flex flex-col justify-center items-center bg-slate-100 dark:bg-slate-900/95 relative">
         <Toaster position="bottom-center" />
         <ThemeProvider attribute="class">
           <NextIntlClientProvider messages={messages}>
+            <Header />
             {children}
+            <Footer/>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

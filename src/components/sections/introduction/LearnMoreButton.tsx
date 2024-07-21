@@ -19,7 +19,7 @@ export const LearnMoreButton: React.FC = (): JSX.Element => {
         <ProjectIcon
           width={"50px"}
           height={"50px"}
-          className={`${style.learnMoreHoverEffect} learn-more-hover-effect z-50 text-white`}
+          className={`${style.learnMoreHoverEffect} learn-more-hover-effect z-[2] text-white`}
         />
         <div
           id="textWrapper"

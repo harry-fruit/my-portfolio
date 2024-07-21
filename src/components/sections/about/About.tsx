@@ -17,7 +17,7 @@ export const About: React.FC = (): JSX.Element => {
         >
           <h1 title={t("title")} className="w-full text-center lg:text-start">
             <span className="text-primary-gradient">{t("title")}</span>{" "}
-            <span className="wave-container">👋</span>
+            <span className={style.wave}>👋</span>
           </h1>
           <h3
             className={"py-4 text-center lg:text-start"}
