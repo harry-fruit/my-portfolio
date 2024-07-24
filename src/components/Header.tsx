@@ -5,6 +5,7 @@ import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { MenuButton } from "@/components/navbar/MenuButton";
 import { Navbar } from "@/components/navbar/Navbar";
 import { useEffect, useState } from "react";
+import { Link } from "@/navigation";
 
 export const Header = () => {
   const [navbarActive, setNavbarActive] = useState(false);
@@ -16,15 +17,17 @@ export const Header = () => {
     if (!intro) {
       return;
     }
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) {
-        setIsOnIntro(false);
-        return;
-      }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setIsOnIntro(false);
+          return;
+        }
 
-      setIsOnIntro(true);
-
-    }, { threshold: 0 });
+        setIsOnIntro(true);
+      },
+      { threshold: 0 }
+    );
 
     observer.observe(intro);
 
@@ -34,9 +37,16 @@ export const Header = () => {
   }, []);
 
   return (
-    <header id="header" className={`${style.header} ${isOnIntro ? style.onIntro : ""} ${navbarActive ? style.navbarActive : ""}`}>  
+    <header
+      id="header"
+      className={`${style.header} ${isOnIntro ? style.onIntro : ""} ${
+        navbarActive ? style.navbarActive : ""
+      }`}
+    >
       <div className={style.headerIconsWrapper}>
-        <ProjectIcon width="40" height="40" className="text-white" />
+        <Link href={"/"} className="text-white">
+          <ProjectIcon width="40" height="40" className="text-white" />
+        </Link>
         <MenuButton
           isActive={navbarActive}
           onClick={() => setNavbarActive(!navbarActive)}

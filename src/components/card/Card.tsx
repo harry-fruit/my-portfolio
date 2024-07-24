@@ -1,9 +1,9 @@
 "use client";
 
 import style from "@/styles/card/card.module.scss";
+import { Link } from "@/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { RightArrow } from "@/components/icons/RightArrow";
-import { Link } from "@/navigation";
 
 type Props = {
   className?: string;

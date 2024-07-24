@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import style from "@/styles/navbar/navbar.module.scss";
 import { Dispatch, MouseEvent, SetStateAction, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
@@ -79,7 +79,7 @@ export const Navbar = ({ isActive, setIsActive }: NavbarProps) => {
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/resume`} target="_blank">
+              <Link href={"/resume"} target="_blank">
                 {t("resume")}
               </Link>
             </li>
