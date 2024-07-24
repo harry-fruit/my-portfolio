@@ -9,7 +9,7 @@ import { EmailIcon } from "@/components/icons/EmailIcon";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
 import { handleResumeGeneration } from "@/util/generateResume";
-import { useEffect, useTransition } from "react";
+import { useTransition } from "react";
 import { Loader } from "@/components/Loader";
 import { useUserDevice } from "@/hooks/useUserDevice";
 
@@ -24,13 +24,6 @@ const Resume = ({ params: { locale } }: ResumeProps) => {
   const [isPending, startTransition] = useTransition();
   const userDevice  = useUserDevice();
 
-  useEffect(() => {
-    const header = document.getElementById("header");
-    const footer = document.getElementById("footer");
-
-    header?.style.setProperty("display", "none");
-    footer?.style.setProperty("display", "none");
-  }, []);
 
   const generateResume = async () => {
     startTransition(async () => {
