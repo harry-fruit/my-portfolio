@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/header.module.scss";
+import style from "@/styles/components/header.module.scss";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { MenuButton } from "@/components/navbar/MenuButton";
 import { Navbar } from "@/components/navbar/Navbar";

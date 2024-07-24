@@ -1,4 +1,4 @@
-import style from "@/styles/projects.module.scss";
+import style from "@/styles/portfolio/landing/projects.module.scss";
 import {
   SectionHeaderContainer,
   SectionSubtitle,
@@ -29,8 +29,7 @@ const cards: CardsData[] = [
   {
     title: "Gym Project",
     link: {
-      href: "https://gym-project.netlify.app/",
-      target: "_blank"
+      href: "/projects/gym-project",
     },
     tags: [
       {

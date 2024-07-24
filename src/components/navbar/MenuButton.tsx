@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/navbar/menu-button.module.scss";
+import style from "@/styles/components/navbar/menu-button.module.scss";
 import { useTranslations } from "next-intl";
 
 type Props = {

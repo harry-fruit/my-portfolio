@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/theme-toggle.module.scss";
+import style from "@/styles/components/theme-toggle.module.scss";
 import { getNewTheme } from "@/util/getTheme";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";

@@ -1,4 +1,4 @@
-import style from "@/styles/dropdown.module.scss";
+import style from "@/styles/components/dropdown.module.scss";
 import { MouseEvent, useState } from "react";
 import { DropdownOptions } from "@/types/components/dropdownOptions";
 import { TriangleIcon } from "@/components/icons/TriangleIcon";

@@ -1,4 +1,4 @@
-import style from "@/styles/loader.module.scss";
+import style from "@/styles/components/loader.module.scss";
 import { SpinnerIcon } from "@/components/icons/Spinner";
 import { useTranslations } from "next-intl";
 

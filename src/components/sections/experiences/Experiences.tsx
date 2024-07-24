@@ -9,7 +9,7 @@ import { TimelineItem } from "@/components/sections/experiences/timeline/Timelin
 import { TimelinePeriod } from "@/components/sections/experiences/timeline/TimelinePeriod";
 import { useTranslations } from "next-intl";
 import { DocumentIcon } from "@/components/icons/DocumentIcon";
-import style from "@/styles/experiences.module.scss";
+import style from "@/styles/portfolio/landing/experiences.module.scss";
 import { Link } from "@/navigation";
 
 export const Experience = (): JSX.Element => {

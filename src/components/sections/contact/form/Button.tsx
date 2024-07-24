@@ -1,4 +1,4 @@
-import style from "@/styles/button.module.scss";
+import style from "@/styles/components/button.module.scss";
 import { RightArrow } from "@/components/icons/RightArrow";
 
 type Props = {

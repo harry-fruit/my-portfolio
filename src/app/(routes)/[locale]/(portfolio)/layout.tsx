@@ -1,40 +1,18 @@
 import "@/styles/globals.scss";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { ThemeProvider } from "next-themes";
-import { Toaster } from "react-hot-toast";
+import { ReactNode } from "react";
 
-type LocaleLayoutProps = {
-  children: React.ReactNode;
-  params: { locale: string };
+type PortfolioLayoutProps = {
+  children: ReactNode;
 };
 
-export const metadata: Metadata = {
-  title: "Isaque Duarte | Portfolio",
-  description: "My Portfolio",
-};
-
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: LocaleLayoutProps) {
-  const messages = await getMessages();
-
+export default async function PortfolioLayout({ children }: PortfolioLayoutProps) {
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className="flex flex-col justify-center items-center bg-slate-100 dark:bg-slate-900/95 relative">
-        <Toaster position="bottom-center" />
-        <ThemeProvider attribute="class">
-          <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer/>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <>
+      <Header />
+        {children}
+      <Footer />
+    </>
   );
 }

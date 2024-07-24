@@ -1,4 +1,4 @@
-import style from "@/styles/introduction.module.scss";
+import style from "@/styles/portfolio/landing/introduction.module.scss";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { ChevronDown } from "@/components/icons/ChevronDown";
 import { useTranslations } from "next-intl";

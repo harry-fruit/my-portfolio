@@ -4,7 +4,7 @@ import {
   SubmissionError,
   SubmissionSuccess,
 } from "@formspree/core";
-import style from "@/styles/input.module.scss";
+import style from "@/styles/components/input.module.scss";
 
 type StateProps = {
   errors: SubmissionError<FieldValues> | null;

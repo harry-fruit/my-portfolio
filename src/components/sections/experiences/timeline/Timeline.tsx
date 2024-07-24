@@ -1,4 +1,4 @@
-import style from "@/styles/experiences.module.scss";
+import style from "@/styles/portfolio/landing/experiences.module.scss";
 
 type Props = {
   children: React.ReactNode;

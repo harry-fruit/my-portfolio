@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "@/styles/about.module.scss";
+import style from "@/styles/portfolio/landing/about.module.scss";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/shared/FadeIn";
 

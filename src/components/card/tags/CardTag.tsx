@@ -1,4 +1,4 @@
-import style from "@/styles/card/tags.module.scss";
+import style from "@/styles/components/card/tags.module.scss";
 
 export type CardTagProps = {
   text: string;

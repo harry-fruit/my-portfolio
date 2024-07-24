@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/contact/form.module.scss";
+import style from "@/styles/portfolio/landing/contact/form.module.scss";
 import { Input } from "@/components/shared/Input";
 import { TextArea } from "@/components/shared/TextArea";
 import { useForm } from "@formspree/react";

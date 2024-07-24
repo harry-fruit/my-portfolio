@@ -1,4 +1,4 @@
-import style from "@/styles/experiences.module.scss";
+import style from "@/styles/portfolio/landing/experiences.module.scss";
 import { FadeIn } from "@/components/shared/FadeIn";
 
 type Props = {

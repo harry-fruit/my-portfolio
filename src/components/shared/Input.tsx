@@ -1,4 +1,4 @@
-import style from "@/styles/input.module.scss";
+import style from "@/styles/components/input.module.scss";
 import { ValidationError } from "@formspree/react";
 import {
   FieldValues,

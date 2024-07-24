@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/card/card.module.scss";
+import style from "@/styles/components/card/card.module.scss";
 import { Link } from "@/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { RightArrow } from "@/components/icons/RightArrow";

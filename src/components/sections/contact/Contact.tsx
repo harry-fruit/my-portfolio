@@ -1,4 +1,4 @@
-import style from "@/styles/contact.module.scss";
+import style from "@/styles/portfolio/landing/contact.module.scss";
 import { Form } from "@/components/sections/contact/form/Form";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { useTranslations } from "next-intl";
