@@ -4,37 +4,13 @@ import style from "@/styles/components/header.module.scss";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { MenuButton } from "@/components/navbar/MenuButton";
 import { Navbar } from "@/components/navbar/Navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "@/navigation";
+import useHeader from "@/hooks/useHeader";
 
 export const Header = () => {
   const [navbarActive, setNavbarActive] = useState(false);
-  const [isOnIntro, setIsOnIntro] = useState(true);
-
-  useEffect(() => {
-    const intro = document.getElementById("introduction");
-
-    if (!intro) {
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          setIsOnIntro(false);
-          return;
-        }
-
-        setIsOnIntro(true);
-      },
-      { threshold: 0 }
-    );
-
-    observer.observe(intro);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const { isOnIntro } = useHeader();
 
   return (
     <header

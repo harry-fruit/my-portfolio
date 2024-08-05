@@ -1,0 +1,8 @@
+.main {
+    min-height: 100vh;
+
+    &:not(:has(.introduction)) {
+        margin-top: var(--header-icon-wrapper-height);
+    }
+    
+}

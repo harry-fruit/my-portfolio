@@ -64,7 +64,7 @@ export const Navbar = ({ isActive, setIsActive }: NavbarProps) => {
         <section className={style.navigation}>
           <ul>
             <li>
-              <Link href={"#about"} onClick={toggleMenu}>
+              <Link href={"/about"} onClick={toggleMenu}>
                 {t("about")}
               </Link>
             </li>

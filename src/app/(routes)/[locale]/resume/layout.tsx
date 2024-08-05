@@ -1,3 +1,3 @@
-import DefaultLayout from "@/components/DefaultLayout";
+import DefaultLayout from "@/app/layout";
 
 export default DefaultLayout;
