@@ -1,0 +1,37 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "img"
+  "texts";
+  background-color: red;
+  padding: 2rem 2rem;
+
+  .textsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: blue;
+    padding: 1rem;
+
+    h1 {
+        margin-bottom: .5rem;
+    }
+
+    .paragraphs {
+        margin-top: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    gap: 2rem;
+    grid-template-areas: 
+    "img texts";
+    grid-template-columns: .5fr .75fr;
+  }
+}

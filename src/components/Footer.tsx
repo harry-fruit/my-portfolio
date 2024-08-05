@@ -1,3 +1,4 @@
+import style from "@/styles/components/footer.module.scss";
 import { Link } from "@/navigation";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { GithubIcon } from "@/components/icons/GithubIcon";
@@ -11,7 +12,7 @@ export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-full py-8 md:py-10 lg:py-12 flex flex-col items-center justify-center bg-primary-700 dark:bg-slate-950/90"
+      className={`${style.footer} bg-primary-700 dark:bg-slate-950/90`}
     >
       <div
         id="social-media"

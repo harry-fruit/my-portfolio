@@ -1,27 +1,32 @@
+
+@function rgb-color($color-list, $transparency: 1) {
+    @return rgba(nth($color-list, 1), nth($color-list, 2), nth($color-list, 3), $transparency);
+}
+
 $bg-transparent: transparent;
 
 // Primary Colors
-$color-primary-100: #CFEBFF;
-$color-primary-200: #9FD7FF;
-$color-primary-300: #70C2FF;
-$color-primary-400: #40AEFF;
-$color-primary-500: #109AFF;
-$color-primary-600: #0D7BCC;
-$color-primary-700: #0A5C99;
-$color-primary-800: #063E66;
-$color-primary-900: #031F33;
+$color-primary-100: 207, 235, 255;
+$color-primary-200: 159, 215, 255;
+$color-primary-300: 112, 194, 255;
+$color-primary-400: 64, 174, 255;
+$color-primary-500: 16, 154, 255;
+$color-primary-600: 13 123 204;
+$color-primary-700: 10, 92, 153;
+$color-primary-800: 6, 62, 102;
+$color-primary-900: 3, 31, 51;
 
-$color-slate-50: #f8fafc;
-$color-slate-100: #f1f5f9;
-$color-slate-200: #e2e8f0;
-$color-slate-300: #cbd5e1;
-$color-slate-400: #94a3b8;
-$color-slate-500: #64748b;
-$color-slate-600: #475569;
-$color-slate-700: #334155;
-$color-slate-800: #1e293b;
-$color-slate-900: #0f172a;
-$color-slate-950: #020617;
+$color-slate-50: 248, 250, 252;
+$color-slate-100: 241, 245, 249;
+$color-slate-200: 226, 232, 240;
+$color-slate-300: 203, 213, 225;
+$color-slate-400: 148, 163, 184;
+$color-slate-500: 100, 116, 139;
+$color-slate-600: 71, 85, 105;
+$color-slate-700: 51, 65, 85;
+$color-slate-800: 30, 41, 59;
+$color-slate-900: 15, 23, 42;
+$color-slate-950: 2, 6, 23;
 
 
 $paragraph-dark-color: #B8B9D1;

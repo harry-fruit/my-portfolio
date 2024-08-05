@@ -63,7 +63,7 @@ body {
 }
 
 .text-primary-gradient {
-  background: -webkit-linear-gradient($color-primary-600, $color-primary-500);
+  background: -webkit-linear-gradient(rgb-color($color-primary-600), rgb-color($color-primary-500));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,7 +1,7 @@
 @import "../variables";
 
-$light-button-color: $color-primary-600;
-$light-button-color-hover: $color-primary-600;
+$light-button-color: rgb-color($color-primary-600);
+$light-button-color-hover: rgb-color($color-primary-600);
 
 $dark-button-color: #B8B9D1;
 $dark-button-color-hover: #E3ECFF;
@@ -39,11 +39,11 @@ $dark-button-color-hover: #E3ECFF;
     }
 
     &:hover {
-        color: $color-slate-100;
+        color: rgb-color($color-slate-100);
         border-color: $light-button-color-hover;
 
         &>svg {
-            color: $color-slate-100;
+            color: rgb-color($color-slate-100);
         }
 
         &::before {
@@ -64,11 +64,11 @@ $dark-button-color-hover: #E3ECFF;
             background-color: $dark-button-color-hover;
         }
         &:hover {
-            color: rgba($color-slate-950, .8);
+            color: rgb-color($color-slate-950, .8);
             border-color: $dark-button-color-hover;
     
             &>svg {
-                color: rgba($color-slate-950, .8);
+                color: rgb-color($color-slate-950, .8);
             }
         }
 

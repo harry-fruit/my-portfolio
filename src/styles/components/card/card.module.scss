@@ -18,7 +18,7 @@
       left: 0;
       width: 100%;
       height: 2.5px;
-      background-color: $color-primary-500;
+      background-color: rgb-color($color-primary-500);
       z-index: -1;
     }
 
@@ -26,7 +26,7 @@
 
   .button {
     margin-top: 2px;
-    background-color: $color-primary-500;
+    background-color: rgb-color($color-primary-500);
     transform: rotate(-45deg);
     transition: all 0.2s;
   }
@@ -35,17 +35,17 @@
     cursor: pointer;
 
     .button {
-      background-color: $color-primary-600;
+      background-color: rgb-color($color-primary-600);
       transform: rotate(0deg);
     }
 
     .cardTitle {
-      color: $color-slate-50;
+      color: rgb-color($color-slate-50);
     }
 
     .cardTitle::after {
       height: calc(100% + 3px);
-      background-color: $color-primary-600;
+      background-color: rgb-color($color-primary-600);
     }
 
     +.animatedCard {
