@@ -8,7 +8,7 @@ export default function Page() {
     <section className={style.about}>
       <div
         id="imageWrapper"
-        className={`bg-slate-300 relative ${style.picture} flex flex-col items-center justify-center`}
+        className={`relative ${style.picture} flex flex-col items-center justify-center`}
       >
         <Image
           src="/myself2.jpg"
@@ -19,7 +19,10 @@ export default function Page() {
         />
       </div>
       <div className={style.textsContainer}>
-        <h1>{t("title")}</h1>
+        <h1 title={t("title")} className="w-full text-center lg:text-start">
+          <span className="text-primary-gradient">{t("title")}</span>{" "}
+          <span className={style.wave}>👋</span>
+        </h1>
         <h2>{t("subTitle")}</h2>
         <div className={style.paragraphs}>
           <p>{t("firstParagraph")}</p>

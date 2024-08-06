@@ -1,5 +1,3 @@
-@import "../variables";
-
 $input-bg-color: #1e293b;
 $input-text-color: var(--input-text-color);
 $input-placeholder-color: var(--input-placeholder-color);
@@ -17,7 +15,7 @@ textarea.input {
   padding-inline: 0.5em;
   padding-block: 0.7em;
   border: none;
-  border-bottom: 4px solid rgb-color($color-primary-400, 0.3);
+  border-bottom: 4px solid rgb(var(--primary-color-400), 0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: $input-text-color;
 
@@ -40,7 +38,7 @@ input.input {
 
 .inputBorder {
   position: absolute;
-  background: rgb-color($color-primary-200);
+  background: rgb(var(--primary-color-200));
   height: 2px;
   width: 100%;
   bottom: 0px;
@@ -73,9 +71,9 @@ textarea + .inputBorder {
   height: 3px;
   background: linear-gradient(
     90deg,
-    rgb-color($color-primary-200) 0%,
-    rgb-color($color-primary-600) 50%,
-    rgb-color($color-primary-200) 100%
+    rgb(var(--primary-color-200)) 0%,
+    rgb(var(--primary-color-600)) 50%,
+    rgb(var(--primary-color-200)) 100%
   );
   transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }

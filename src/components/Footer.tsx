@@ -3,24 +3,20 @@ import { Link } from "@/navigation";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
-import { LineSplit } from "@/components/shared/LineSplit";
 import { useTranslations } from "next-intl";
 
 // TODO: Translate titles
 export const Footer = () => {
   const t = useTranslations("footer");
   return (
-    <footer
-      id="footer"
-      className={`${style.footer} bg-primary-700 dark:bg-slate-950/90`}
-    >
+    <footer id="footer" className={style.footer}>
       <div
         id="social-media"
         className="flex flex-row items-center justify-center gap-5 md:gap-10 xl:gap-8"
       >
         <Link
           href={"https://www.linkedin.com/in/isaque-d-moreira-578697191/"}
-          title="My LinkedIn Profile" 
+          title="My LinkedIn Profile"
           target="_blank"
         >
           <LinkedinIcon
@@ -40,10 +36,6 @@ export const Footer = () => {
           <WhatsappIcon width="40" height="40" className="text-gray-200" />
         </Link>
       </div>
-      <LineSplit
-        alignCenter
-        className="bg-primary-500/70 dark:bg-primary-500/60 w-2/6 mb-2 mt-4 lg:mt-6 lg:mb-4"
-      />
       <p className="text-center px-8 text-gray-200 font-medium">
         {t("copyright")}
       </p>

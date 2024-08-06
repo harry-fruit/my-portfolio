@@ -1,8 +1,26 @@
-.main {
-    min-height: 100vh;
+@import "../../mixins.scss";
 
-    &:not(:has(.introduction)) {
-        margin-top: var(--header-icon-wrapper-height);
-    }
-    
+.main {
+  @include section-box-shadow(rgba(0, 0, 0, 0.35), 8px, 0.3px, 0.35);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &:not(:has(.introduction)) {
+    margin-top: var(--header-icon-wrapper-height);
+    min-height: calc(
+      100vh - var(--header-icon-wrapper-height) - var(--footer-size)
+    );
+  }
+
+  display: flex;
+}
+
+:global(html.dark) {
+  .main {
+    @include section-box-shadow;
+  }
 }

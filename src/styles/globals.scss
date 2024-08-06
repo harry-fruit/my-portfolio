@@ -1,5 +1,4 @@
-@import "variables.scss";
-@import "./mixins.scss";
+@import "mixins";
 
 @tailwind base;
 @tailwind components;
@@ -36,6 +35,15 @@
   --slate-color-900: 15, 23, 42;
   --slate-color-950: 2, 6, 23;
 
+  //Fonts colors
+  --paragraph-dark-color: 184, 185, 209;
+  --title-dark-color: 227, 236, 255;
+  --subtitle-dark-color: 209, 215, 235;
+
+  --paragraph-light-color: 95, 95, 102;
+  --title-light-color: 39, 39, 42;
+  --subtitle-light-color: 75, 75, 82;
+
   // MY VARIABLES
   --text-color-3: #5f5f66;
   --text-color-2: #4b4b52;
@@ -51,6 +59,9 @@
   --bg-secondary-color: rgba(var(--primary-color-100), 0.6);
 
   --header-icon-wrapper-height: 3.5em;
+  --footer-padding: 1.5em;
+  --footer-height: 10em;
+  --footer-size: calc((var(--footer-padding) * 2) + var(--footer-height));
 }
 
 @include fonts-definition("light");
@@ -63,7 +74,7 @@ body {
 }
 
 .text-primary-gradient {
-  background: -webkit-linear-gradient(rgb-color($color-primary-600), rgb-color($color-primary-500));
+  background: -webkit-linear-gradient(rgb(var(--primary-color-600)), rgb(var(--primary-color-500)));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

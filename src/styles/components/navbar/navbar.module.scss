@@ -1,7 +1,5 @@
-@import "../../variables";
-
-$links-color: $subtitle-dark-color;
-$hovered-links-color: $title-dark-color;
+$links-color: rgb(var(--subtitle-dark-color));
+$hovered-links-color: rgb(var(--title-dark-color));
 
 .navbar {
   width: 100%;

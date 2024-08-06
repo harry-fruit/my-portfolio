@@ -1,5 +1,3 @@
-@import "../../variables.scss";
-
 .card {
   z-index: 1;
 
@@ -18,7 +16,7 @@
       left: 0;
       width: 100%;
       height: 2.5px;
-      background-color: rgb-color($color-primary-500);
+      background-color: rgb(var(--primary-color-500));
       z-index: -1;
     }
 
@@ -26,7 +24,7 @@
 
   .button {
     margin-top: 2px;
-    background-color: rgb-color($color-primary-500);
+    background-color: rgb(var(--primary-color-500));
     transform: rotate(-45deg);
     transition: all 0.2s;
   }
@@ -35,17 +33,17 @@
     cursor: pointer;
 
     .button {
-      background-color: rgb-color($color-primary-600);
+      background-color: rgb(var(--primary-color-600));
       transform: rotate(0deg);
     }
 
     .cardTitle {
-      color: rgb-color($color-slate-50);
+      color: rgb(var(--slate-color-50));
     }
 
     .cardTitle::after {
       height: calc(100% + 3px);
-      background-color: rgb-color($color-primary-600);
+      background-color: rgb(var(--primary-color-600));
     }
 
     +.animatedCard {

@@ -1,7 +1,5 @@
-@import "../variables";
-
-$light-button-color: rgb-color($color-primary-600);
-$light-button-color-hover: rgb-color($color-primary-600);
+$light-button-color: rgb(var(--primary-color-600));
+$light-button-color-hover: rgb(var(--primary-color-600));
 
 $dark-button-color: #B8B9D1;
 $dark-button-color-hover: #E3ECFF;
@@ -14,7 +12,7 @@ $dark-button-color-hover: #E3ECFF;
     border: 3px solid $light-button-color;
     cursor: pointer;
     position: relative;
-    background-color: $bg-transparent;
+    background-color: transparent;
     text-decoration: none;
     overflow: hidden;
     z-index: 1;
@@ -39,11 +37,11 @@ $dark-button-color-hover: #E3ECFF;
     }
 
     &:hover {
-        color: rgb-color($color-slate-100);
+        color: rgb(var(--slate-color-100));
         border-color: $light-button-color-hover;
 
         &>svg {
-            color: rgb-color($color-slate-100);
+            color: rgb(var(--slate-color-100));
         }
 
         &::before {
@@ -64,11 +62,11 @@ $dark-button-color-hover: #E3ECFF;
             background-color: $dark-button-color-hover;
         }
         &:hover {
-            color: rgb-color($color-slate-950, .8);
+            color: rgba(var(--slate-color-950), .8);
             border-color: $dark-button-color-hover;
     
             &>svg {
-                color: rgb-color($color-slate-950, .8);
+                color: rgba(var(--slate-color-950), .8);
             }
         }
 

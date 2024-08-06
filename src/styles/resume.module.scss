@@ -1,10 +1,8 @@
-@import "variables.scss";
-
-$primary-color: $color-primary-600;
-$strongest-primary-color: $color-primary-700;
-$default-font-color: $paragraph-light-color;
-$subtitle-font-color: $subtitle-light-color;
-$strongest-font-color: $title-light-color;
+$primary-color: rgb(var(--primary-color-600));
+$strongest-primary-color: rgb(var(--primary-color-700));
+$default-font-color: rbg(var(--paragraph-light-color));
+$subtitle-font-color: rgb(var(--subtitle-light-color));
+$strongest-font-color: rgb(var(--title-light-color));
 
 .container {
 
@@ -40,7 +38,7 @@ $strongest-font-color: $title-light-color;
     column-gap: 1rem;
     padding: 1rem 2rem;
     max-width: 1240px;
-    background-color: $color-slate-100;
+    background-color: rgb(var(--slate-color-100));
 
     .links {
         grid-area: links;
