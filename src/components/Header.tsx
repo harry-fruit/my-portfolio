@@ -11,6 +11,7 @@ import useHeader from "@/hooks/useHeader";
 export const Header = () => {
   const [navbarActive, setNavbarActive] = useState(false);
   const { isOnIntro } = useHeader();
+  const toggleNavbar = () => { setNavbarActive(!navbarActive); };
 
   return (
     <header
@@ -18,6 +19,7 @@ export const Header = () => {
       className={`${style.header} ${isOnIntro ? style.onIntro : ""} ${
         navbarActive ? style.navbarActive : ""
       }`}
+      onClick={toggleNavbar}
     >
       <div className={style.headerIconsWrapper}>
         <Link href={"/"} className="text-white">
@@ -25,7 +27,7 @@ export const Header = () => {
         </Link>
         <MenuButton
           isActive={navbarActive}
-          onClick={() => setNavbarActive(!navbarActive)}
+          onClick={toggleNavbar}
         />
       </div>
       <div
