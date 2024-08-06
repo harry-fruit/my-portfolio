@@ -3,7 +3,10 @@
     "learnMore": "Learn more"
   },
   "about": {
-    "title": "Hey there! I'm Isaque!",
+    "title": {
+      "greeting": "Hey there!",
+      "name": "I'm Isaque!"
+    },
     "subTitle": "Passionate about creating web solutions and enthusiastic about AI, always exploring new ways to innovate and improve processes",
     "firstParagraph": "I am a full stack web developer with extensive experience in front-end. I have solid knowledge in jQuery, React, Next.js, and previous experience with Gatsby, which allows me to create intuitive and dynamic user interfaces, always applying the best practices and available technologies. My dedication to front-end development drives me to constantly strive for excellence and create engaging and accessible user experiences.",
     "secondParagraph": "In the back-end, I work efficiently using Node.js and Python to create REST APIs and develop automated ETL processes. I also have some experience with Java, which allows me to leverage its strengths in building robust backend services. My solid knowledge in relational databases, especially SQL Server, enables me to effectively manage and integrate data in complex systems",

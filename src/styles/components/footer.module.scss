@@ -7,11 +7,5 @@
     gap: 1rem;
     height: var(--footer-height);
     padding: var(--footer-padding) 0;
-    background-color: rgb(var(--primary-color-700));
-}
-
-:global(html.dark) {
-    .footer {
-        background-color: rgba(var(--slate-color-950), .9);
-    }
+    background-color: var(--footer-bg-color);
 }

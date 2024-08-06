@@ -19,8 +19,13 @@ export default function Page() {
         />
       </div>
       <div className={style.textsContainer}>
-        <h1 title={t("title")} className="w-full text-center lg:text-start">
-          <span className="text-primary-gradient">{t("title")}</span>{" "}
+        <h1 title={`${t("title.greeting")} ${t("title.name")}`} className="w-full text-center lg:text-start">
+          <span className="text-primary-gradient">
+            {t("title.greeting")}
+            {" "}
+            <span className={style.dontBreak}/>
+              {t("title.name")}
+          </span>{" "}
           <span className={style.wave}>👋</span>
         </h1>
         <h2>{t("subTitle")}</h2>

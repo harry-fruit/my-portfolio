@@ -53,12 +53,13 @@
   --input-text-color: #2c2c2c;
   --input-placeholder-color: #5f5f66;
 
-  --navbar-bg-color: rgb(var(--primary-color-800));
+  --navbar-bg-color: rgb(var(--primary-color-600));
+  --footer-bg-color: rgb(var(--primary-color-600));
 
   --bg-primary-color: rgb(var(--slate-color-50));
   --bg-secondary-color: rgba(var(--primary-color-100), 0.6);
 
-  --header-icon-wrapper-height: 3.5em;
+  --header-icon-wrapper-height: 4.5em;
   --footer-padding: 1.5em;
   --footer-height: 10em;
   --footer-size: calc((var(--footer-padding) * 2) + var(--footer-height));
@@ -89,6 +90,7 @@ html.dark {
   --input-placeholder-color: #b8b9d1;
 
   --navbar-bg-color: rgb(var(--slate-color-950));
+  --footer-bg-color: rgb(var(--slate-color-950));
 
   --bg-primary-color: rgba(var(--slate-color-900), 0.55);
   --bg-secondary-color: rgba(var(--slate-color-900), 0.95);
