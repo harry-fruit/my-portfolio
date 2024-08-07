@@ -74,7 +74,7 @@ export const Experience = (): JSX.Element => {
         >
           <FadeIn
             threshold={0.25}
-            className="w-full flex flex-col gap-3 justify-center items-center bg-primary-600 dark:bg-slate-950/90 py-12"
+            className="w-full flex flex-col gap-3 justify-center items-center py-12"
           >
             <DocumentIcon
               width="40"

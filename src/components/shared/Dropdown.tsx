@@ -1,6 +1,5 @@
 import style from "@/styles/components/dropdown.module.scss";
 import { MouseEvent, useState } from "react";
-import { DropdownOptions } from "@/types/components/dropdownOptions";
 import { TriangleIcon } from "@/components/icons/TriangleIcon";
 
 type Props = {
@@ -12,6 +11,13 @@ type DisplayProps = {
   value: string;
   label: string;
 };
+
+export type DropdownOptions = {
+  value: string;
+  label: string;
+  selected: boolean;
+  icon: JSX.Element
+}[];
 
 const getDefaultValue = (options: DropdownOptions) => {
   const defaultValue = options.find((option) => option.selected);

@@ -1,3 +1,9 @@
 .contactContainer {
-    background-color: var(--bg-secondary-color);
+    background-color: rgba(var(--primary-color), .05);
+}
+
+:global(html.dark) {
+    .contactContainer {
+        background-color: rgba(var(--primary-color), .2);
+    }
 }

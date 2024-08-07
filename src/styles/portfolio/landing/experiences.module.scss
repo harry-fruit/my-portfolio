@@ -1,9 +1,4 @@
-$primary-color: #109AFF;
-$primary-color-hover: scale-color($primary-color, $lightness: 32%);
-
-.experiencesContainer {
-    background-color: var(--bg-secondary-color);
-}
+$primary-color: rgb(var(--primary-color));
 
 .headerTitle {
     text-align: center;
@@ -16,6 +11,8 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 }
 
 .resumeContainer {
+    background-color: rgb(var(--primary-color));
+
     * {
         transition: transform 0.3s ease-out;
         overflow: visible;

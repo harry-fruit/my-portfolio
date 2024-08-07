@@ -11,7 +11,14 @@ import useHeader from "@/hooks/useHeader";
 export const Header = () => {
   const [navbarActive, setNavbarActive] = useState(false);
   const { isOnIntro } = useHeader();
-  const toggleNavbar = () => { setNavbarActive(!navbarActive); };
+
+  const toggleNavbar = () => { 
+    setNavbarActive(!navbarActive); 
+  };
+
+  const closeNavbar = () => {
+    setNavbarActive(false);
+  }
 
   return (
     <header
@@ -19,10 +26,9 @@ export const Header = () => {
       className={`${style.header} ${isOnIntro ? style.onIntro : ""} ${
         navbarActive ? style.navbarActive : ""
       }`}
-      onClick={toggleNavbar}
     >
       <div className={style.headerIconsWrapper}>
-        <Link href={"/"} className="text-white">
+        <Link href={"/"} onClick={closeNavbar} className="text-white">
           <ProjectIcon width="40" height="40" className="text-white" />
         </Link>
         <MenuButton

@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: rgb(var(--bg-color));
 
   &:not(:has(.introduction)) {
     margin-top: var(--header-icon-wrapper-height);

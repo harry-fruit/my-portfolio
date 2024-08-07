@@ -23,56 +23,58 @@ $default: #f1f5f9;
             flex flex-row items-center justify-center 
             rounded-full;
         padding: .25rem .75rem;
-        border: 2px solid;
+        border: 2.15px solid;
         color: var(--text-color-2);
+        text-transform: uppercase;
+        font-size: .85rem;
     
-        &.python {
-          border-color: #4da54d
-        }
+        // &.python {
+        //   border-color: #4da54d
+        // }
     
-        &.javascript {
-          border-color: #f7df1e;
-        }
+        // &.javascript {
+        //   border-color: #f7df1e;
+        // }
     
-        &.typescript {
-          border-color: #3178c6;
-        }
+        // &.typescript {
+        //   border-color: #3178c6;
+        // }
     
-        &.react {
-          border-color: #61dafb;
-        }
+        // &.react {
+        //   border-color: #61dafb;
+        // }
     
-        &.nextjs {
-          border-color: #161616;
-        }
+        // &.nextjs {
+        //   border-color: #161616;
+        // }
     
-        &.sass {
-          border-color: #c69;
-        }
+        // &.sass {
+        //   border-color: #c69;
+        // }
     
-        &.sql {
-          border-color: #e15249;
-        }
+        // &.sql {
+        //   border-color: #e15249;
+        // }
     
-        &.tailwind {
-          border-color: #38bdf8;
-        }
+        // &.tailwind {
+        //   border-color: #38bdf8;
+        // }
 
-        &.html {
-          border-color: #e34c26;
-        }
+        // &.html {
+        //   border-color: #e34c26;
+        // }
 
-        &.css {
-          border-color: #6da8f5;
-        }
+        // &.css {
+        //   border-color: #6da8f5;
+        // }
     
-        &.new {
-          border-color: #0052cc;
-        }
+        // &.new {
+        //   border-color: #0052cc;
+        // }
     
-        &.default {
-          border-color: #f1f5f9;
-        }
+        // &.default {
+        //   border-color: #f1f5f9;
+        // }
     }
 }
 
