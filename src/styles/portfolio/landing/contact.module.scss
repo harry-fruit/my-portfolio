@@ -1,9 +1,9 @@
 .contactContainer {
-    background-color: rgba(var(--primary-color), .05);
+  background-color: rgba(var(--primary-color), 0.05);
 }
 
 :global(html.dark) {
-    .contactContainer {
-        background-color: rgba(var(--primary-color), .2);
-    }
+  .contactContainer {
+    background-color: rgba(var(--primary-color), 0.2);
+  }
 }

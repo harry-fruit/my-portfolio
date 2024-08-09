@@ -10,7 +10,6 @@ textarea.input {
 
 .input {
   font-size: 0.9rem;
-  // background-color: var(--input-bg-color);
   width: 100%;
   box-sizing: border-box;
   padding-inline: 0.5em;
@@ -74,9 +73,9 @@ textarea + .inputBorder {
   height: 3px;
   background: linear-gradient(
     90deg,
-    rgba(var(--primary-color),.7) 0%,
-    rgba(var(--primary-color-lighter),.55) 50%,
-    rgba(var(--primary-color),.7) 100%
+    rgba(var(--primary-color), 0.7) 0%,
+    rgba(var(--primary-color-lighter), 0.55) 50%,
+    rgba(var(--primary-color), 0.7) 100%
   );
   // background: red;
   border-bottom-left-radius: 5px;

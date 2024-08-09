@@ -1,48 +1,47 @@
 .form {
-    display: grid;
-    grid-template-areas:
-        "name"
-        "email"
-        "message"
-        "button";
-        gap: .75em;
-    
-    input::placeholder {
-        @apply text-gray-800;
-    }
+  display: grid;
+  grid-template-areas:
+    "name"
+    "email"
+    "message"
+    "button";
+  gap: 0.75em;
 
-    .inputName {
-        grid-area: name;
-    }
+  input::placeholder {
+    @apply text-gray-800;
+  }
 
-    .inputEmail {
-        grid-area: email;
-    }
+  .inputName {
+    grid-area: name;
+  }
 
-    .inputMessage {
-        grid-area: message;
-    }
+  .inputEmail {
+    grid-area: email;
+  }
 
-    .inputButton {
-        justify-self: center;
-        grid-area: button;
-    }
+  .inputMessage {
+    grid-area: message;
+  }
+
+  .inputButton {
+    justify-self: center;
+    grid-area: button;
+  }
 }
 
-
 @media (min-width: 768px) {
-    .form {
-        grid-template-areas:
-            "name email"
-            "message message"
-            "button button";
-        gap: 1rem;
-    }
+  .form {
+    grid-template-areas:
+      "name email"
+      "message message"
+      "button button";
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 1536px) {
-    .form {
-        row-gap: 1rem;
-        column-gap: 2rem;
-    }
+  .form {
+    row-gap: 1rem;
+    column-gap: 2rem;
+  }
 }

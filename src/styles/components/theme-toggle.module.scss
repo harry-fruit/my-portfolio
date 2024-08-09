@@ -32,26 +32,25 @@
 .themeIcon {
   display: block;
   top: 0.75em;
-  left: .7em;
+  left: 0.7em;
   width: 1.5em;
   height: 1.5em;
 }
 
 .themeIconPart {
   border-radius: 50%;
-  box-shadow: 0.4em -0.4em 0 0.5em hsl(0,0%,100%) inset;
+  box-shadow: 0.4em -0.4em 0 0.5em hsl(0, 0%, 100%) inset;
   top: calc(50% - 0.5em);
   left: calc(50% - 0.5em);
   width: 1em;
   height: 1em;
   transition: box-shadow var(--transDur) ease-in-out,
-        opacity var(--transDur) ease-in-out,
-        transform var(--transDur) ease-in-out;
+    opacity var(--transDur) ease-in-out, transform var(--transDur) ease-in-out;
   transform: scale(0.5);
 }
 
 .themeIconPart ~ .themeIconPart {
-  background-color: hsl(0,0%,100%);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 0.05em;
   top: 50%;
   left: calc(50% - 0.05em);
@@ -101,7 +100,7 @@
 }
 
 .themeToggle {
-  background-color: hsl(48,90%,85%);
+  background-color: hsl(48, 90%, 85%);
   border-radius: 25% / 50%;
   box-shadow: 0 0 0 0.125em var(--primaryT);
   padding: 0.25em;
@@ -110,12 +109,11 @@
   -webkit-appearance: none;
   appearance: none;
   transition: background-color var(--transDur) ease-in-out,
-        box-shadow 0.15s ease-in-out,
-        transform var(--transDur) ease-in-out;
+    box-shadow 0.15s ease-in-out, transform var(--transDur) ease-in-out;
 }
 
 .themeToggle:before {
-  background-color: hsl(48,90%,55%);
+  background-color: hsl(48, 90%, 55%);
   border-radius: 50%;
   content: "";
   width: 2.5em;
@@ -130,7 +128,7 @@
 
 /* Checked */
 .themeToggle:checked {
-  background-color: rgba(var(--primary-color-darker), .9);
+  background-color: rgba(var(--primary-color-darker), 0.9);
 }
 
 .themeToggle:checked:before,
@@ -147,10 +145,10 @@
 }
 
 .themeToggle:checked ~ .themeIcon .themeIconPart:nth-child(1) {
-  box-shadow: 0.2em -0.2em 0 0.2em hsl(0,0%,100%) inset;
+  box-shadow: 0.2em -0.2em 0 0.2em hsl(0, 0%, 100%) inset;
   transform: scale(1);
   top: 0.2em;
-  left: .35em;
+  left: 0.35em;
 }
 
 .themeToggle:checked ~ .themeIcon .themeIconPart ~ .themeIconPart {
