@@ -130,7 +130,7 @@
 
 /* Checked */
 .themeToggle:checked {
-  background-color: hsl(198,90%,15%);
+  background-color: rgba(var(--primary-color-darker), .9);
 }
 
 .themeToggle:checked:before,
@@ -139,7 +139,7 @@
 }
 
 .themeToggle:checked:before {
-  background-color: hsl(198,90%,55%);
+  background-color: rgba(var(--primary-color-lighter), 1);
 }
 
 .themeToggle:checked ~ .themeFill {

@@ -10,7 +10,7 @@ export const BrazilFlag = ({
   color,
   width,
   height,
-  className,
+  className = "",
   onClick,
 }: Props) => {
   return (

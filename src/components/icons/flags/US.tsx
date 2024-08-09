@@ -6,7 +6,7 @@ type Props = {
   onClick?: () => void;
 };
 
-export const USFlag = ({ color, width, height, className, onClick }: Props) => {
+export const USFlag = ({ color, width, height, className = "", onClick }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

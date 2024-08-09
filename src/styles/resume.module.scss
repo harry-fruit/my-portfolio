@@ -3,6 +3,8 @@ $strongest-primary-color: rgb(var(--primary-color-700));
 $default-font-color: rbg(var(--paragraph-light-color));
 $subtitle-font-color: rgb(var(--subtitle-light-color));
 $strongest-font-color: rgb(var(--title-light-color));
+$linkedin-color: #0A66C2;
+
 
 .container {
 
@@ -56,11 +58,7 @@ $strongest-font-color: rgb(var(--title-light-color));
             }
 
             & .linkedinIcon * {
-                color: $primary-color;
-
-                &:hover {
-                    color: $strongest-primary-color;
-                }
+                color: $linkedin-color;
             }
         }
     }
