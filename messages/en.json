@@ -1,5 +1,13 @@
 {
   "introduction": {
+    "btns": {
+      "about": "About me",
+      "resume": "My Résumé"
+    },
+    "links": {
+      "linkedInTitle": "My LinkedIn profile",
+      "githubTitle": "My Github profile"
+    },
     "learnMore": "Learn more"
   },
   "about": {

@@ -48,6 +48,8 @@ export const Form = () => {
           type={"submit"}
           text={t("inputButton")}
           disabled={state.submitting}
+          showArrow
+          styleType="fullfill"
           className={`w-full mt-4 lg:mt-16 xl:mt-10 xl:w-[50%] 2xl:w-[35%] ${style.inputButton}`}
         />
       </form>

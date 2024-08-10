@@ -13,9 +13,9 @@ $hovered-links-color: rgb(var(--title-color));
   grid-template-rows: 1fr auto;
   overflow: scroll;
   background-color: var(--navbar-color);
-  -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
 
   // background-color: green;
 
@@ -64,7 +64,7 @@ $hovered-links-color: rgb(var(--title-color));
       justify-content: center;
 
       h2 {
-        color: var(--solid-constrast-color-by-theme);
+        color: rgb(var(--solid-constrast-color-by-theme));
       }
     }
 
@@ -104,7 +104,7 @@ $hovered-links-color: rgb(var(--title-color));
     width: 100%;
 
     h2 {
-      color: var(--solid-constrast-color-by-theme);
+      color: rgb(var(--solid-constrast-color-by-theme));
     }
   }
 }

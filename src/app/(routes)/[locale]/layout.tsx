@@ -23,7 +23,7 @@ export default async function AppLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className="flex flex-col justify-center items-center bg-slate-100 dark:bg-slate-900/95 relative">
+      <body className="relative">
         <Toaster position="bottom-center" />
         <ThemeProvider attribute="class">
           <NextIntlClientProvider messages={messages}>

@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: 100svw;
   display: flex;
   flex-direction: column;
   top: 0;
@@ -8,7 +8,15 @@
 
   &.onIntro:not(.navbarActive) {
     .headerIconsWrapper {
-      background-color: transparent;
+      background-color: rgb(var(--bg-color));
+      .projectIcon {
+        color: rgb(var(--primary-color));
+      }
+      .menuButton {
+        span {
+          background-color: rgb(var(--primary-color));
+        }
+      }
     }
   }
 
@@ -22,6 +30,17 @@
     align-items: center;
     padding: 0 1em;
     transition: all 0.3s ease;
+
+    .projectIcon {
+      color: white;
+    }
+
+    .menuButton {
+      span {
+        background-color: white;
+      }
+    }
+
   }
 
   .navbarWrapper {

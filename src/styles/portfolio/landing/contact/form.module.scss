@@ -23,9 +23,28 @@
     grid-area: message;
   }
 
-  .inputButton {
+  button.inputButton {
     justify-self: center;
     grid-area: button;
+    color: rgba(var(--primary-color-lighter),.6);
+    border-color: rgba(var(--primary-color-lighter),.6);
+
+    & > svg {
+      fill: rgb(var(--primary-color-lighter));
+    }
+
+    &::before {
+      background-color: rgb(var(--primary-color-lighter));
+    }
+
+    &:hover {
+      border-color: rgb(var(--primary-color-lighter));
+      
+      // & > svg {
+      //   fill: rgb(var(--primary-color-darker));
+      // }
+
+    }
   }
 }
 

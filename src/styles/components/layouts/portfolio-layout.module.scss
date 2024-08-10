@@ -1,14 +1,13 @@
 @import "../../mixins.scss";
 
 .main {
-  @include section-box-shadow(rgba(0, 0, 0, 0.35), 8px, 0.3px, 0.35);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   background-color: rgb(var(--bg-color));
+  overflow-x: hidden;
 
   &:not(:has(.introduction)) {
     margin-top: var(--header-icon-wrapper-height);
@@ -18,10 +17,4 @@
   }
 
   display: flex;
-}
-
-:global(html.dark) {
-  .main {
-    @include section-box-shadow;
-  }
 }

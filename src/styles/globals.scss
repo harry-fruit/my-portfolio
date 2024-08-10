@@ -11,6 +11,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --var-test: #b248f0;
 
   // COLORS PALLETE
   --primary-color-100: 207, 235, 255;
@@ -64,7 +65,13 @@
   --dropdown-color: #272727;
   --dropdown-selected-color: #1e293b;
 
-  --solid-constrast-color-by-theme: rgb(27, 27, 27);
+  --solid-color-by-theme: 255, 255, 255;
+  --solid-constrast-color-by-theme: 27, 27, 27;
+
+  --btn-bg-color: rgb(34, 34, 34);
+  --btn-text-color: rgb(199, 199, 199);
+  --btn-active-bg-color: rgb(17, 17, 17);
+  --btn-active-text-color: rgb(245, 245, 245);
 
   --navbar-color: rgb(var(--bg-color));
   --footer-color: rgb(var(--primary-color));
@@ -110,7 +117,10 @@ html.dark {
 
   --bg-color: 30, 30, 30;
 
-  --solid-constrast-color-by-theme: white;
+  --solid-color-by-theme: 27, 27, 27;
+  --solid-constrast-color-by-theme: 255, 255, 255;
+
+
 
   :root {
     --foreground-rgb: 255, 255, 255;

@@ -1,6 +1,14 @@
 {
   "introduction": {
-    "learnMore": "Saiba mais"
+    "learnMore": "Saiba mais",
+    "btns": {
+      "about": "Sobre mim",
+      "resume": "Currículo"
+    },
+    "links": {
+      "linkedInTitle": "Meu perfil no LinkedIn",
+      "githubTitle": "Meu perfil no Github"
+    }
   },
   "about": {
     "title": {
