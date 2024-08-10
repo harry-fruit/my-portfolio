@@ -1,5 +1,4 @@
-@import "variables.scss";
-@import "./mixins.scss";
+@import "mixins";
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +11,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --var-test: #b248f0;
 
   // COLORS PALLETE
   --primary-color-100: 207, 235, 255;
@@ -19,10 +19,13 @@
   --primary-color-300: 112, 194, 255;
   --primary-color-400: 64, 174, 255;
   --primary-color-500: 16, 154, 255;
-  --primary-color-600: 13, 123, 204;
   --primary-color-700: 10, 92, 153;
   --primary-color-800: 6, 62, 102;
   --primary-color-900: 3, 31, 51;
+
+  --primary-color-lighter: 144, 34, 212;
+  --primary-color: 92, 20, 136;
+  --primary-color-darker: 64, 15, 95;
 
   --slate-color-50: 248, 250, 252;
   --slate-color-100: 241, 245, 249;
@@ -36,6 +39,20 @@
   --slate-color-900: 15, 23, 42;
   --slate-color-950: 2, 6, 23;
 
+  --bg-color: 251, 251, 251;
+
+  //Fonts colors
+  --paragraph-dark-color: 184, 185, 209;
+  --title-dark-color: 227, 236, 255;
+  --subtitle-dark-color: 209, 215, 235;
+
+  --paragraph-light-color: 95, 95, 102;
+  --title-light-color: 39, 39, 42;
+  --subtitle-light-color: 75, 75, 82;
+
+  --subtitle-color: 75, 75, 82;
+  --title-color: 39, 39, 42;
+
   // MY VARIABLES
   --text-color-3: #5f5f66;
   --text-color-2: #4b4b52;
@@ -45,12 +62,24 @@
   --input-text-color: #2c2c2c;
   --input-placeholder-color: #5f5f66;
 
-  --navbar-bg-color: rgb(var(--primary-color-800));
+  --dropdown-color: #272727;
+  --dropdown-selected-color: #1e293b;
 
-  --bg-primary-color: rgb(var(--slate-color-50));
-  --bg-secondary-color: rgba(var(--primary-color-100), 0.6);
+  --solid-color-by-theme: 255, 255, 255;
+  --solid-constrast-color-by-theme: 27, 27, 27;
 
-  --header-icon-wrapper-height: 3.5em;
+  --btn-bg-color: rgb(34, 34, 34);
+  --btn-text-color: rgb(199, 199, 199);
+  --btn-active-bg-color: rgb(17, 17, 17);
+  --btn-active-text-color: rgb(245, 245, 245);
+
+  --navbar-color: rgb(var(--bg-color));
+  --footer-color: rgb(var(--primary-color));
+
+  --header-icon-wrapper-height: 4.5em;
+  --footer-padding: 1.5em;
+  --footer-height: 10em;
+  --footer-size: calc((var(--footer-padding) * 2) + var(--footer-height));
 }
 
 @include fonts-definition("light");
@@ -63,7 +92,10 @@ body {
 }
 
 .text-primary-gradient {
-  background: -webkit-linear-gradient($color-primary-600, $color-primary-500);
+  background: -webkit-linear-gradient(
+    rgb(var(--primary-color-darker)),
+    rgba(var(--primary-color-lighter), 0.7)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -77,10 +109,18 @@ html.dark {
   --input-text-color: #f1f5f9;
   --input-placeholder-color: #b8b9d1;
 
-  --navbar-bg-color: rgb(var(--slate-color-950));
+  --dropdown-color: #272727;
+  --dropdown-selected-color: #1e293b;
 
-  --bg-primary-color: rgba(var(--slate-color-900), 0.55);
-  --bg-secondary-color: rgba(var(--slate-color-900), 0.95);
+  --subtitle-color: 209, 215, 235;
+  --title-color: 227, 236, 255;
+
+  --bg-color: 30, 30, 30;
+
+  --solid-color-by-theme: 27, 27, 27;
+  --solid-constrast-color-by-theme: 255, 255, 255;
+
+
 
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -88,9 +128,12 @@ html.dark {
 
   @include fonts-definition("dark");
 
-  .text-primary-gradient:not(.apply-dark) {
-    background: initial;
-    background-clip: initial;
-    -webkit-text-fill-color: initial;
+  .text-primary-gradient {
+    background: -webkit-linear-gradient(
+      rgb(var(--primary-color-lighter)) 45%,
+      rgba(var(--primary-color), 0.7)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

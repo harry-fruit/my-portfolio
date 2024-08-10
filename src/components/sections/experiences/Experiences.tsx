@@ -15,10 +15,9 @@ import { Link } from "@/navigation";
 export const Experience = (): JSX.Element => {
   const t = useTranslations("experiences");
   return (
-    <FadeIn threshold={0.05} className={style.experiencesContainer}>
       <section
         id={"experiences"}
-        className={"flex flex-col items-center pt-4 md:pt-8 xl:pt-10"}
+        className={"flex flex-col items-center pt-2"}
       >
         <SectionHeaderContainer className="px-4">
           <SectionTitle text={t("title")} className="text-primary-gradient" />
@@ -74,7 +73,7 @@ export const Experience = (): JSX.Element => {
         >
           <FadeIn
             threshold={0.25}
-            className="w-full flex flex-col gap-3 justify-center items-center bg-primary-600 dark:bg-slate-950/90 py-12"
+            className="w-full flex flex-col gap-3 justify-center items-center py-12"
           >
             <DocumentIcon
               width="40"
@@ -87,6 +86,5 @@ export const Experience = (): JSX.Element => {
           </FadeIn>
         </Link>
       </section>
-    </FadeIn>
   );
 };

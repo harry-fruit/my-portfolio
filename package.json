@@ -12,6 +12,8 @@
     "@formspree/core": "^3.0.1",
     "@formspree/react": "^2.5.1",
     "animejs": "^3.2.2",
+    "d3": "^7.9.0",
+    "d3-cloud": "^1.2.7",
     "jsonwebtoken": "^9.0.2",
     "next": "14.2.4",
     "next-intl": "^3.15.2",
@@ -20,6 +22,7 @@
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-swipeable": "^7.0.1",
+    "react-wordcloud": "^1.2.7",
     "sass": "^1.77.5"
   },
   "devDependencies": {

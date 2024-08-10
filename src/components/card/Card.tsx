@@ -46,7 +46,7 @@ export const Card = ({ className = "", title, children, link }: Props) => {
       <div
         id="card"
         ref={cardRef}
-        className={`w-[90%] max-w-[600px] bg-slate-100 dark:bg-slate-800 min-h-[375px] absolute rounded-2xl overflow-hidden p-5 flex flex-col items-center justify-between gap-4 ${style.card} ${className}`}
+        className={`w-[90%] max-w-[600px] min-h-[375px] absolute rounded-2xl overflow-hidden p-5 flex flex-col items-center justify-between gap-4 ${style.card} ${className}`}
       >
         {children}
         <CardInfo>
@@ -59,7 +59,7 @@ export const Card = ({ className = "", title, children, link }: Props) => {
           width: `${useCardSize.width}px`,
           height: `${useCardSize.height}px`,
         }}
-        className={`w-[${useCardSize.width}px] h-[${useCardSize.height}px] bg-primary-600 dark:bg-slate-700 absolute rounded-xl ${style.animatedCard}`}
+        className={`w-[${useCardSize.width}px] h-[${useCardSize.height}px] absolute rounded-xl ${style.animatedCard}`}
       ></div>
       <div
         id="animated-card-2"
@@ -67,7 +67,7 @@ export const Card = ({ className = "", title, children, link }: Props) => {
           width: `${useCardSize.width}px`,
           height: `${useCardSize.height}px`,
         }}
-        className={` bg-primary-700 dark:bg-slate-950 absolute rounded-xl ${style.animatedCard}`}
+        className={`absolute rounded-xl ${style.animatedCard}`}
       ></div>
     </div>
   );

@@ -1,41 +1,60 @@
 .header {
-    position: fixed;
+  position: fixed;
+  width: 100svw;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  z-index: 10;
+
+  &.onIntro:not(.navbarActive) {
+    .headerIconsWrapper {
+      background-color: rgb(var(--bg-color));
+      .projectIcon {
+        color: rgb(var(--primary-color));
+      }
+      .menuButton {
+        span {
+          background-color: rgb(var(--primary-color));
+        }
+      }
+    }
+  }
+
+  .headerIconsWrapper {
+    z-index: 11;
+    background-color: rgb(var(--primary-color));
     width: 100%;
+    height: var(--header-icon-wrapper-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    transition: all 0.3s ease;
+
+    .projectIcon {
+      color: white;
+    }
+
+    .menuButton {
+      span {
+        background-color: white;
+      }
+    }
+
+  }
+
+  .navbarWrapper {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: calc(100lvh - var(--header-icon-wrapper-height));
+    top: calc((100lvh - var(--header-icon-wrapper-height)) * -1);
     display: flex;
     flex-direction: column;
-    top: 0;
-    z-index: 10;
+    transition: all 0.3s ease;
 
-    &.onIntro:not(.navbarActive) {
-        .headerIconsWrapper {
-            background-color: transparent;
-        }
+    &.active {
+      transform: translateY(100lvh);
     }
-    
-    .headerIconsWrapper {
-        z-index: 11;
-        background-color: var(--navbar-bg-color);
-        width: 100%;
-        height: var(--header-icon-wrapper-height);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1em;
-        transition: all .3s ease;
-    }
-    
-    .navbarWrapper {
-        z-index: 10;
-        position: absolute;
-        width: 100%;
-        height: calc(100lvh - var(--header-icon-wrapper-height));
-        top: calc((100lvh - var(--header-icon-wrapper-height)) * -1);
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease;
-
-        &.active {
-            transform: translateY(100lvh);
-        }
-    }
+  }
 }

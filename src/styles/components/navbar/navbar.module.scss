@@ -1,7 +1,5 @@
-@import "../../variables";
-
-$links-color: $subtitle-dark-color;
-$hovered-links-color: $title-dark-color;
+$links-color: rgb(var(--subtitle-color));
+$hovered-links-color: rgb(var(--title-color));
 
 .navbar {
   width: 100%;
@@ -12,10 +10,15 @@ $hovered-links-color: $title-dark-color;
   grid-template-areas:
     "body"
     "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   overflow: scroll;
-  background-color: var(--navbar-bg-color);
-  
+  background-color: var(--navbar-color);
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+
+  // background-color: green;
+
   ul li {
     color: $links-color;
     transition: color 0.2s ease;
@@ -61,7 +64,7 @@ $hovered-links-color: $title-dark-color;
       justify-content: center;
 
       h2 {
-        color: white;
+        color: rgb(var(--solid-constrast-color-by-theme));
       }
     }
 
@@ -81,6 +84,7 @@ $hovered-links-color: $title-dark-color;
     display: flex;
     justify-content: center;
     padding: 0 2em 4vh;
+    // background-color: blue;
 
     ul {
       display: flex;
@@ -100,7 +104,7 @@ $hovered-links-color: $title-dark-color;
     width: 100%;
 
     h2 {
-      color: white;
+      color: rgb(var(--solid-constrast-color-by-theme));
     }
   }
 }

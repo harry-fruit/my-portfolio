@@ -4,37 +4,21 @@ import style from "@/styles/components/header.module.scss";
 import { ProjectIcon } from "@/components/icons/ProjectIcon";
 import { MenuButton } from "@/components/navbar/MenuButton";
 import { Navbar } from "@/components/navbar/Navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "@/navigation";
+import useHeader from "@/hooks/useHeader";
 
 export const Header = () => {
   const [navbarActive, setNavbarActive] = useState(false);
-  const [isOnIntro, setIsOnIntro] = useState(true);
+  const { isOnIntro } = useHeader();
 
-  useEffect(() => {
-    const intro = document.getElementById("introduction");
+  const toggleNavbar = () => { 
+    setNavbarActive(!navbarActive); 
+  };
 
-    if (!intro) {
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          setIsOnIntro(false);
-          return;
-        }
-
-        setIsOnIntro(true);
-      },
-      { threshold: 0 }
-    );
-
-    observer.observe(intro);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const closeNavbar = () => {
+    setNavbarActive(false);
+  };
 
   return (
     <header
@@ -44,12 +28,13 @@ export const Header = () => {
       }`}
     >
       <div className={style.headerIconsWrapper}>
-        <Link href={"/"} className="text-white">
-          <ProjectIcon width="40" height="40" className="text-white" />
+        <Link href={"/"} onClick={closeNavbar} className="text-white">
+          <ProjectIcon width="40" height="40" className={style.projectIcon} />
         </Link>
         <MenuButton
           isActive={navbarActive}
-          onClick={() => setNavbarActive(!navbarActive)}
+          onClick={toggleNavbar}
+          className={style.menuButton}
         />
       </div>
       <div

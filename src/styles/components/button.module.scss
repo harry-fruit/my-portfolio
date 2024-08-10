@@ -1,77 +1,86 @@
-@import "../variables";
-
-$light-button-color: $color-primary-600;
-$light-button-color-hover: $color-primary-600;
-
-$dark-button-color: #B8B9D1;
-$dark-button-color-hover: #E3ECFF;
-
 .btn {
-    padding: 0.9rem 1.8rem;
-    font-size: 16px;
-    font-weight: 600;
-    color: $light-button-color;
-    border: 3px solid $light-button-color;
-    cursor: pointer;
-    position: relative;
-    background-color: $bg-transparent;
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--btn-text-color);
+  border: 3.45px solid var(--btn-bg-color);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--btn-bg-color);
+  transition: all 0.3s;
+  border-radius: 5px;
 
-    &>svg {
-        color: $light-button-color;
+  & > svg {
+    fill: var(--btn-text-color);
+  }
+
+
+  &:hover {
+    background-color: var(--btn-active-bg-color);
+    border-color: var(--btn-active-bg-color);
+    color: var(--btn-active-text-color);
+
+    & > svg {
+      fill: var(--btn-active-text-color);
     }
 
-    ;
+  }
+
+  &.fullfill {
+    background-color: transparent;
+    color: var(--btn-bg-color);
+
+    & > svg {
+      fill: var(--btn-bg-color);
+    }
 
     &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $light-button-color-hover;
-        transform: translateX(-100%);
-        transition: all .3s;
-        z-index: -1;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--btn-active-bg-color);
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      z-index: -1;
     }
 
     &:hover {
-        color: $color-slate-100;
-        border-color: $light-button-color-hover;
+      border-color: var(--btn-active-bg-color);
+      color: var(--btn-active-text-color);
 
-        &>svg {
-            color: $color-slate-100;
-        }
+      & > svg {
+        fill: var(--btn-active-text-color);
+      }
+      &::before {
+        transform: translateX(0);
 
-        &::before {
-            transform: translateX(0);
-        }
+      }
     }
-}
+  }
 
-:global(html.dark) {
-    .btn{
-        color: $dark-button-color;
-        border-color: $dark-button-color;
+  &.outline {
+    background-color: transparent;
+    border-color: rgba(var(--solid-constrast-color-by-theme),.6);
+    color: rgba(var(--solid-constrast-color-by-theme),.6);
 
-        &>svg {
-            color: $dark-button-color;
-        }
-        &::before {
-            background-color: $dark-button-color-hover;
-        }
-        &:hover {
-            color: rgba($color-slate-950, .8);
-            border-color: $dark-button-color-hover;
-    
-            &>svg {
-                color: rgba($color-slate-950, .8);
-            }
-        }
-
+    & > svg {
+      fill: rgba(var(--solid-constrast-color-by-theme),.6);
     }
+
+    &:hover {
+      color: rgba(var(--solid-constrast-color-by-theme),1);
+      border-color: rgba(var(--solid-constrast-color-by-theme),1);
+
+      & > svg {
+        fill: rgba(var(--solid-constrast-color-by-theme),1);
+      }
+    }
+  }
 
 }

@@ -1,9 +1,20 @@
 {
   "introduction": {
-    "learnMore": "Saiba mais"
+    "learnMore": "Saiba mais",
+    "btns": {
+      "about": "Sobre mim",
+      "resume": "Currículo"
+    },
+    "links": {
+      "linkedInTitle": "Meu perfil no LinkedIn",
+      "githubTitle": "Meu perfil no Github"
+    }
   },
   "about": {
-    "title": "Olá! Eu sou Isaque!",
+    "title": {
+      "greeting": "Olá!",
+      "name": "Eu sou Isaque!"
+    },
     "subTitle": "Apaixonado por criar soluções web e entusiasta em IA, sempre explorando novas formas de inovar e melhorar processos.",
     "firstParagraph": "Sou um desenvolvedor web full stack com vasta experiência em front-end. Possuo conhecimentos sólidos em jQuery, React, Next.js e experiência prévia com Gatsby, o que me permite criar interfaces de usuário intuitivas e dinâmicas, sempre aplicando as melhores práticas e tecnologias disponíveis. Minha dedicação ao desenvolvimento front-end me impulsiona a sempre buscar a excelência e criar experiências de usuário envolventes e acessíveis.",
     "secondParagraph": "No back-end, trabalho com eficiência utilizando Node.js e Python para criar APIs REST e desenvolver processos automatizados e de ETL. Também possuo alguma experiência com Java, o que me permite aproveitar suas vantagens na construção de serviços robustos no backend. Meu sólido conhecimento em bancos de dados relacionais, especialmente SQL Server, me permite gerenciar e integrar dados de forma eficaz em sistemas complexos.",

@@ -6,8 +6,7 @@ import { Dispatch, MouseEvent, SetStateAction, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
-import { Dropdown } from "@/components/shared/Dropdown";
-import { DropdownOptions } from "@/types/components/dropdownOptions";
+import { Dropdown, DropdownOptions } from "@/components/shared/Dropdown";
 import { BrazilFlag } from "@/components/icons/flags/Brazil";
 import { USFlag } from "@/components/icons/flags/US";
 
@@ -64,7 +63,7 @@ export const Navbar = ({ isActive, setIsActive }: NavbarProps) => {
         <section className={style.navigation}>
           <ul>
             <li>
-              <Link href={"#about"} onClick={toggleMenu}>
+              <Link href={"/about"} onClick={toggleMenu}>
                 {t("about")}
               </Link>
             </li>

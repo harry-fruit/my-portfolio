@@ -9,78 +9,77 @@ $tailwind: #38bdf8;
 $new: #0052cc;
 $default: #f1f5f9;
 
-
 .tagContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .5rem;
-    width: 100%;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  flex-wrap: wrap;
 
-    .tag {
-        @apply 
-            flex flex-row items-center justify-center 
+  .tag {
+    @apply flex flex-row items-center justify-center 
             rounded-full;
-        padding: .25rem .75rem;
-        border: 2px solid;
-        color: var(--text-color-2);
-    
-        &.python {
-          border-color: #4da54d
-        }
-    
-        &.javascript {
-          border-color: #f7df1e;
-        }
-    
-        &.typescript {
-          border-color: #3178c6;
-        }
-    
-        &.react {
-          border-color: #61dafb;
-        }
-    
-        &.nextjs {
-          border-color: #161616;
-        }
-    
-        &.sass {
-          border-color: #c69;
-        }
-    
-        &.sql {
-          border-color: #e15249;
-        }
-    
-        &.tailwind {
-          border-color: #38bdf8;
-        }
+    padding: 0.25rem 0.75rem;
+    border: 2.15px solid;
+    color: var(--text-color-2);
+    text-transform: uppercase;
+    font-size: 0.85rem;
 
-        &.html {
-          border-color: #e34c26;
-        }
+    // &.python {
+    //   border-color: #4da54d
+    // }
 
-        &.css {
-          border-color: #6da8f5;
-        }
-    
-        &.new {
-          border-color: #0052cc;
-        }
-    
-        &.default {
-          border-color: #f1f5f9;
-        }
-    }
+    // &.javascript {
+    //   border-color: #f7df1e;
+    // }
+
+    // &.typescript {
+    //   border-color: #3178c6;
+    // }
+
+    // &.react {
+    //   border-color: #61dafb;
+    // }
+
+    // &.nextjs {
+    //   border-color: #161616;
+    // }
+
+    // &.sass {
+    //   border-color: #c69;
+    // }
+
+    // &.sql {
+    //   border-color: #e15249;
+    // }
+
+    // &.tailwind {
+    //   border-color: #38bdf8;
+    // }
+
+    // &.html {
+    //   border-color: #e34c26;
+    // }
+
+    // &.css {
+    //   border-color: #6da8f5;
+    // }
+
+    // &.new {
+    //   border-color: #0052cc;
+    // }
+
+    // &.default {
+    //   border-color: #f1f5f9;
+    // }
+  }
 }
 
-
 @media (min-width: 1536px) {
-    .tagContainer {
-        .tag {
-          border: 3px solid;
-        }
+  .tagContainer {
+    .tag {
+      border: 3px solid;
     }
+  }
 }

@@ -1,207 +1,201 @@
-@import "variables.scss";
-
-$primary-color: $color-primary-600;
-$strongest-primary-color: $color-primary-700;
-$default-font-color: $paragraph-light-color;
-$subtitle-font-color: $subtitle-light-color;
-$strongest-font-color: $title-light-color;
+$primary-color: rgb(var(--primary-color));
+$strongest-primary-color: rgb(var(--primary-color-700));
+$default-font-color: rbg(var(--paragraph-light-color));
+$subtitle-font-color: rgb(var(--subtitle-light-color));
+$strongest-font-color: rgb(var(--title-light-color));
+$linkedin-color: #0a66c2;
 
 .container {
+  .primaryColor {
+    color: $primary-color;
+  }
 
-    .primaryColor {
-        color: $primary-color;
+  .links,
+  .aside,
+  .introduction,
+  .experiences,
+  .projects {
+    p,
+    li,
+    svg:not(.linkedinIcon) {
+      color: $default-font-color;
     }
 
-    .links,
-    .aside,
-    .introduction,
-    .experiences,
-    .projects {
-
-        p,
-        li,
-        svg:not(.linkedinIcon) {
-            color: $default-font-color;
-        }
-
-        a {
-            text-decoration: underline;
-        }
+    a {
+      text-decoration: underline;
     }
+  }
 
-    display: grid;
-    grid-template-areas: "links"
+  display: grid;
+  grid-template-areas:
+    "links"
     "aside"
     "introduction"
     "experiences"
     "projects";
-    width: 100%;
-    grid-template-rows: repeat(5, auto);
-    column-gap: 1rem;
-    padding: 1rem 2rem;
-    max-width: 1240px;
-    background-color: $color-slate-100;
+  width: 100%;
+  grid-template-rows: repeat(5, auto);
+  column-gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 1240px;
+  background-color: rgb(var(--slate-color-100));
 
-    .links {
-        grid-area: links;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 1em;
-        margin-bottom: 2rem;
+  .links {
+    grid-area: links;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2rem;
 
-        li {
-            cursor: pointer;
+    li {
+      cursor: pointer;
 
-            &:hover * {
-                color: $strongest-font-color;
-            }
+      &:hover * {
+        color: $strongest-font-color;
+      }
 
-            & .linkedinIcon * {
-                color: $primary-color;
+      & .linkedinIcon * {
+        color: $linkedin-color;
+      }
+    }
+  }
 
-                &:hover {
-                    color: $strongest-primary-color;
-                }
-            }
-        }
+  .aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .moreInfo {
+      display: none;
     }
 
-    .aside {
-        grid-area: aside;
+    .skillsContainer {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3vh;
+
+      .skills {
+        width: 50%;
+
+        ul {
+          padding-left: 20px;
+
+          li {
+            list-style-type: square;
+          }
+        }
+      }
+
+      .skills:last-child {
+        align-items: end;
+      }
+    }
+  }
+
+  .introduction {
+    grid-area: introduction;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      color: $subtitle-font-color;
+    }
+  }
+
+  .experiences {
+    grid-area: experiences;
+    margin-bottom: 2rem;
+
+    .experiencesHeader {
+      margin-bottom: 1rem;
+    }
+
+    .experienceItemsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .experienceItem {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 0.75rem;
 
-        .moreInfo {
-            display: none;
+        .experienceHeader {
+          .companyName {
+            font-weight: 700;
+          }
         }
 
-        .skillsContainer {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3vh;
+        ul {
+          display: flex;
+          flex-direction: column;
 
-            .skills {
-                width: 50%;
+          padding: 0 5vw;
 
-                ul {
-                    padding-left: 20px;
-
-                    li {
-                        list-style-type: square;
-                    }
-                }
-            }
-
-            .skills:last-child {
-                align-items: end;
-            }
+          li {
+            list-style-type: square;
+          }
         }
+      }
     }
+  }
 
-    .introduction {
-        grid-area: introduction;
-        margin-bottom: 2rem;
-
-        h1 {
-            font-size: 3.5rem;
-            line-height: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            margin-bottom: 1rem;
-            color: $subtitle-font-color;
-        }
-    }
-
-    .experiences {
-        grid-area: experiences;
-        margin-bottom: 2rem;
-
-        .experiencesHeader {
-            margin-bottom: 1rem;
-        }
-
-        .experienceItemsWrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-
-            .experienceItem {
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-
-                .experienceHeader {
-                    .companyName {
-                        font-weight: 700;
-                    }
-                }
-
-                ul {
-                    display: flex;
-                    flex-direction: column;
-
-                    padding: 0 5vw;
-
-                    li {
-                        list-style-type: square;
-                    }
-                }
-            }
-        }
-    }
-
-    .projects {
-        grid-area: projects;
-    }
+  .projects {
+    grid-area: projects;
+  }
 }
 
 @media (min-width: 768px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-            "links links"
-            "aside introduction"
-            "aside experiences"
-            "aside projects";
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: 0.25fr 1fr;
+  .container {
+    display: grid;
+    grid-template-areas:
+      "links links"
+      "aside introduction"
+      "aside experiences"
+      "aside projects";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 0.25fr 1fr;
 
-        .aside {
-            .moreInfo {
-                display: block;
-            }
+    .aside {
+      .moreInfo {
+        display: block;
+      }
 
-            .skillsContainer {
-                flex-direction: column;
-                justify-content: center;
-                gap: 1rem;
-                margin-bottom: 3vh;
+      .skillsContainer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3vh;
 
-                .skills {
-                    width: fit-content;
-                }
-
-                .skills:last-child {
-                    align-items: end;
-                }
-            }
+        .skills {
+          width: fit-content;
         }
+
+        .skills:last-child {
+          align-items: end;
+        }
+      }
     }
+  }
 }
 
 @media (min-width: 1280px) {
-    .container {
-        padding: 4rem 8rem;
-    }
+  .container {
+    padding: 4rem 8rem;
+  }
 }
 
 @media (min-width: 1536px) {
-    .container {
-        width: 80%;
-    }
+  .container {
+    width: 80%;
+  }
 }

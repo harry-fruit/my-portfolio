@@ -1,0 +1,20 @@
+@import "../../mixins.scss";
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--bg-color));
+  overflow-x: hidden;
+
+  &:not(:has(.introduction)) {
+    margin-top: var(--header-icon-wrapper-height);
+    min-height: calc(
+      100vh - var(--header-icon-wrapper-height) - var(--footer-size)
+    );
+  }
+
+  display: flex;
+}
