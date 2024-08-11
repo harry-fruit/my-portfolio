@@ -4,37 +4,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
   background-color: rgba(240, 255, 255, 0.062);
-  //   background-color: red;
   background-color: rgb(var(--primary-color));
-  
+
 
   .wrapper {
     width: 100%;
     min-height: 70vh;
     display: grid;
-    padding: 3em 1em 1em;
+    padding: 2em 1em;
     grid-template-areas:
       "apresentation"
       "word-cloud"
       "btns"
       "links";
-    gap: 3em;
-    // background-color: blue;
-    grid-template-columns: 1fr;
+    gap: 1em;
+    grid-template-columns: 100%;
     justify-items: center;
     align-items: end;
 
     .apresentation {
       grid-area: apresentation;
       width: 100%;
-      //   background-color: red;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      //   background-color: green;
+      max-width: 500px;
       $h1-color: #fff;
       $h2-color: #ffffff9c;
       h1 {
@@ -48,10 +44,14 @@
     .wordCloud {
       grid-area: word-cloud;
       width: 100%;
-      max-width: 350px;
-      min-height: 320px;
+      height: 100%;
+      min-height: 350px;
+      max-width: 750px;
       border-radius: 5px;
-      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .btns {
@@ -60,8 +60,9 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
-      gap: 1em;
+      justify-content: space-between;
+      max-width: 500px;
+      
 
       button {
         width: 47.5%;
@@ -106,7 +107,6 @@
       align-items: center;
       justify-content: center;
       gap: 2em;
-      //   background-color: yellow;
       padding: 1em;
       $color: rgba(255, 255, 255, 0.6);
       $active-color: rgb(255, 255, 255);
@@ -126,35 +126,41 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .container {
     .wrapper {
+      width: 90%;
 
-      .wordCloud {
-        max-width: 720px;
+      .apresentation {
+        width: 70%;
       }
 
+      .btns {
+        width: 70%;
+      }
     }
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .container {
     .wrapper {
-      width: 85%;
+      width: 100%;
       grid-template-areas:
         "apresentation word-cloud"
         "btns word-cloud"
         "links links";
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
-      column-gap: 6vw;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr;
       align-items: center;
-      justify-content: space-between;
 
       .apresentation {
         align-self: last baseline;
         align-items: start;
+      }
+
+      .wordCloud {
+        margin-right: 5em;
       }
 
       .btns {
@@ -164,7 +170,6 @@
 
       .links {
         margin-top: 2em;
-        gap: 2.5em;
       }
     }
   }
@@ -173,8 +178,7 @@
 @media (min-width: 1536px) {
   .container {
     .wrapper {
-      grid-template-columns: 0.8fr .65fr;
-      width: 75%;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -184,9 +188,6 @@
     min-height: 60vh;
     .wrapper {
       min-height: 60vh;
-      // width: 75%;
-      // column-gap: 12vw;
-      // grid-template-columns: 0.5fr 0.65fr;
     }
   }
 }
