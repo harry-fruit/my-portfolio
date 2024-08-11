@@ -17,7 +17,7 @@ export const Experience = (): JSX.Element => {
   return (
       <section
         id={"experiences"}
-        className={"flex flex-col items-center pt-2"}
+        className={"flex flex-col items-center pt-2 lg:pt-8 xl:pt-10"}
       >
         <SectionHeaderContainer className="px-4">
           <SectionTitle text={t("title")} className="text-primary-gradient" />

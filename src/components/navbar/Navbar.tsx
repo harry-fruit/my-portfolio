@@ -68,12 +68,12 @@ export const Navbar = ({ isActive, setIsActive }: NavbarProps) => {
               </Link>
             </li>
             <li>
-              <Link href={"#experiences"} onClick={toggleMenu}>
+              <Link href={"/#experiences"} onClick={toggleMenu}>
                 {t("experiences")}
               </Link>
             </li>
             <li>
-              <Link href={"#projects"} onClick={toggleMenu}>
+              <Link href={"/#projects"} onClick={toggleMenu}>
                 {t("projects")}
               </Link>
             </li>
