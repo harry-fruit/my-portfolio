@@ -3,6 +3,7 @@ import style from "@/styles/components/card/tags.module.scss";
 export type CardTagProps = {
   text: string;
   type:
+    | "golang"
     | "python"
     | "javascript"
     | "typescript"

@@ -27,6 +27,20 @@ type CardsData = {
 
 const cards: CardsData[] = [
   {
+    title: "Simple Rest API",
+    link: {
+      href: "https://github.com/harry-fruit/simple-go-rest-api",
+      target: "_blank"
+    },
+    tags: [
+      {
+        text: "GoLang",
+        type: "golang"
+      }
+    ],
+    image: { src: "/projects/go.png", alt: "Simple Rest API With GoLang - Logo" }
+  },
+  {
     title: "Gym Project",
     link: {
       href: "/projects/gym-project",
